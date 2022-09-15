@@ -20,6 +20,8 @@ tools -> faces
 import numpy as np
 
 from gustaf.volumes import Volumes
+from gustaf.faces import Faces
+from gustaf.edges import Edges
 from gustaf.utils import log
 
 class HMLine:
@@ -48,9 +50,9 @@ class HMLine:
                         parts[1][:-2].split(',')]
 
 class HMElementType:
-    __slots__ = ["number_of_nodes", "subelement"]
+    __slots__ = ["number_of_nodes", "subelement", "MeshType"]
 
-    def __init__(self, number_of_nodes, subelement = ''):
+    def __init__(self, number_of_nodes, MeshType, subelement = ''):
         """
         Store HyperMesh element type information.
 
@@ -66,16 +68,18 @@ class HMElementType:
         None
         """
         self.number_of_nodes = int(number_of_nodes)
+        self.MeshType = MeshType
         self.subelement = str(subelement)
 
 class HMComponent:
     __slots__ = ["name", "elements"]
 
     element_types = {
-            'tetra4': HMElementType(4, 'tria3'),
-            'hexa8': HMElementType(8, 'quad4'),
-            'tria3': HMElementType(3),
-            'quad4': HMElementType(4)
+            'tetra4': HMElementType(4, Volumes, 'tria3'),
+            'hexa8': HMElementType(8, Volumes, 'quad4'),
+            'tria3': HMElementType(3, Faces, 'plotel'),
+            'quad4': HMElementType(4, Faces, 'plotel'),
+            'plotel': HMElementType(2, Edges),
             }
 
     def __init__(self, line):
@@ -258,13 +262,14 @@ def load(
         for volume_node_index, hm_node_id in enumerate(hm_node_ids):
             hm_node_ids[volume_node_index] = node_perm[hm_node_id]
 
-    mesh = Volumes(vertices=vertices, volumes=volumes)
+    MeshType = HMComponent.element_types[element_type].MeshType
+    mesh = MeshType(vertices=vertices, elements=volumes)
 
     if create_face_groups:
         # determine subelement type
         subelement_type = HMComponent.element_types[element_type].subelement
         # get all faces in volume
-        faces = mesh.get_faces()
+        faces = mesh.get_faces() if MeshType == Volumes else mesh.get_edges()
         # transform to 1D tuple array
         # (we want to use the intersect1d function later, so we cannot keep the
         # rows)
@@ -285,7 +290,7 @@ def load(
                         group_faces_sorted.view(dtype=tuple_dtype)
                 face_indices = np.intersect1d(faces_tuples, group_faces_tuples,
                         return_indices=True)[1]
-                mesh.face_groups[component.name] = face_indices
+                mesh.get_subelement_groups()[component.name] = face_indices
             elif component != main_component:
                 log.warning(f"Component '{component.name}' does not "\
                         f"contain any elements of type '{subelement_type}'.")
