@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gustaf.show &#8212; gustaf 0.0.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic_mod.css?v=0.7.0-1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <script src="../../_static/js/petite-vue.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+  </head><body data-dark_mode_code_blocks="true">
+
+<div id="top_nav">
+    
+
+    <nav>
+        
+            
+        
+
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="../../index.html" title="Go to homepage">gustaf 0.0.3 documentation</a></h1>
+
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="../../search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
+            
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><ul>
+<li class="toctree-l1"><a class="reference external" href="http://github.com/tataratat/gustaf">Github</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contiributing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">API references</a></li>
+</ul>
+
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for gustaf.show</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;gustaf/gustaf/show.py.</span>
+
+<span class="sd">Everything related to show/visualization.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">gustaf</span> <span class="kn">import</span> <span class="n">settings</span>
+<span class="kn">from</span> <span class="nn">gustaf</span> <span class="kn">import</span> <span class="n">utils</span>
+<span class="kn">from</span> <span class="nn">gustaf._base</span> <span class="kn">import</span> <span class="n">GustafBase</span>
+
+<span class="c1"># @linux it raises error if vedo is imported inside the function.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">vedo</span>
+<span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="c1"># overwrites the vedo module with an object which will throw an error</span>
+    <span class="c1"># as soon as it is used the first time. This means that any non vedo</span>
+    <span class="c1"># functionality works as before, but as soon as vedo is used a</span>
+    <span class="c1"># comprehensive exception will be raised which is understandable in</span>
+    <span class="c1"># contrast to the possible errors previously possible</span>
+    <span class="kn">from</span> <span class="nn">gustaf.helpers.raise_if</span> <span class="kn">import</span> <span class="n">ModuleImportRaiser</span>
+    <span class="n">vedo</span> <span class="o">=</span> <span class="n">ModuleImportRaiser</span><span class="p">(</span><span class="s2">&quot;vedo&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="show"><a class="viewcode-back" href="../../gustaf.html#gustaf.show.show">[docs]</a><span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="o">*</span><span class="n">gusobj</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Shows using appropriate backend.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    *gusobj: gustaf objects</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">showables</span> <span class="o">=</span> <span class="p">[</span><span class="n">make_showable</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">gusobj</span><span class="p">]</span>
+    <span class="n">vis_b</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">VISUALIZATION_BACKEND</span>
+
+    <span class="k">if</span> <span class="n">vis_b</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;vedo&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">show_vedo</span><span class="p">(</span><span class="n">showables</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">vis_b</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;trimesh&quot;</span><span class="p">):</span>
+        <span class="k">pass</span>
+    <span class="k">elif</span> <span class="n">vis_b</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;matplotlib&quot;</span><span class="p">):</span>
+        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+
+<div class="viewcode-block" id="show_vedo"><a class="viewcode-back" href="../../gustaf.html#gustaf.show.show_vedo">[docs]</a><span class="k">def</span> <span class="nf">show_vedo</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;`vedo.show` wrapper. Each args represent one section of window. In other</span>
+<span class="sd">    words len(args) == N, where N corresponds to the parameter for vedo.show().</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    *args: Union[List[Union[gustaf_obj, vedo_obj]], Dict[str, Any]]]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># vedo plotter parameter</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">offs</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;offscreen&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">interac</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;interactive&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">plt</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;vedoplot&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">skip_clear</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;skip_clear&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">close</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;close&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">,</span> <span class="s2">&quot;auto&quot;</span><span class="p">)</span>
+    <span class="n">cam</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cam&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;gustaf&quot;</span><span class="p">)</span>
+    <span class="n">return_show_list</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;return_showable_list&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">clear_vedoplotter</span><span class="p">(</span><span class="n">plotter</span><span class="p">,</span> <span class="n">numrenderers</span><span class="p">,</span> <span class="n">skipcl</span><span class="o">=</span><span class="n">skip_clear</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;enough said.&quot;&quot;&quot;</span>
+        <span class="c1"># for whatever reason it is desired</span>
+        <span class="k">if</span> <span class="n">skipcl</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numrenderers</span><span class="p">):</span>
+            <span class="n">plotter</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="n">at</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">cam_tuple_to_list</span><span class="p">(</span><span class="n">dictcam</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;if entity is tuple, turns it into list.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">dictcam</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">dictcam</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+                <span class="n">dictcam</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">dictcam</span>
+
+    <span class="c1"># get plotter</span>
+    <span class="k">if</span> <span class="n">plt</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">plt</span> <span class="o">=</span> <span class="n">vedo</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span>
+                <span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">,</span> <span class="n">sharecam</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">offscreen</span><span class="o">=</span><span class="n">offs</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">title</span>
+        <span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># check if plt has enough Ns</span>
+        <span class="n">trueN</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+        <span class="n">clear_vedoplotter</span><span class="p">(</span><span class="n">plt</span><span class="p">,</span> <span class="n">trueN</span><span class="p">)</span>  <span class="c1"># always clear.</span>
+        <span class="k">if</span> <span class="n">trueN</span> <span class="o">!=</span> <span class="n">N</span><span class="p">:</span>
+            <span class="n">utils</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                    <span class="s2">&quot;Number of args exceed given vedo.Plotter&#39;s capacity.&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;Assigning a new one&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span>
+            <span class="k">if</span> <span class="n">close</span><span class="p">:</span>  <span class="c1"># only if it is explicitly stated</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># Hope that this truely releases..</span>
+            <span class="c1"># assign a new one</span>
+            <span class="n">plt</span> <span class="o">=</span> <span class="n">vedo</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span>
+                    <span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">,</span>
+                    <span class="n">sharecam</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">offscreen</span><span class="o">=</span><span class="n">offs</span><span class="p">,</span>
+                    <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span>
+                    <span class="n">title</span><span class="o">=</span><span class="n">title</span>
+            <span class="p">)</span>
+
+    <span class="c1"># loop and plot</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">arg</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+        <span class="c1"># form valid input type.</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="n">showlist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">arg</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">showlist</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># raise TypeError(</span>
+            <span class="c1">#     &quot;For vedo_show, only list or dict is valid input&quot;)</span>
+            <span class="n">utils</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                    <span class="s2">&quot;one of args for show_vedo is neither `dict` nor&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;`list`. Putting it naively into a list.&quot;</span>
+            <span class="p">)</span>
+            <span class="n">showlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">arg</span><span class="p">]</span>
+
+        <span class="c1"># quickcheck if the list is gustaf or non-gustaf</span>
+        <span class="c1"># if gustaf, make it vedo-showable.</span>
+        <span class="c1"># if there&#39;s spline, we need to pop the element and</span>
+        <span class="c1"># extend showables to the list.</span>
+        <span class="c1"># A showlist is a list to be plotted into a single subframe of the</span>
+        <span class="c1"># plot</span>
+        <span class="n">list_of_showables</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">sl</span> <span class="ow">in</span> <span class="n">showlist</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sl</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="n">sl</span> <span class="o">=</span> <span class="p">[</span><span class="n">sl</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sl</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">GustafBase</span><span class="p">):</span>
+                    <span class="n">tmp_showable</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">showable</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="s2">&quot;vedo&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                    <span class="c1"># splines return dict</span>
+                    <span class="c1"># - maybe it is time to do some typing..</span>
+                    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tmp_showable</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                        <span class="c1"># add to extend later</span>
+                        <span class="n">list_of_showables</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">tmp_showable</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="c1"># replace gustafobj with vedo_obj.</span>
+                        <span class="n">list_of_showables</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp_showable</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">list_of_showables</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">sl</span><span class="p">)</span>
+
+        <span class="c1"># set interactive to true at last element</span>
+        <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span>
+                    <span class="n">list_of_showables</span><span class="p">,</span>
+                    <span class="n">at</span><span class="o">=</span><span class="n">i</span><span class="p">,</span>
+                    <span class="n">interactive</span><span class="o">=</span><span class="n">interac</span><span class="p">,</span>
+                    <span class="n">camera</span><span class="o">=</span><span class="n">cam_tuple_to_list</span><span class="p">(</span><span class="n">cam</span><span class="p">),</span>
+                    <span class="c1"># offscreen=offs,</span>
+            <span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span>
+                    <span class="n">list_of_showables</span><span class="p">,</span>
+                    <span class="n">at</span><span class="o">=</span><span class="n">i</span><span class="p">,</span>
+                    <span class="n">interactive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">camera</span><span class="o">=</span><span class="n">cam_tuple_to_list</span><span class="p">(</span><span class="n">cam</span><span class="p">),</span>
+                    <span class="c1"># offscreen=offs,</span>
+            <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">interac</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">offs</span><span class="p">:</span>
+        <span class="c1"># only way to ensure memory is released</span>
+        <span class="n">clear_vedoplotter</span><span class="p">(</span><span class="n">plt</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">close</span> <span class="ow">or</span> <span class="n">close</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># explicitly given or None.</span>
+            <span class="c1"># It seems to leak some memory, but here it goes.</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># if i close it, this cannot be reused...</span>
+            <span class="n">plt</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="n">return_show_list</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">plt</span><span class="p">,</span> <span class="n">list_of_showables</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">plt</span></div>
+
+
+<span class="k">def</span> <span class="nf">_vedo_showable</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Generates a vedo obj based on `kind` attribute from given obj.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    obj: gustaf obj</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    vedo_obj: vedo obj</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># parse from vis_dict</span>
+    <span class="c1"># NOTE: maybe we can make a helper class to organize this nicely</span>
+    <span class="n">basic_options</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+            <span class="n">c</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="n">r</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="n">lw</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;lw&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="n">alpha</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;alpha&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="n">cmap</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cmap&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="c1"># &gt; followings are cmap options</span>
+            <span class="n">vmin</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;vmin&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="n">vmax</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;vmax&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="n">cmapalpha</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cmapalpha&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="c1"># &gt; takes scalarbar options as dict.</span>
+            <span class="n">scalarbar</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;scalarbar&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="n">dataname</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;dataname&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="c1"># &lt;</span>
+            <span class="n">arrows</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;arrows&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>  <span class="c1"># only for edges</span>
+            <span class="c1"># &gt;only for edges internally treated same as `lw`,</span>
+            <span class="c1"># but higher priority</span>
+            <span class="n">thickness</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;thickness&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="n">title</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;gustaf&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="c1"># loop once more to extract basics from kwargs</span>
+    <span class="c1"># done after vis_dict, so that this overpowers</span>
+    <span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>  <span class="c1"># to pop dict during loop</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">basic_options</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">basic_options</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+    <span class="n">utils</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;making vedo-showable obj&quot;</span><span class="p">)</span>
+    <span class="n">local_options</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;vertex&quot;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;alpha&quot;</span><span class="p">]:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">basic_options</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">local_options</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span><span class="p">})</span>
+
+        <span class="n">vobj</span> <span class="o">=</span> <span class="n">vedo</span><span class="o">.</span><span class="n">Points</span><span class="p">(</span>
+                <span class="n">obj</span><span class="o">.</span><span class="n">vertices</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">local_options</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">obj</span><span class="o">.</span><span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;edge&quot;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;lw&quot;</span><span class="p">,</span> <span class="s2">&quot;alpha&quot;</span><span class="p">]:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">basic_options</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">local_options</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span><span class="p">})</span>
+
+        <span class="c1"># edges can be arrows if vis_dict[&quot;arrows&quot;] is set True</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">basic_options</span><span class="p">[</span><span class="s2">&quot;arrows&quot;</span><span class="p">]:</span>
+            <span class="n">vobj</span> <span class="o">=</span> <span class="n">vedo</span><span class="o">.</span><span class="n">Lines</span><span class="p">(</span>
+                    <span class="n">obj</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">edges</span><span class="p">],</span>
+                    <span class="o">**</span><span class="n">local_options</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">basic_options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;thickness&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+                <span class="n">local_options</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;thickness&quot;</span><span class="p">:</span> <span class="n">basic_options</span><span class="p">[</span><span class="s2">&quot;thickness&quot;</span><span class="p">]})</span>
+
+            <span class="c1"># turn lw into thickness if there&#39;s no thickness</span>
+            <span class="k">elif</span> <span class="n">local_options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;lw&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+                <span class="n">thickness</span> <span class="o">=</span> <span class="n">local_options</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;lw&quot;</span><span class="p">)</span>
+                <span class="n">local_options</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;thickness&quot;</span><span class="p">:</span> <span class="n">thickness</span><span class="p">})</span>
+
+            <span class="c1"># `s` is another param for arrows</span>
+            <span class="n">local_options</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;s&quot;</span><span class="p">:</span> <span class="n">obj</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)})</span>
+
+            <span class="n">vobj</span> <span class="o">=</span> <span class="n">vedo</span><span class="o">.</span><span class="n">Arrows</span><span class="p">(</span>
+                    <span class="n">obj</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">edges</span><span class="p">],</span>
+                    <span class="o">**</span><span class="n">local_options</span><span class="p">,</span>
+            <span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">obj</span><span class="o">.</span><span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;face&quot;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;alpha&quot;</span><span class="p">]:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">basic_options</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">local_options</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span><span class="p">})</span>
+
+        <span class="n">vobj</span> <span class="o">=</span> <span class="n">vedo</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span>
+                <span class="p">[</span><span class="n">obj</span><span class="o">.</span><span class="n">vertices</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">faces</span><span class="p">],</span>
+                <span class="o">**</span><span class="n">local_options</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">obj</span><span class="o">.</span><span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;volume&quot;</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">vtk</span> <span class="kn">import</span> <span class="n">VTK_TETRA</span> <span class="k">as</span> <span class="n">frau_tetra</span>
+        <span class="kn">from</span> <span class="nn">vtk</span> <span class="kn">import</span> <span class="n">VTK_HEXAHEDRON</span> <span class="k">as</span> <span class="n">herr_hexa</span>
+
+        <span class="n">whatami</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">whatami</span>
+        <span class="k">if</span> <span class="n">whatami</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;tet&quot;</span><span class="p">):</span>
+            <span class="n">grid_type</span> <span class="o">=</span> <span class="n">frau_tetra</span>
+        <span class="k">elif</span> <span class="n">whatami</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;hexa&quot;</span><span class="p">):</span>
+            <span class="n">grid_type</span> <span class="o">=</span> <span class="n">herr_hexa</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>  <span class="c1"># get_whatami should&#39;ve rasied error..</span>
+
+        <span class="k">if</span> <span class="n">basic_options</span><span class="p">[</span><span class="s2">&quot;dataname&quot;</span><span class="p">]:</span>
+            <span class="kn">from</span> <span class="nn">gustaf.faces</span> <span class="kn">import</span> <span class="n">Faces</span>
+
+            <span class="c1"># UGrid would be politically correct,</span>
+            <span class="c1"># but currently it can&#39;t show field</span>
+            <span class="c1"># so, extract only surface mesh</span>
+            <span class="n">surf_ids</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">single_faces</span><span class="p">()</span>  <span class="c1"># gets faces too</span>
+            <span class="n">sfaces</span> <span class="o">=</span> <span class="n">Faces</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">vertices</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">faces</span><span class="p">()[</span><span class="n">surf_ids</span><span class="p">])</span>
+            <span class="n">sfaces</span><span class="o">.</span><span class="n">remove_unreferenced_vertices</span><span class="p">()</span>
+
+            <span class="n">vobj</span> <span class="o">=</span> <span class="n">sfaces</span><span class="o">.</span><span class="n">showable</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="s2">&quot;vedo&quot;</span><span class="p">)</span>  <span class="c1"># recursive alert</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">vobj</span> <span class="o">=</span> <span class="n">vedo</span><span class="o">.</span><span class="n">UGrid</span><span class="p">(</span>
+                    <span class="p">[</span>
+                            <span class="n">obj</span><span class="o">.</span><span class="n">vertices</span><span class="p">,</span>
+                            <span class="n">obj</span><span class="o">.</span><span class="n">volumes</span><span class="p">,</span>
+                            <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">([</span><span class="n">grid_type</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">volumes</span><span class="p">)),</span>
+                    <span class="p">]</span>
+            <span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">basic_options</span><span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">basic_options</span><span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;hotpink&quot;</span>
+
+            <span class="n">vobj</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="n">basic_options</span><span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">])</span>
+            <span class="n">vobj</span><span class="o">.</span><span class="n">alpha</span><span class="p">(</span><span class="n">basic_options</span><span class="p">[</span><span class="s2">&quot;alpha&quot;</span><span class="p">])</span>
+
+    <span class="c1"># this sets vedo v2021.0.6+ requirement</span>
+    <span class="n">dname</span> <span class="o">=</span> <span class="n">basic_options</span><span class="p">[</span><span class="s2">&quot;dataname&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">dname</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># transfer data</span>
+        <span class="n">vobj</span><span class="o">.</span><span class="n">pointdata</span><span class="p">[</span><span class="n">dname</span><span class="p">]</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">vertexdata</span><span class="p">[</span><span class="n">dname</span><span class="p">]</span>
+
+        <span class="c1"># default cmap is jet.</span>
+        <span class="k">if</span> <span class="n">basic_options</span><span class="p">[</span><span class="s2">&quot;cmap&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">basic_options</span><span class="p">[</span><span class="s2">&quot;cmap&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;jet&quot;</span>
+
+        <span class="c1"># register cmap and data</span>
+        <span class="n">vobj</span><span class="o">.</span><span class="n">cmap</span><span class="p">(</span>
+                <span class="n">basic_options</span><span class="p">[</span><span class="s2">&quot;cmap&quot;</span><span class="p">],</span>
+                <span class="n">input_array</span><span class="o">=</span><span class="n">dname</span><span class="p">,</span>
+                <span class="n">on</span><span class="o">=</span><span class="s2">&quot;points&quot;</span><span class="p">,</span>  <span class="c1"># hardcoded since yet, we don&#39;t have cell field</span>
+                <span class="n">vmin</span><span class="o">=</span><span class="n">basic_options</span><span class="p">[</span><span class="s2">&quot;vmin&quot;</span><span class="p">],</span>
+                <span class="n">vmax</span><span class="o">=</span><span class="n">basic_options</span><span class="p">[</span><span class="s2">&quot;vmax&quot;</span><span class="p">],</span>
+                <span class="n">alpha</span><span class="o">=</span><span class="n">basic_options</span><span class="p">[</span><span class="s2">&quot;cmapalpha&quot;</span><span class="p">],</span>
+        <span class="p">)</span>
+
+        <span class="c1"># scalarbar?</span>
+        <span class="n">scalarbar_dict</span> <span class="o">=</span> <span class="n">basic_options</span><span class="p">[</span><span class="s2">&quot;scalarbar&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">scalarbar_dict</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># if horizontal==True, size doesnt really matter</span>
+            <span class="n">vobj</span><span class="o">.</span><span class="n">addScalarBar</span><span class="p">(</span><span class="o">**</span><span class="n">scalarbar_dict</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">vobj</span>
+
+
+<span class="k">def</span> <span class="nf">_trimesh_showable</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="nf">_matplotlib_showable</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+
+<div class="viewcode-block" id="make_showable"><a class="viewcode-back" href="../../gustaf.html#gustaf.show.make_showable">[docs]</a><span class="k">def</span> <span class="nf">make_showable</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">settings</span><span class="o">.</span><span class="n">VISUALIZATION_BACKEND</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Since gustaf does not natively support visualization, one of the</span>
+<span class="sd">    following library is used to visualize gustaf (visualizable) objects: (1)</span>
+<span class="sd">    vedo -&gt; Fast, offers a lot of features (2) trimesh -&gt; Fast, compatible with</span>
+<span class="sd">    old opengl (3) matplotlib -&gt; Slow, offers vector graphics.</span>
+
+<span class="sd">    This determines showing types using `whatami`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    obj: gustaf-objects</span>
+<span class="sd">    backend: str</span>
+<span class="sd">      (Optional) Default is `gustaf.settings.VISUALIZATION_BACKEND`.</span>
+<span class="sd">      Options are: &quot;vedo&quot; | &quot;trimesh&quot; | &quot;matplotlib&quot;</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    showalbe_objs: list</span>
+<span class="sd">      List of showable objects.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">backend</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;vedo&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">_vedo_showable</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">backend</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;trimesh&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">_trimesh_showable</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">backend</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;matplotlib&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">_matplotlib_showable</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+
+<span class="c1"># possibly relocate</span>
+<div class="viewcode-block" id="interpolate_vedo_dictcam"><a class="viewcode-back" href="../../gustaf.html#gustaf.show.interpolate_vedo_dictcam">[docs]</a><span class="k">def</span> <span class="nf">interpolate_vedo_dictcam</span><span class="p">(</span><span class="n">cameras</span><span class="p">,</span> <span class="n">resolutions</span><span class="p">,</span> <span class="n">spline_degree</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Interpolate between vedo dict cameras.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ------------</span>
+<span class="sd">    cameras: list or tuple</span>
+<span class="sd">    resolutions: int</span>
+<span class="sd">    spline_degree: int</span>
+<span class="sd">      if &gt; 1 and splinepy is available and there are more than two cameras,</span>
+<span class="sd">      we interpolate all the entries using spline.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    interpolated_cams: list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">splinepy</span>
+        <span class="n">spp</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="n">spp</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="c1"># quick type check loop</span>
+    <span class="n">camkeys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="s2">&quot;focalPoint&quot;</span><span class="p">,</span> <span class="s2">&quot;viewup&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">,</span> <span class="s2">&quot;clippingRange&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">cam</span> <span class="ow">in</span> <span class="n">cameras</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cam</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Only `dict` description of vedo cam is allowed.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">camkeys</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">cam</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                            <span class="sa">f</span><span class="s2">&quot;One of the camera does not contain `</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">` info&quot;</span>
+                    <span class="p">)</span>
+
+    <span class="n">interpolated_cams</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">total_cams</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">resolutions</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cameras</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">spp</span> <span class="ow">and</span> <span class="n">spline_degree</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">cameras</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">spline_degree</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">cameras</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Not enough camera to interpolate with &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;spline degree </span><span class="si">{</span><span class="n">spline_degree</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">ps</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">fs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">vs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ds</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">cs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">cam</span> <span class="ow">in</span> <span class="n">cameras</span><span class="p">:</span>
+            <span class="n">ps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">cam</span><span class="p">[</span><span class="n">camkeys</span><span class="p">[</span><span class="mi">0</span><span class="p">]]))</span>
+            <span class="n">fs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">cam</span><span class="p">[</span><span class="n">camkeys</span><span class="p">[</span><span class="mi">1</span><span class="p">]]))</span>
+            <span class="n">vs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">cam</span><span class="p">[</span><span class="n">camkeys</span><span class="p">[</span><span class="mi">2</span><span class="p">]]))</span>
+            <span class="n">ds</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="nb">float</span><span class="p">(</span><span class="n">cam</span><span class="p">[</span><span class="n">camkeys</span><span class="p">[</span><span class="mi">3</span><span class="p">]])])</span>
+            <span class="n">cs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">cam</span><span class="p">[</span><span class="n">camkeys</span><span class="p">[</span><span class="mi">4</span><span class="p">]]))</span>
+
+        <span class="n">interpolated</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">prop</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="n">ps</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">vs</span><span class="p">,</span> <span class="n">ds</span><span class="p">,</span> <span class="n">cs</span><span class="p">]):</span>
+            <span class="n">ispline</span> <span class="o">=</span> <span class="n">splinepy</span><span class="o">.</span><span class="n">BSpline</span><span class="p">()</span>
+            <span class="n">ispline</span><span class="o">.</span><span class="n">interpolate_curve</span><span class="p">(</span>
+                    <span class="n">query_points</span><span class="o">=</span><span class="n">prop</span><span class="p">,</span>
+                    <span class="n">degree</span><span class="o">=</span><span class="n">spline_degree</span><span class="p">,</span>
+                    <span class="n">save_query</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">interpolated</span><span class="p">[</span><span class="n">camkeys</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">ispline</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="n">total_cams</span><span class="p">])</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total_cams</span><span class="p">):</span>
+            <span class="n">interpolated_cams</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="p">{</span>
+                            <span class="n">camkeys</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">interpolated</span><span class="p">[</span><span class="n">camkeys</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+                            <span class="n">camkeys</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">interpolated</span><span class="p">[</span><span class="n">camkeys</span><span class="p">[</span><span class="mi">1</span><span class="p">]][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+                            <span class="n">camkeys</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">interpolated</span><span class="p">[</span><span class="n">camkeys</span><span class="p">[</span><span class="mi">2</span><span class="p">]][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+                            <span class="n">camkeys</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span>
+                            <span class="n">interpolated</span><span class="p">[</span><span class="n">camkeys</span><span class="p">[</span><span class="mi">3</span><span class="p">]][</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>  <span class="c1"># float?</span>
+                            <span class="n">camkeys</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">interpolated</span><span class="p">[</span><span class="n">camkeys</span><span class="p">[</span><span class="mi">4</span><span class="p">]][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+                    <span class="p">}</span>
+            <span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">startcam</span><span class="p">,</span> <span class="n">endcam</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">cameras</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">cameras</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">interpolated</span> <span class="o">=</span> <span class="p">[</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span>
+                                <span class="n">startcam</span><span class="p">[</span><span class="n">ckeys</span><span class="p">],</span>
+                                <span class="n">endcam</span><span class="p">[</span><span class="n">ckeys</span><span class="p">],</span>
+                                <span class="n">resolutions</span><span class="p">,</span>
+                        <span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="k">for</span> <span class="n">ckeys</span> <span class="ow">in</span> <span class="n">camkeys</span>
+                <span class="p">]</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">interpolated</span> <span class="o">=</span> <span class="p">[</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span>
+                                <span class="n">startcam</span><span class="p">[</span><span class="n">ckeys</span><span class="p">],</span>
+                                <span class="n">endcam</span><span class="p">[</span><span class="n">ckeys</span><span class="p">],</span>
+                                <span class="nb">int</span><span class="p">(</span><span class="n">resolutions</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+                        <span class="p">)[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="k">for</span> <span class="n">ckeys</span> <span class="ow">in</span> <span class="n">camkeys</span>
+                <span class="p">]</span>
+
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">resolutions</span><span class="p">):</span>
+                <span class="n">interpolated_cams</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                        <span class="p">{</span>
+                                <span class="n">camkeys</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">interpolated</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">],</span>
+                                <span class="n">camkeys</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">interpolated</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">],</span>
+                                <span class="n">camkeys</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">interpolated</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="n">j</span><span class="p">],</span>
+                                <span class="n">camkeys</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">interpolated</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="n">j</span><span class="p">],</span>  <span class="c1"># float?</span>
+                                <span class="n">camkeys</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">interpolated</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="n">j</span><span class="p">],</span>
+                        <span class="p">}</span>
+                <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">interpolated_cams</span></div>
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="clearer"></div>
+    </div>
+    <div class="button_nav_wrapper">
+        <div class="button_nav">
+            <div class="left">
+                
+            </div>
+
+            <div class="right">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Jaewook Lee.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+
+<p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>
+  </body>
+</html>

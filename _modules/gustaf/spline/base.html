@@ -1,0 +1,949 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gustaf.spline.base &#8212; gustaf 0.0.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/basic_mod.css?v=0.7.0-1" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <script src="../../../_static/js/petite-vue.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+  </head><body data-dark_mode_code_blocks="true">
+
+<div id="top_nav">
+    
+
+    <nav>
+        
+            
+        
+
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="../../../index.html" title="Go to homepage">gustaf 0.0.3 documentation</a></h1>
+
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="../../../search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
+            
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><ul>
+<li class="toctree-l1"><a class="reference external" href="http://github.com/tataratat/gustaf">Github</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../CONTRIBUTING.html">Contiributing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">API references</a></li>
+</ul>
+
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for gustaf.spline.base</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;gustaf/spline/base.py.</span>
+
+<span class="sd">Base for splines. Contains show and inherited classes from `spline`.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">abc</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">import</span> <span class="nn">splinepy</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">gustaf</span> <span class="kn">import</span> <span class="n">settings</span>
+<span class="kn">from</span> <span class="nn">gustaf</span> <span class="kn">import</span> <span class="n">show</span> <span class="k">as</span> <span class="n">showmodule</span>
+<span class="kn">from</span> <span class="nn">gustaf._base</span> <span class="kn">import</span> <span class="n">GustafBase</span>
+<span class="kn">from</span> <span class="nn">gustaf.vertices</span> <span class="kn">import</span> <span class="n">Vertices</span>
+<span class="kn">from</span> <span class="nn">gustaf.spline.create</span> <span class="kn">import</span> <span class="n">Creator</span>
+<span class="kn">from</span> <span class="nn">gustaf.spline.extract</span> <span class="kn">import</span> <span class="n">Extractor</span>
+<span class="kn">from</span> <span class="nn">gustaf.spline.proximity</span> <span class="kn">import</span> <span class="n">Proximity</span>
+<span class="kn">from</span> <span class="nn">gustaf.spline._utils</span> <span class="kn">import</span> <span class="n">to_res_list</span>
+
+
+<div class="viewcode-block" id="show"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.show">[docs]</a><span class="k">def</span> <span class="nf">show</span><span class="p">(</span>
+        <span class="n">spline</span><span class="p">,</span>
+        <span class="n">resolutions</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+        <span class="n">control_points</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">knots</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">show_fitting_queries</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">return_discrete</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">return_showable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">backend</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="c1"># From here, | only relevant if &quot;vedo&quot; is backend.</span>
+        <span class="c1">#            V</span>
+        <span class="n">parametric_space</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">surface_alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">control_points_alpha</span><span class="o">=</span><span class="mf">.8</span><span class="p">,</span>
+        <span class="n">lighting</span><span class="o">=</span><span class="s2">&quot;glossy&quot;</span><span class="p">,</span>
+        <span class="n">control_point_ids</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">color_spline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># only required</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Shows splines with various options. They are excessively listed, so that</span>
+<span class="sd">    it can be adjustable.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    spline: BSpline or NURBS</span>
+<span class="sd">    resolutions: int or (spline.para_dim,) array-like</span>
+<span class="sd">    control_points: bool</span>
+<span class="sd">    knots: bool</span>
+<span class="sd">    show_fitting_queries: bool</span>
+<span class="sd">    return_discrete: bool</span>
+<span class="sd">      Return dict of gustaf discrete objects, for example,</span>
+<span class="sd">      {Vertices, Edges, Faces}, instead of opening a window</span>
+<span class="sd">    return_showable: bool</span>
+<span class="sd">      Return dict of showable objects.</span>
+<span class="sd">    parametric_space: bool</span>
+<span class="sd">      Only relevant for `vedo` backend.</span>
+<span class="sd">    color: str</span>
+<span class="sd">      Default is None. Black for curves, else green.</span>
+<span class="sd">    surface_alpha: float</span>
+<span class="sd">      Only relevant for `vedo` backend. Effective range [0, 1].</span>
+<span class="sd">    lighting: str</span>
+<span class="sd">      Only relevant for `vedo` backend.</span>
+<span class="sd">    control_point_ids: bool</span>
+<span class="sd">    color_spline: str</span>
+<span class="sd">    cmap: str</span>
+<span class="sd">      Only relevant for `vedo` backend and color_spline is not None.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    things_to_show: dict</span>
+<span class="sd">      iff return_discrete==True, dict of gustaf objects that are showable.</span>
+<span class="sd">      iff return_showable==True, dict of backend objects that are showable.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Showing is only possible for following splines</span>
+    <span class="n">allowed_dim_combo</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+            <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+            <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+            <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+            <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span><span class="p">,</span> <span class="n">spline</span><span class="o">.</span><span class="n">dim</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed_dim_combo</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Sorry, can&#39;t show given spline.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># determine backend</span>
+    <span class="k">if</span> <span class="n">backend</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">backend</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">VISUALIZATION_BACKEND</span>
+
+    <span class="c1"># Prepare correct form of resolution input</span>
+    <span class="n">resolutions</span> <span class="o">=</span> <span class="n">to_res_list</span><span class="p">(</span><span class="n">resolutions</span><span class="p">,</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span><span class="p">)</span>
+
+    <span class="c1"># Prepare things to show dict.</span>
+    <span class="n">things_to_show</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="c1"># (discretized) spline itself with basic color scheme.</span>
+    <span class="k">if</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">sp</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">extract</span><span class="o">.</span><span class="n">edges</span><span class="p">(</span><span class="n">resolutions</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span>
+        <span class="n">sp</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">sp</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">extract</span><span class="o">.</span><span class="n">faces</span><span class="p">(</span><span class="n">resolutions</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;green&quot;</span>
+        <span class="n">sp</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+        <span class="c1"># If</span>
+
+    <span class="n">things_to_show</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">spline</span><span class="o">=</span><span class="n">sp</span><span class="p">)</span>
+
+    <span class="c1"># control_points = control mesh + control_points</span>
+    <span class="c1"># control mesh always takes unique edge representation.</span>
+    <span class="k">if</span> <span class="n">control_points</span><span class="p">:</span>
+        <span class="n">control_mesh</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">extract</span><span class="o">.</span><span class="n">control_mesh</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">control_mesh</span> <span class="o">=</span> <span class="n">control_mesh</span><span class="o">.</span><span class="n">toedges</span><span class="p">(</span><span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># Set alpha to &lt; 1, so that they don&#39;t &quot;overshadow&quot; spline</span>
+        <span class="n">control_mesh</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">control_points_alpha</span><span class="p">)</span>
+        <span class="n">things_to_show</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">control_mesh</span><span class="o">=</span><span class="n">control_mesh</span><span class="p">)</span>  <span class="c1"># mesh itself</span>
+        <span class="c1"># Add big vertices to emphasize cps.</span>
+        <span class="n">cps</span> <span class="o">=</span> <span class="n">control_mesh</span><span class="o">.</span><span class="n">tovertices</span><span class="p">()</span>
+        <span class="n">cps</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">control_points_alpha</span><span class="p">)</span>
+        <span class="n">things_to_show</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">control_points</span><span class="o">=</span><span class="n">cps</span><span class="p">)</span>  <span class="c1"># only points</span>
+
+    <span class="k">if</span> <span class="n">knots</span><span class="p">:</span>
+        <span class="c1"># Knot lines for non-curve splines.</span>
+        <span class="c1"># Knot for curves are only added for vedo backend.</span>
+        <span class="k">if</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">knot_lines</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">extract</span><span class="o">.</span><span class="n">edges</span><span class="p">(</span><span class="n">resolutions</span><span class="p">,</span> <span class="n">all_knots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">knot_lines</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+            <span class="n">things_to_show</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">knots</span><span class="o">=</span><span class="n">knot_lines</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">show_fitting_queries</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">spline</span><span class="p">,</span> <span class="s2">&quot;_fitting_queries&quot;</span><span class="p">):</span>
+        <span class="n">fitting_queries</span> <span class="o">=</span> <span class="n">Vertices</span><span class="p">(</span><span class="n">spline</span><span class="o">.</span><span class="n">_fitting_queries</span><span class="p">)</span>
+        <span class="n">fitting_queries</span><span class="o">.</span><span class="n">vis_dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">things_to_show</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">fitting_queries</span><span class="o">=</span><span class="n">fitting_queries</span><span class="p">)</span>
+
+    <span class="c1"># Return here, if backend is not vedo</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">backend</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;vedo&quot;</span><span class="p">):</span>
+        <span class="c1"># turn everything into backend showables</span>
+        <span class="k">if</span> <span class="n">return_showable</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">gusobj</span> <span class="ow">in</span> <span class="n">things_to_show</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">things_to_show</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">key</span><span class="p">:</span> <span class="n">gusobj</span><span class="o">.</span><span class="n">showable</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">)})</span>
+
+            <span class="k">return</span> <span class="n">things_to_show</span>
+
+        <span class="k">elif</span> <span class="n">return_discrete</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">things_to_show</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">showmodule</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">things_to_show</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="c1"># iff backend is vedo, we provide fancier visualization</span>
+    <span class="k">elif</span> <span class="n">backend</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;vedo&quot;</span><span class="p">):</span>
+        <span class="c1"># return if showable is not desired</span>
+        <span class="c1"># -&gt; From now on we will directly work on vedo objects.</span>
+        <span class="k">if</span> <span class="n">return_discrete</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">return_showable</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">things_to_show</span>
+
+        <span class="c1"># turn all gus objects into gus objects.</span>
+        <span class="n">vedo_things</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">gusobj</span> <span class="ow">in</span> <span class="n">things_to_show</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">vedo_things</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">key</span><span class="p">:</span> <span class="n">gusobj</span><span class="o">.</span><span class="n">showable</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">)})</span>
+
+        <span class="c1"># apply lighting</span>
+        <span class="k">if</span> <span class="n">lighting</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">vedo_things</span><span class="p">[</span><span class="s2">&quot;spline&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">lighting</span><span class="p">(</span><span class="n">lighting</span><span class="p">)</span>
+
+        <span class="c1"># adjust surface alpha</span>
+        <span class="k">if</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">vedo_things</span><span class="p">[</span><span class="s2">&quot;spline&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">alpha</span><span class="p">(</span><span class="n">surface_alpha</span><span class="p">)</span>
+
+        <span class="c1"># add red points for at control points</span>
+        <span class="k">if</span> <span class="n">control_points</span> <span class="ow">and</span> <span class="n">control_point_ids</span><span class="p">:</span>
+            <span class="n">vedo_things</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+                    <span class="n">control_point_ids</span><span class="o">=</span><span class="n">vedo_things</span><span class="p">[</span><span class="s2">&quot;control_points&quot;</span><span class="p">]</span><span class="o">.</span>
+                    <span class="n">labels</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="c1"># add knots as &quot;x&quot; for curves</span>
+        <span class="k">if</span> <span class="n">knots</span> <span class="ow">and</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">uks</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">unique_knots</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">phys_uks</span> <span class="o">=</span> <span class="n">showmodule</span><span class="o">.</span><span class="n">make_showable</span><span class="p">(</span>
+                    <span class="n">Vertices</span><span class="p">(</span><span class="n">spline</span><span class="o">.</span><span class="n">evaluate</span><span class="p">([[</span><span class="n">uk</span><span class="p">]</span> <span class="k">for</span> <span class="n">uk</span> <span class="ow">in</span> <span class="n">uks</span><span class="p">])),</span>
+                    <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">uks</span><span class="p">)</span>
+
+            <span class="n">vedo_things</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+                    <span class="n">knots</span><span class="o">=</span><span class="n">phys_uks</span><span class="o">.</span><span class="n">labels</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="c1"># generate parametric view of spline</span>
+        <span class="k">if</span> <span class="n">parametric_space</span> <span class="ow">and</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">vedo.addons</span> <span class="kn">import</span> <span class="n">Axes</span>
+            <span class="kn">from</span> <span class="nn">gustaf.create.spline</span> <span class="kn">import</span> <span class="n">parametric_view</span>
+            <span class="kn">from</span> <span class="nn">gustaf.utils.arr</span> <span class="kn">import</span> <span class="n">bounds</span>
+
+            <span class="n">para_spline</span> <span class="o">=</span> <span class="n">parametric_view</span><span class="p">(</span><span class="n">spline</span><span class="p">)</span>
+            <span class="n">para_showables</span> <span class="o">=</span> <span class="n">show</span><span class="p">(</span>
+                    <span class="n">para_spline</span><span class="p">,</span>
+                    <span class="n">control_points</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">return_showable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">lighting</span><span class="o">=</span><span class="n">lighting</span><span class="p">,</span>
+                    <span class="n">knots</span><span class="o">=</span><span class="n">knots</span><span class="p">,</span>
+                    <span class="n">parametric_space</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="c1"># Make lines a bit thicker</span>
+            <span class="k">if</span> <span class="n">knots</span><span class="p">:</span>
+                <span class="n">para_showables</span><span class="p">[</span><span class="s2">&quot;knots&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">lw</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+
+            <span class="c1"># Trick to show begin/end value</span>
+            <span class="n">bs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">bounds</span><span class="p">(</span><span class="n">para_showables</span><span class="p">[</span><span class="s2">&quot;spline&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">points</span><span class="p">()))</span>
+            <span class="n">bs_diff_001</span> <span class="o">=</span> <span class="p">(</span><span class="n">bs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">bs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="mf">0.001</span>
+            <span class="n">lowerb</span> <span class="o">=</span> <span class="n">bs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">bs_diff_001</span>
+            <span class="n">upperb</span> <span class="o">=</span> <span class="n">bs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">bs_diff_001</span>
+
+            <span class="n">axes_config</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+                    <span class="n">xtitle</span><span class="o">=</span><span class="s2">&quot;u&quot;</span><span class="p">,</span>
+                    <span class="n">ytitle</span><span class="o">=</span><span class="s2">&quot;v&quot;</span><span class="p">,</span>
+                    <span class="n">xrange</span><span class="o">=</span><span class="p">[</span><span class="n">lowerb</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">upperb</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span>
+                    <span class="n">yrange</span><span class="o">=</span><span class="p">[</span><span class="n">lowerb</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">upperb</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span>
+                    <span class="n">tipSize</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                    <span class="n">xMinorTicks</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                    <span class="n">yMinorTicks</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                    <span class="n">xyGrid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">yzGrid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">axes_config</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">ztitle</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+                <span class="n">axes_config</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">zrange</span><span class="o">=</span><span class="p">[</span><span class="n">lowerb</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">upperb</span><span class="p">[</span><span class="mi">2</span><span class="p">]])</span>
+                <span class="n">axes_config</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">zMinorTicks</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+                <span class="n">axes_config</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">zxGrid</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+            <span class="n">para_showables</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+                    <span class="n">axes</span><span class="o">=</span><span class="n">Axes</span><span class="p">(</span><span class="n">para_showables</span><span class="p">[</span><span class="s2">&quot;spline&quot;</span><span class="p">],</span> <span class="o">**</span><span class="n">axes_config</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="c1"># showable return</span>
+        <span class="k">if</span> <span class="n">return_showable</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">parametric_space</span><span class="p">:</span>
+                <span class="n">vedo_things</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">parametric_spline</span><span class="o">=</span><span class="n">para_showables</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">vedo_things</span>
+
+        <span class="c1"># now, show</span>
+        <span class="k">if</span> <span class="n">parametric_space</span><span class="p">:</span>
+            <span class="n">para_showables</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Parametric View&quot;</span><span class="p">)</span>
+            <span class="n">vedo_things</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Physical View&quot;</span><span class="p">)</span>
+            <span class="n">plt</span> <span class="o">=</span> <span class="n">showmodule</span><span class="o">.</span><span class="n">show_vedo</span><span class="p">(</span><span class="n">para_showables</span><span class="p">,</span> <span class="n">vedo_things</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plt</span> <span class="o">=</span> <span class="n">showmodule</span><span class="o">.</span><span class="n">show_vedo</span><span class="p">(</span><span class="n">vedo_things</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">plt</span></div>
+
+
+<div class="viewcode-block" id="GustafSpline"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.GustafSpline">[docs]</a><span class="k">class</span> <span class="nc">GustafSpline</span><span class="p">(</span><span class="n">GustafBase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="GustafSpline.__init__"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.GustafSpline.__init__">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Contructor as abstractmethod.</span>
+
+<span class="sd">        This needs to be inherited first to make sure duplicating</span>
+<span class="sd">        functions properly override splinepy.Spline</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">extract</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns spline extracter. Can directly perform extractions available</span>
+<span class="sd">        at `gustaf/spline/extract.py`. For more info, take a look at</span>
+<span class="sd">        `gustaf/spline/extract.py`: Extracter.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        ---------</span>
+<span class="sd">        &gt;&gt;&gt; splinefaces = spline.extract.faces()</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        spline_extracter: Extracter</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extractor</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns spline creator Can be used to create new splines using</span>
+<span class="sd">        geometric relations.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; prism = spline.create.extrude(axis=[1,4,1])</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        spline.Creator</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_creator</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">proximity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns spline proximity helper. Can directly perform proximity</span>
+<span class="sd">        queries available at `gustaf/spline/proximity.py`. For more info, take</span>
+<span class="sd">        a look at `gustaf/spline/proximity.py`: Proximity.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        ---------</span>
+<span class="sd">        &gt;&gt;&gt; closest_cp_ids = spline.proximity.closest_control_points(queries)</span>
+<span class="sd">        &gt;&gt;&gt; closest_cp_ids, distances =\</span>
+<span class="sd">        ...    spline.proximity.closest_control_points(</span>
+<span class="sd">        ...       queries,</span>
+<span class="sd">        ...       return_distances=True</span>
+<span class="sd">        ...    )</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        spline_proximity: Proximity</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_proximity</span>
+
+<div class="viewcode-block" id="GustafSpline.show"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.GustafSpline.show">[docs]</a>    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Equivalent to `gustaf.spline.base.show(**kwrags)`&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GustafSpline.showable"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.GustafSpline.showable">[docs]</a>    <span class="k">def</span> <span class="nf">showable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Equivalent to</span>
+<span class="sd">        `gustaf.spline.base.show(return_showable=True,**kwargs)`&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">return_showable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="GustafSpline.copy"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.GustafSpline.copy">[docs]</a>    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">todict</span><span class="p">())</span></div></div>
+
+
+<div class="viewcode-block" id="Bezier"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.Bezier">[docs]</a><span class="k">class</span> <span class="nc">Bezier</span><span class="p">(</span><span class="n">GustafSpline</span><span class="p">,</span> <span class="n">splinepy</span><span class="o">.</span><span class="n">Bezier</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Bezier.__init__"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.Bezier.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">degrees</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">control_points</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">spline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Bezier of gustaf. Inherited from splinepy.Bezier and GustafSpline.</span>
+
+<span class="sd">        Attributes</span>
+<span class="sd">        -----------</span>
+<span class="sd">        extract: Extractor</span>
+<span class="sd">        create: Creator</span>
+<span class="sd">        proximity: Proximity</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        degrees: (para_dim,) list-like</span>
+<span class="sd">        control_points: (m, dim) list-like</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">splinepy</span><span class="o">.</span><span class="n">Bezier</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+                <span class="n">degrees</span><span class="o">=</span><span class="n">degrees</span><span class="p">,</span> <span class="n">control_points</span><span class="o">=</span><span class="n">control_points</span><span class="p">,</span> <span class="n">spline</span><span class="o">=</span><span class="n">spline</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_extractor</span> <span class="o">=</span> <span class="n">Extractor</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_proximity</span> <span class="o">=</span> <span class="n">Proximity</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_creator</span> <span class="o">=</span> <span class="n">Creator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">bezier</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns same parametric representation as Bezier Spline.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        same : Bezier</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">rationalbezier</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns same parametric representation as Rational Bezier Spline.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        same : RationalBezier</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">RationalBezier</span><span class="p">(</span>
+                <span class="n">degrees</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">degrees</span><span class="p">,</span>
+                <span class="n">control_points</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">control_points</span><span class="p">,</span>
+                <span class="n">weights</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">control_points</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">bspline</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns same parametric representation as BSpline.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        same_bspline : BSpline</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">BSpline</span><span class="p">(</span>
+                <span class="n">degrees</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">degrees</span><span class="p">,</span>
+                <span class="n">control_points</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">control_points</span><span class="p">,</span>
+                <span class="n">knot_vectors</span><span class="o">=</span><span class="p">[</span>
+                        <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">degrees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                        <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">degrees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">para_dim</span><span class="p">)</span>
+                <span class="p">]</span>
+        <span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nurbs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns same parametric representation as nurbs.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        same_nurbs: NURBS</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bspline</span><span class="o">.</span><span class="n">nurbs</span></div>
+
+
+<div class="viewcode-block" id="RationalBezier"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.RationalBezier">[docs]</a><span class="k">class</span> <span class="nc">RationalBezier</span><span class="p">(</span><span class="n">GustafSpline</span><span class="p">,</span> <span class="n">splinepy</span><span class="o">.</span><span class="n">RationalBezier</span><span class="p">):</span>
+
+<div class="viewcode-block" id="RationalBezier.__init__"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.RationalBezier.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">degrees</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">control_points</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">spline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Rational Bezier of gustaf. Inherited from splinepy.RationalBezier</span>
+<span class="sd">        and GustafSpline.</span>
+
+<span class="sd">        Attributes</span>
+<span class="sd">        -----------</span>
+<span class="sd">        extract: Extractor</span>
+<span class="sd">        create: Creator</span>
+<span class="sd">        proximity: Proximity</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        degrees: (para_dim,) list-like</span>
+<span class="sd">        control_points: (m, dim) list-like</span>
+<span class="sd">        weights : (m) list-like</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">splinepy</span><span class="o">.</span><span class="n">RationalBezier</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+                <span class="n">degrees</span><span class="o">=</span><span class="n">degrees</span><span class="p">,</span>
+                <span class="n">control_points</span><span class="o">=</span><span class="n">control_points</span><span class="p">,</span>
+                <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">,</span>
+                <span class="n">spline</span><span class="o">=</span><span class="n">spline</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_extractor</span> <span class="o">=</span> <span class="n">Extractor</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_proximity</span> <span class="o">=</span> <span class="n">Proximity</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_creator</span> <span class="o">=</span> <span class="n">Creator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">rationalbezier</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns same parametric representation as Rational Bezier Spline.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        same : RationalBezier</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nurbs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns same parametric representation as nurbs.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        same_nurbs: NURBS</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">NURBS</span><span class="p">(</span>
+                <span class="n">degrees</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">degrees</span><span class="p">,</span>
+                <span class="n">control_points</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">control_points</span><span class="p">,</span>
+                <span class="n">knot_vectors</span><span class="o">=</span><span class="p">[</span>
+                        <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">degrees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                        <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">degrees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">para_dim</span><span class="p">)</span>
+                <span class="p">],</span>
+                <span class="n">weights</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">weights</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BSpline"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.BSpline">[docs]</a><span class="k">class</span> <span class="nc">BSpline</span><span class="p">(</span><span class="n">GustafSpline</span><span class="p">,</span> <span class="n">splinepy</span><span class="o">.</span><span class="n">BSpline</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BSpline.__init__"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.BSpline.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">degrees</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">knot_vectors</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">control_points</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">spline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;BSpline of gustaf. Inherited from splinepy.BSpline and GustafSpline.</span>
+
+<span class="sd">        Attributes</span>
+<span class="sd">        -----------</span>
+<span class="sd">        extract: Extractor</span>
+<span class="sd">        create: Creator</span>
+<span class="sd">        proximity: Proximity</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        degrees: (para_dim,) list-like</span>
+<span class="sd">        knot_vectors: (para_dim, ...) list</span>
+<span class="sd">        control_points: (m, dim) list-like</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">splinepy</span><span class="o">.</span><span class="n">BSpline</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+                <span class="n">degrees</span><span class="o">=</span><span class="n">degrees</span><span class="p">,</span>
+                <span class="n">knot_vectors</span><span class="o">=</span><span class="n">knot_vectors</span><span class="p">,</span>
+                <span class="n">control_points</span><span class="o">=</span><span class="n">control_points</span><span class="p">,</span>
+                <span class="n">spline</span><span class="o">=</span><span class="n">spline</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_extractor</span> <span class="o">=</span> <span class="n">Extractor</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_proximity</span> <span class="o">=</span> <span class="n">Proximity</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_creator</span> <span class="o">=</span> <span class="n">Creator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">bspline</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns same parametric representation as BSpline.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        same_bspline : BSpline</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nurbs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns same nurbs. Overwrites one from splinepy to return correct</span>
+<span class="sd">        type.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        same_nurbs: NURBS</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+
+        <span class="k">return</span> <span class="n">NURBS</span><span class="p">(</span>
+                <span class="n">degrees</span><span class="o">=</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">degrees</span><span class="p">),</span>
+                <span class="n">knot_vectors</span><span class="o">=</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">knot_vectors</span><span class="p">),</span>
+                <span class="n">control_points</span><span class="o">=</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">control_points</span><span class="p">),</span>
+                <span class="c1"># fix dtype to match splinepy&#39;s dtype.</span>
+                <span class="n">weights</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">control_points</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float64&quot;</span><span class="p">)</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="BSpline.extract_bezier_patches"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.BSpline.extract_bezier_patches">[docs]</a>    <span class="k">def</span> <span class="nf">extract_bezier_patches</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Overwrites splinepy-parent&#39;s function to ensure the conversion of</span>
+<span class="sd">        Splines into a usable gustaf format.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;Functionality not supported, please use:</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="s2">&quot;&lt;BSpline&gt;.extract.beziers()&quot;</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span></div></div>
+
+
+<div class="viewcode-block" id="NURBS"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.NURBS">[docs]</a><span class="k">class</span> <span class="nc">NURBS</span><span class="p">(</span><span class="n">GustafSpline</span><span class="p">,</span> <span class="n">splinepy</span><span class="o">.</span><span class="n">NURBS</span><span class="p">):</span>
+
+<div class="viewcode-block" id="NURBS.__init__"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.NURBS.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">degrees</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">knot_vectors</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">control_points</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">spline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;NURBS of gustaf. Inherited from splinepy.NURBS.</span>
+
+<span class="sd">        Attributes</span>
+<span class="sd">        -----------</span>
+<span class="sd">        extract: Extractor</span>
+<span class="sd">        create: Creator</span>
+<span class="sd">        proximity: Proximity</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        degrees: (para_dim,) list-like</span>
+<span class="sd">        knot_vectors: (para_dim,) list</span>
+<span class="sd">        control_points: (m, dim) list-like</span>
+<span class="sd">        weights: (m, 1) list-like</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">splinepy</span><span class="o">.</span><span class="n">NURBS</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+                <span class="n">degrees</span><span class="o">=</span><span class="n">degrees</span><span class="p">,</span>
+                <span class="n">knot_vectors</span><span class="o">=</span><span class="n">knot_vectors</span><span class="p">,</span>
+                <span class="n">control_points</span><span class="o">=</span><span class="n">control_points</span><span class="p">,</span>
+                <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">,</span>
+                <span class="n">spline</span><span class="o">=</span><span class="n">spline</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_extractor</span> <span class="o">=</span> <span class="n">Extractor</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_proximity</span> <span class="o">=</span> <span class="n">Proximity</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_creator</span> <span class="o">=</span> <span class="n">Creator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">_mfem_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns mfem index mapping. For ease of use.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                    <span class="s2">&quot;Sorry, only available for para_dim = 2 splines&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">gustaf2mfem</span><span class="p">,</span> <span class="n">mfem2gustaf</span> <span class="o">=</span> <span class="n">splinepy</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">mfem</span><span class="o">.</span><span class="n">mfem_index_mapping</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">para_dim</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">degrees</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">knot_vectors</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">gustaf2mfem</span><span class="p">,</span> <span class="n">mfem2gustaf</span>
+
+<div class="viewcode-block" id="NURBS.extract_bezier_patches"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.NURBS.extract_bezier_patches">[docs]</a>    <span class="k">def</span> <span class="nf">extract_bezier_patches</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Overwrites splinepy-parent&#39;s function to ensure the conversion of</span>
+<span class="sd">        Splines into a usable gustaf format.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;Functionality not supported, please use:</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="s2">&quot;&lt;NURBS&gt;.extract.beziers()&quot;</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nurbs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns same parametric representation as nurbs.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        same_nurbs: NURBS</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="from_mfem"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.from_mfem">[docs]</a><span class="k">def</span> <span class="nf">from_mfem</span><span class="p">(</span><span class="n">nurbs_dict</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Construct a gustaf NURBS. Reorganizes control points and weights.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    nurbs_dict: dict</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    nurbs: NURBS</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">m2gus</span> <span class="o">=</span> <span class="n">splinepy</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">mfem</span><span class="o">.</span><span class="n">mfem_index_mapping</span><span class="p">(</span>
+            <span class="nb">len</span><span class="p">(</span><span class="n">nurbs_dict</span><span class="p">[</span><span class="s2">&quot;degrees&quot;</span><span class="p">]),</span>
+            <span class="n">nurbs_dict</span><span class="p">[</span><span class="s2">&quot;degrees&quot;</span><span class="p">],</span>
+            <span class="n">nurbs_dict</span><span class="p">[</span><span class="s2">&quot;knot_vectors&quot;</span><span class="p">],</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">NURBS</span><span class="p">(</span>
+            <span class="n">degrees</span><span class="o">=</span><span class="n">nurbs_dict</span><span class="p">[</span><span class="s2">&quot;degrees&quot;</span><span class="p">],</span>
+            <span class="n">knot_vectors</span><span class="o">=</span><span class="n">nurbs_dict</span><span class="p">[</span><span class="s2">&quot;knot_vectors&quot;</span><span class="p">],</span>
+            <span class="n">control_points</span><span class="o">=</span><span class="n">nurbs_dict</span><span class="p">[</span><span class="s2">&quot;control_points&quot;</span><span class="p">][</span><span class="n">m2gus</span><span class="p">],</span>
+            <span class="n">weights</span><span class="o">=</span><span class="n">nurbs_dict</span><span class="p">[</span><span class="s2">&quot;weights&quot;</span><span class="p">][</span><span class="n">m2gus</span><span class="p">],</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="load_splines"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.base.load_splines">[docs]</a><span class="k">def</span> <span class="nf">load_splines</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Loads and creates gustaf NURBS. Does not perform any check or tests.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    fname: str</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    gussplines: list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># first get dict_splines using splinepy</span>
+    <span class="n">dictsplines</span> <span class="o">=</span> <span class="n">splinepy</span><span class="o">.</span><span class="n">load_splines</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">as_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># try to initialize with correct spline type</span>
+    <span class="n">gussplines</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">dics</span> <span class="ow">in</span> <span class="n">dictsplines</span><span class="p">:</span>
+        <span class="n">is_bspline</span> <span class="o">=</span> <span class="s2">&quot;knot_vectors&quot;</span> <span class="ow">in</span> <span class="n">dics</span>
+        <span class="n">is_nurbs</span> <span class="o">=</span> <span class="s2">&quot;weights&quot;</span> <span class="ow">in</span> <span class="n">dics</span>
+
+        <span class="k">if</span> <span class="n">is_nurbs</span><span class="p">:</span>
+            <span class="n">gussplines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">NURBS</span><span class="p">(</span><span class="o">**</span><span class="n">dics</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">is_bspline</span><span class="p">:</span>
+            <span class="n">gussplines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">BSpline</span><span class="p">(</span><span class="o">**</span><span class="n">dics</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">gussplines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Bezier</span><span class="p">(</span><span class="o">**</span><span class="n">dics</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">gussplines</span></div>
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="clearer"></div>
+    </div>
+    <div class="button_nav_wrapper">
+        <div class="button_nav">
+            <div class="left">
+                
+            </div>
+
+            <div class="right">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Jaewook Lee.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+
+<p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>
+  </body>
+</html>

@@ -1,0 +1,949 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>gustaf.utils &#8212; gustaf 0.0.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/basic_mod.css?v=0.7.0-1" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <script src="_static/js/petite-vue.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="gustaf.spline.microstructure.tiles" href="gustaf.spline.microstructure.tiles.html" />
+    <link href="_static/style.css" rel="stylesheet" type="text/css">
+
+  </head><body data-dark_mode_code_blocks="true">
+
+<div id="top_nav">
+    
+
+    <nav>
+        
+            
+        
+
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="index.html" title="Go to homepage">gustaf 0.0.3 documentation</a></h1>
+
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
+            
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><ul>
+<li class="toctree-l1"><a class="reference external" href="http://github.com/tataratat/gustaf">Github</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contiributing</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API references</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="gustaf.html">gustaf</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="gustaf.create.html">gustaf.create</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.helpers.html">gustaf.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.io.html">gustaf.io</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html">gustaf.spline</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">gustaf.utils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="gustaf-utils">
+<h1>gustaf.utils<a class="headerlink" href="#gustaf-utils" title="Permalink to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="module-gustaf.utils.arr">
+<span id="gustaf-utils-arr"></span><h2>gustaf.utils.arr<a class="headerlink" href="#module-gustaf.utils.arr" title="Permalink to this heading">¶</a></h2>
+<p>gustaf/gustaf/utils/arr.py.</p>
+<p>Useful functions for array / point operations. Named <cite>arr</cite>, since
+<cite>array</cite> is python library and it sounds funny.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.arr.bounds">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.arr.</span></span><span class="sig-name descname"><span class="pre">bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/arr.html#bounds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.arr.bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return bounds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>arr</strong> (<em>(</em><em>n</em><em>, </em><em>d</em><em>) </em><em>array-like</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>bounds</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(2, d) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.arr.bounds_diagonal">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.arr.</span></span><span class="sig-name descname"><span class="pre">bounds_diagonal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/arr.html#bounds_diagonal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.arr.bounds_diagonal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns diagonal vector of the bounds.</p>
+<p>bounds[1] - bounds[0]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>arr</strong> (<em>(</em><em>n</em><em>, </em><em>d</em><em>) </em><em>array-like</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>bounds_diagonal</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n,) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.arr.bounds_mean">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.arr.</span></span><span class="sig-name descname"><span class="pre">bounds_mean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/arr.html#bounds_mean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.arr.bounds_mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns mean of the bounds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>arr</strong> (<em>(</em><em>n</em><em>, </em><em>d</em><em>) </em><em>array-like</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>bounds_mean</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n,) array-like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.arr.bounds_norm">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.arr.</span></span><span class="sig-name descname"><span class="pre">bounds_norm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/arr.html#bounds_norm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.arr.bounds_norm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns norm of the bounds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>arr</strong> (<em>(</em><em>n</em><em>, </em><em>d</em><em>) </em><em>array-like</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>bounds_norm</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.arr.close_rows">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.arr.</span></span><span class="sig-name descname"><span class="pre">close_rows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/arr.html#close_rows"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.arr.close_rows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to unique_rows, but if data type is floats, use this one.
+Performs radius search using KDTree. Currently uses
+<cite>scipy.spatial.cKDTree</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> (<em>(</em><em>n</em><em>, </em><em>d</em><em>) </em><em>array-like</em>) – </p></li>
+<li><p><strong>tolerance</strong> (<em>(</em><em>float</em><em>)</em>) – Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>unique_arrays</strong> (<em>(n, d) np.ndarray</em>)</p></li>
+<li><p><strong>unique_ids</strong> (<em>(m) np.ndarray</em>)</p></li>
+<li><p><strong>inverse</strong> (<em>(n) np.ndarray</em>)</p></li>
+<li><p><strong>overlapping</strong> (<em>list(list)</em>) – id of neighbors within the tolerance.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.arr.is_one_of_shapes">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.arr.</span></span><span class="sig-name descname"><span class="pre">is_one_of_shapes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shapes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/arr.html#is_one_of_shapes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.arr.is_one_of_shapes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tuple/list of given shapes, iterates and checks with is_shape. Useful if
+you have multiple acceptable shapes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> (<em>np.ndarray</em>) – </p></li>
+<li><p><strong>shapes</strong> (<em>tuple</em><em> or </em><em>list</em>) – tuple/list of tuple/list</p></li>
+<li><p><strong>strict</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>matches</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.arr.is_shape">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.arr.</span></span><span class="sig-name descname"><span class="pre">is_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/arr.html#is_shape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.arr.is_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if arr matches given shape. shape can have negative numbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> (<em>np.ndarray</em>) – </p></li>
+<li><p><strong>shape</strong> (<em>tuple</em>) – </p></li>
+<li><p><strong>strict</strong> (<em>bool</em>) – raises ValueError if shapes do not match</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>matches</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.arr.make_c_contiguous">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.arr.</span></span><span class="sig-name descname"><span class="pre">make_c_contiguous</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/arr.html#make_c_contiguous"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.arr.make_c_contiguous" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make given array like object a c contiguous np.ndarray. dtype is
+optional. If None is given, just returns None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array</strong> (<em>array-like</em>) – </p></li>
+<li><p><strong>dtype</strong> (<em>type</em><em> or </em><em>str</em>) – (Optional) <cite>numpy</cite> interpretable type or str, describing type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>c_contiguous_array</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.arr.rotate">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.arr.</span></span><span class="sig-name descname"><span class="pre">rotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/arr.html#rotate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.arr.rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotates given arrays. Arrays shape[1] should equal to either 2 or 3 For
+more information, see <cite>rotation_matrix()</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> (<em>(</em><em>n</em><em>, </em><em>(</em><em>2</em><em> or </em><em>3</em><em>)</em><em>) </em><em>list-like</em>) – </p></li>
+<li><p><strong>rotation</strong> (<em>list</em><em> or </em><em>float</em>) – angle of rotation (around each axis)</p></li>
+<li><p><strong>rotation_axis</strong> (<em>(</em><em>n</em><em>, </em><em>(</em><em>2</em><em> or </em><em>3</em><em>)</em><em>) or </em><em>(</em><em>2</em><em> or </em><em>3</em><em>) </em><em>list-like</em>) – center of rotation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>rotated_points</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n, d) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.arr.rotation_matrix">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.arr.</span></span><span class="sig-name descname"><span class="pre">rotation_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/arr.html#rotation_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.arr.rotation_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute rotation matrix. Works for both 2D and 3D point sets. In 2D, it
+can rotate along the (virtual) z-axis. In 3D, it can rotate along [x, y,
+z]-axis. Uses <cite>scipy.spatial.transform.Rotation</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rotation</strong> (<em>list</em><em> or </em><em>float</em>) – Amount of rotation along [x,y,z] axis. Default is in degrees.
+In 2D, it can be float.</p></li>
+<li><p><strong>degree</strong> (<em>bool</em>) – (Optional) rotation given in degrees.
+Default is <cite>True</cite>. If <cite>False</cite>, in radian.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>rotation_matrix</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray (3,3)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.arr.rotation_matrix_around_axis">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.arr.</span></span><span class="sig-name descname"><span class="pre">rotation_matrix_around_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/arr.html#rotation_matrix_around_axis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.arr.rotation_matrix_around_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute rotation matrix given the axis of rotation. Works for both 2D
+and 3D Uses Rodrigues’ formula.</p>
+<p>If axis is not specified, 2D rotation matrix is assumed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axis</strong> (<em>list</em><em> or </em><em>np.ndarray</em>) – Axis of rotation in 3D</p></li>
+<li><p><strong>rotation</strong> (<em>float</em>) – angle of rotation in either radiant or degrees</p></li>
+<li><p><strong>degree</strong> (<em>bool</em>) – (Optional) rotation given in degrees.
+Default is <cite>True</cite>. If <cite>False</cite>, in radian.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>rotation_matrix</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray (3,3) of np.ndarray (2,2)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.arr.select_with_ranges">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.arr.</span></span><span class="sig-name descname"><span class="pre">select_with_ranges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ranges</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/arr.html#select_with_ranges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.arr.select_with_ranges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select array with ranges of each column. Always parsed as:</p>
+<p>[[greater_than, less_than], [….], …]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ranges</strong> (<em>(</em><em>d</em><em>, </em><em>2</em><em>) </em><em>array-like</em>) – Takes None.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ids</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n,) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.arr.unique_rows">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.arr.</span></span><span class="sig-name descname"><span class="pre">unique_rows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_inverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_counts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/arr.html#unique_rows"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.arr.unique_rows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find unique rows using np.unique, but apply tricks. Adapted from
+<cite>skimage.util.unique_rows</cite>.
+url: github.com/scikit-image/scikit-image/blob/main/skimage/util/unique.py/
+Suitable for int types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_arr</strong> (<em>(</em><em>n</em><em>, </em><em>m</em><em>) </em><em>2D array-like</em>) – </p></li>
+<li><p><strong>return_index</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>return_inverse</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>return_counts</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>dtype_name</strong> (<em>str</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>unique_arr</strong> (<em>(p, q) np.ndarray</em>)</p></li>
+<li><p><strong>unique_ind</strong> (<em>(w,) np.ndarray</em>)</p></li>
+<li><p><strong>unique_inv</strong> (<em>(t,) np.ndarray</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-gustaf.utils.connec">
+<span id="gustaf-utils-connec"></span><h2>gustaf.utils.connec<a class="headerlink" href="#module-gustaf.utils.connec" title="Permalink to this heading">¶</a></h2>
+<p>gustaf/gustaf/utils/connec.py.</p>
+<p>Useful functions for connectivity operation. Ranging from edges to
+volumes. Named connec because connectivity is too long. Would have been
+even cooler, if it was palindrome.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.connec.faces_to_edges">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.connec.</span></span><span class="sig-name descname"><span class="pre">faces_to_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">faces</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/connec.html#faces_to_edges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.connec.faces_to_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute edges based on following edge scheme.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ref</span><span class="p">:</span> <span class="p">(</span><span class="n">node_ind</span><span class="p">),</span> <span class="n">edge_ind</span>
+
+    <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+     <span class="o">/</span>\
+  <span class="mi">0</span> <span class="o">/</span>  \<span class="mi">2</span>
+   <span class="o">/</span><span class="n">____</span>\
+<span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="mi">1</span>   <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+      <span class="mi">2</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*-----*</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+   <span class="o">|</span>     <span class="o">|</span>
+ <span class="mi">3</span> <span class="o">|</span>     <span class="o">|</span> <span class="mi">1</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">*-----*</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+      <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Note: if <cite>edges</cite> index matter for tets, reorder it!</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>faces</strong> (<em>(</em><em>n</em><em>, </em><em>3</em><em>) or </em><em>(</em><em>n</em><em>, </em><em>4</em><em>) </em><em>np.ndarray</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>edges</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n * 3, 2) or (n * 4, 2) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.connec.hexa_to_quad">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.connec.</span></span><span class="sig-name descname"><span class="pre">hexa_to_quad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volumes</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/connec.html#hexa_to_quad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.connec.hexa_to_quad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes quad faces based on following index scheme.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Hexahedron</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        <span class="p">(</span><span class="mi">6</span><span class="p">)</span>    <span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+        <span class="o">*------*</span>
+        <span class="o">|</span>      <span class="o">|</span>
+ <span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">|</span> <span class="mi">3</span>    <span class="o">|</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>   <span class="p">(</span><span class="mi">7</span><span class="p">)</span>    <span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+ <span class="o">*------*------*------*------*</span>
+ <span class="o">|</span>      <span class="o">|</span>      <span class="o">|</span>      <span class="o">|</span>      <span class="o">|</span>
+ <span class="o">|</span> <span class="mi">2</span>    <span class="o">|</span> <span class="mi">0</span>    <span class="o">|</span> <span class="mi">4</span>    <span class="o">|</span> <span class="mi">5</span>    <span class="o">|</span>
+ <span class="o">*------*------*------*------*</span>
+ <span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">|</span>      <span class="o">|</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>   <span class="p">(</span><span class="mi">4</span><span class="p">)</span>    <span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="o">|</span> <span class="mi">1</span>    <span class="o">|</span>
+        <span class="o">*------*</span>
+        <span class="p">(</span><span class="mi">5</span><span class="p">)</span>    <span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">face_ind</span> <span class="o">|</span> <span class="n">node_ind</span>
+<span class="o">---------|----------</span>
+<span class="mi">0</span>        <span class="o">|</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">3</span> <span class="mi">2</span>
+<span class="mi">1</span>        <span class="o">|</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">5</span> <span class="mi">4</span>
+<span class="mi">2</span>        <span class="o">|</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">6</span> <span class="mi">5</span>
+<span class="mi">3</span>        <span class="o">|</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">7</span> <span class="mi">6</span>
+<span class="mi">4</span>        <span class="o">|</span> <span class="mi">3</span> <span class="mi">0</span> <span class="mi">4</span> <span class="mi">7</span>
+<span class="mi">5</span>        <span class="o">|</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>volumes</strong> (<em>(</em><em>n</em><em>, </em><em>8</em><em>) </em><em>np.ndarray</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>faces</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n * 8, 4) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.connec.make_hexa_volumes">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.connec.</span></span><span class="sig-name descname"><span class="pre">make_hexa_volumes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolutions</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/connec.html#make_hexa_volumes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.connec.make_hexa_volumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given number of nodes per each dimension, returns connectivity
+information of structured hexahedron elements. Counter clock wise
+connectivity.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="o">*-------*</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+     <span class="o">/|</span>      <span class="o">/|</span>
+    <span class="o">/</span> <span class="o">|</span> <span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="o">|</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">*-------*</span>  <span class="o">|</span>
+   <span class="o">|</span>  <span class="o">*----|--*</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+   <span class="o">|</span> <span class="o">/</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="o">|</span> <span class="o">/</span>
+   <span class="o">|/</span>      <span class="o">|/</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">*-------*</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>resolutions</strong> (<em>list</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>elements</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n, 8) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.connec.make_quad_faces">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.connec.</span></span><span class="sig-name descname"><span class="pre">make_quad_faces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolutions</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/connec.html#make_quad_faces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.connec.make_quad_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given number of nodes per each dimension, returns connectivity
+information of a structured mesh. Counter clock wise connectivity.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*------*</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+   <span class="o">|</span>      <span class="o">|</span>
+   <span class="o">|</span>      <span class="o">|</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">*------*</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>resolutions</strong> (<em>list</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>faces</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n, 4) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.connec.range_to_edges">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.connec.</span></span><span class="sig-name descname"><span class="pre">range_to_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">range_</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">closed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/connec.html#range_to_edges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.connec.range_to_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given range, for example (a, b), returns an edge sequence that
+sequentially connects indices. If int is given as range, it is considered
+as (0, value). Used to be called “closed/open_loop_index_train”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>range</strong> (<em>list</em><em>, </em><em>tuple</em><em>, or </em><em>int</em>) – </p></li>
+<li><p><strong>closed</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>edges</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n, 2) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.connec.sequence_to_edges">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.connec.</span></span><span class="sig-name descname"><span class="pre">sequence_to_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">closed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/connec.html#sequence_to_edges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.connec.sequence_to_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a sequence of int, “connect” to turn them into edges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>seq</strong> (<em>(</em><em>n</em><em>,</em><em>) </em><em>array-like</em>) – </p></li>
+<li><p><strong>closed</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>edges</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(m, 2) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.connec.sorted_unique">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.connec.</span></span><span class="sig-name descname"><span class="pre">sorted_unique</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connectivity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sorted_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/connec.html#sorted_unique"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.connec.sorted_unique" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given connectivity array, finds unique entries, based on its axis=1
+sorted values. Returned value will be sorted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>connectivity</strong> (<em>(</em><em>n</em><em>, </em><em>d</em><em>) </em><em>np.ndarray</em>) – </p></li>
+<li><p><strong>sorted</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>unique_info</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.Unique2DIntegers" title="gustaf.helpers.data.Unique2DIntegers">Unique2DIntegers</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.connec.subdivide_edges">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.connec.</span></span><span class="sig-name descname"><span class="pre">subdivide_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edges</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/connec.html#subdivide_edges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.connec.subdivide_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subdivide edges. We assume that mid point is newly added points.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Subdivided</span> <span class="pre">Edges</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Edges</span> <span class="p">(</span><span class="n">Lines</span><span class="p">)</span>
+
+<span class="n">Ref</span><span class="p">:</span> <span class="p">(</span><span class="n">node_ids</span><span class="p">),</span> <span class="n">edge_ids</span>
+
+<span class="p">(</span><span class="mi">0</span><span class="p">)</span>      <span class="p">(</span><span class="mi">2</span><span class="p">)</span>      <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+ <span class="o">*--------*--------*</span>
+
+<span class="n">edge_ids</span> <span class="o">|</span> <span class="n">node_ids</span>
+<span class="o">---------|----------</span>
+<span class="mi">0</span>        <span class="o">|</span> <span class="mi">0</span> <span class="mi">2</span>
+<span class="mi">1</span>        <span class="o">|</span> <span class="mi">2</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>edges</strong> (<em>(</em><em>n</em><em>, </em><em>2</em><em>) </em><em>np.ndarray</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>subd_edges</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n * 2, 2) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.connec.subdivide_quad">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.connec.</span></span><span class="sig-name descname"><span class="pre">subdivide_quad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/connec.html#subdivide_quad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.connec.subdivide_quad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subdivide quads.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<em>Mesh</em>) – </p></li>
+<li><p><strong>return_dict</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>new_vertices</strong> (<em>(n, d) np.ndarray</em>)</p></li>
+<li><p><strong>subd_faces</strong> (<em>(m, 4) np.ndarray</em>)</p></li>
+<li><p><strong>mesh_dict</strong> (<em>dict</em>) – iff <cite>return_dict=True</cite>,
+returns dict(vertices=new_vertices, faces=subd_faces).</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.connec.subdivide_tri">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.connec.</span></span><span class="sig-name descname"><span class="pre">subdivide_tri</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/connec.html#subdivide_tri"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.connec.subdivide_tri" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subdivide triangles. Each triangle is divided into 4 meshes.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Subdivided</span> <span class="pre">Faces</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Triangles</span>
+
+<span class="n">Ref</span><span class="p">:</span> <span class="p">(</span><span class="n">node_ind</span><span class="p">),</span> <span class="n">face_ind</span>
+
+         <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+             <span class="n">_</span><span class="o">/|</span>
+           <span class="n">_</span><span class="o">/</span> <span class="mi">0</span><span class="o">|</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="n">_</span><span class="o">/</span><span class="n">____</span><span class="o">|</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+       <span class="n">_</span><span class="o">/|</span>    <span class="o">/|</span>
+     <span class="n">_</span><span class="o">/</span> <span class="mi">1</span><span class="o">|</span> <span class="mi">3</span><span class="o">/</span> <span class="mi">2</span><span class="o">|</span>
+    <span class="o">/</span><span class="n">____</span><span class="o">|/</span><span class="n">____</span><span class="o">|</span>
+  <span class="p">(</span><span class="mi">1</span><span class="p">)</span>   <span class="p">(</span><span class="mi">4</span><span class="p">)</span>    <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">face_ind</span> <span class="o">|</span> <span class="n">node_ind</span>
+<span class="o">---------|----------</span>
+<span class="mi">0</span>        <span class="o">|</span> <span class="mi">0</span> <span class="mi">3</span> <span class="mi">5</span>
+<span class="mi">1</span>        <span class="o">|</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">3</span>
+<span class="mi">2</span>        <span class="o">|</span> <span class="mi">2</span> <span class="mi">5</span> <span class="mi">4</span>
+<span class="mi">3</span>        <span class="o">|</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<em>Mesh</em>) – </p></li>
+<li><p><strong>return_dict</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>new_vertices</strong> (<em>(n, d) np.ndarray</em>)</p></li>
+<li><p><strong>subd_faces</strong> (<em>(m, 3) np.ndarray</em>)</p></li>
+<li><p><strong>mesh_dict</strong> (<em>dict</em>) – iff <cite>return_dict=True</cite>,
+returns dict(vertices=new_vertices, faces=subd_faces).</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.connec.tet_to_tri">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.connec.</span></span><span class="sig-name descname"><span class="pre">tet_to_tri</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volumes</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/connec.html#tet_to_tri"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.connec.tet_to_tri" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes tri faces based on following index scheme.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Tetrahedron</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ref</span><span class="p">:</span> <span class="p">(</span><span class="n">node_ind</span><span class="p">),</span> <span class="n">face_ind</span>
+
+              <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+             <span class="n">_</span><span class="o">/|</span>
+           <span class="n">_</span><span class="o">/</span> <span class="mi">1</span><span class="o">|</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="n">_</span><span class="o">/</span><span class="n">____</span><span class="o">|</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+       <span class="n">_</span><span class="o">/|</span>    <span class="o">/|</span>
+     <span class="n">_</span><span class="o">/</span> <span class="mi">0</span><span class="o">|</span> <span class="mi">2</span><span class="o">/</span> <span class="mi">3</span><span class="o">|</span>
+    <span class="o">/</span><span class="n">____</span><span class="o">|/</span><span class="n">____</span><span class="o">|</span>
+  <span class="p">(</span><span class="mi">0</span><span class="p">)</span>   <span class="p">(</span><span class="mi">2</span><span class="p">)</span>    <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">face_ind</span> <span class="o">|</span> <span class="n">node_ind</span>
+<span class="o">---------|----------</span>
+<span class="mi">0</span>        <span class="o">|</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">1</span>
+<span class="mi">1</span>        <span class="o">|</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">0</span>
+<span class="mi">2</span>        <span class="o">|</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">1</span>
+<span class="mi">3</span>        <span class="o">|</span> <span class="mi">3</span> <span class="mi">2</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>volumes</strong> (<em>(</em><em>n</em><em>, </em><em>4</em><em>) </em><em>np.ndarray</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>faces</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n * 4, 3) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.connec.volumes_to_faces">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.connec.</span></span><span class="sig-name descname"><span class="pre">volumes_to_faces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volumes</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/connec.html#volumes_to_faces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.connec.volumes_to_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Guidance function for <cite>tet_to_tri</cite> and <cite>hexa_to_quad</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>volumes</strong> (<em>(</em><em>n</em><em>, </em><em>4</em><em>) or </em><em>(</em><em>m</em><em>, </em><em>8</em><em>) </em><em>np.ndarray</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>faces</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n*4, 3) or (m*6, 4) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-gustaf.utils.log">
+<span id="gustaf-utils-log"></span><h2>gustaf.utils.log<a class="headerlink" href="#module-gustaf.utils.log" title="Permalink to this heading">¶</a></h2>
+<p>gustaf/gustaf/utils/log.py.</p>
+<p>Thin logging wrapper.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.log.configure">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.log.</span></span><span class="sig-name descname"><span class="pre">configure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/log.html#configure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.log.configure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logging configurator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>debug</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>logfile</strong> (<em>str</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.log.debug">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.log.</span></span><span class="sig-name descname"><span class="pre">debug</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">log</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/log.html#debug"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.log.debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Debug logger.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>*log</strong> (<em>Tuple</em><em>[</em><em>str</em><em>]</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.log.info">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.log.</span></span><span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">log</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/log.html#info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.log.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Info logger.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>*log</strong> (<em>Tuple</em><em>[</em><em>str</em><em>]</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.utils.log.warning">
+<span class="sig-prename descclassname"><span class="pre">gustaf.utils.log.</span></span><span class="sig-name descname"><span class="pre">warning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">log</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/utils/log.html#warning"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.utils.log.warning" title="Permalink to this definition">¶</a></dt>
+<dd><p>warning logger.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>*log</strong> (<em>Tuple</em><em>[</em><em>str</em><em>]</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-gustaf.utils.tictoc">
+<span id="gustaf-utils-tictoc"></span><h2>gustaf.utils.tictoc<a class="headerlink" href="#module-gustaf.utils.tictoc" title="Permalink to this heading">¶</a></h2>
+<p>gustaf/gustaf/utils/tictoc.py.</p>
+<p>Timer that tics, tocs and logs.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+    
+        <div id="show_right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon"><</span><span>Page contents<span></a></p>
+        </div>
+
+        <div id="right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">></span><span>Page contents:<span></a></p>
+            <div class="page_toc">
+                <ul>
+<li><a class="reference internal" href="#">gustaf.utils</a><ul>
+<li><a class="reference internal" href="#module-gustaf.utils.arr">gustaf.utils.arr</a><ul>
+<li><a class="reference internal" href="#gustaf.utils.arr.bounds"><code class="docutils literal notranslate"><span class="pre">bounds()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.arr.bounds_diagonal"><code class="docutils literal notranslate"><span class="pre">bounds_diagonal()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.arr.bounds_mean"><code class="docutils literal notranslate"><span class="pre">bounds_mean()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.arr.bounds_norm"><code class="docutils literal notranslate"><span class="pre">bounds_norm()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.arr.close_rows"><code class="docutils literal notranslate"><span class="pre">close_rows()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.arr.is_one_of_shapes"><code class="docutils literal notranslate"><span class="pre">is_one_of_shapes()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.arr.is_shape"><code class="docutils literal notranslate"><span class="pre">is_shape()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.arr.make_c_contiguous"><code class="docutils literal notranslate"><span class="pre">make_c_contiguous()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.arr.rotate"><code class="docutils literal notranslate"><span class="pre">rotate()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.arr.rotation_matrix"><code class="docutils literal notranslate"><span class="pre">rotation_matrix()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.arr.rotation_matrix_around_axis"><code class="docutils literal notranslate"><span class="pre">rotation_matrix_around_axis()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.arr.select_with_ranges"><code class="docutils literal notranslate"><span class="pre">select_with_ranges()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.arr.unique_rows"><code class="docutils literal notranslate"><span class="pre">unique_rows()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-gustaf.utils.connec">gustaf.utils.connec</a><ul>
+<li><a class="reference internal" href="#gustaf.utils.connec.faces_to_edges"><code class="docutils literal notranslate"><span class="pre">faces_to_edges()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.connec.hexa_to_quad"><code class="docutils literal notranslate"><span class="pre">hexa_to_quad()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.connec.make_hexa_volumes"><code class="docutils literal notranslate"><span class="pre">make_hexa_volumes()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.connec.make_quad_faces"><code class="docutils literal notranslate"><span class="pre">make_quad_faces()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.connec.range_to_edges"><code class="docutils literal notranslate"><span class="pre">range_to_edges()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.connec.sequence_to_edges"><code class="docutils literal notranslate"><span class="pre">sequence_to_edges()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.connec.sorted_unique"><code class="docutils literal notranslate"><span class="pre">sorted_unique()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.connec.subdivide_edges"><code class="docutils literal notranslate"><span class="pre">subdivide_edges()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.connec.subdivide_quad"><code class="docutils literal notranslate"><span class="pre">subdivide_quad()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.connec.subdivide_tri"><code class="docutils literal notranslate"><span class="pre">subdivide_tri()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.connec.tet_to_tri"><code class="docutils literal notranslate"><span class="pre">tet_to_tri()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.connec.volumes_to_faces"><code class="docutils literal notranslate"><span class="pre">volumes_to_faces()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-gustaf.utils.log">gustaf.utils.log</a><ul>
+<li><a class="reference internal" href="#gustaf.utils.log.configure"><code class="docutils literal notranslate"><span class="pre">configure()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.log.debug"><code class="docutils literal notranslate"><span class="pre">debug()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.log.info"><code class="docutils literal notranslate"><span class="pre">info()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.utils.log.warning"><code class="docutils literal notranslate"><span class="pre">warning()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-gustaf.utils.tictoc">gustaf.utils.tictoc</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+    
+
+      <div class="clearer"></div>
+    </div>
+    <div class="button_nav_wrapper">
+        <div class="button_nav">
+            <div class="left">
+                
+                <a href="gustaf.spline.microstructure.tiles.html">
+                    <span class="icon"><</span><span>gustaf.spline.microstructure.tiles</span></a>
+                
+            </div>
+
+            <div class="right">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Jaewook Lee.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+
+<p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>
+  </body>
+</html>

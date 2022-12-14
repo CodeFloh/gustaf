@@ -1,0 +1,726 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gustaf.spline.microstructure.microstructure &#8212; gustaf 0.0.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/basic_mod.css?v=0.7.0-1" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <script src="../../../../_static/js/petite-vue.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+  </head><body data-dark_mode_code_blocks="true">
+
+<div id="top_nav">
+    
+
+    <nav>
+        
+            
+        
+
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="../../../../index.html" title="Go to homepage">gustaf 0.0.3 documentation</a></h1>
+
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="../../../../search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
+            
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><ul>
+<li class="toctree-l1"><a class="reference external" href="http://github.com/tataratat/gustaf">Github</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../CONTRIBUTING.html">Contiributing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modules.html">API references</a></li>
+</ul>
+
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for gustaf.spline.microstructure.microstructure</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">gustaf._base</span> <span class="kn">import</span> <span class="n">GustafBase</span>
+<span class="kn">from</span> <span class="nn">gustaf.spline</span> <span class="kn">import</span> <span class="n">base</span>
+
+
+<div class="viewcode-block" id="Microstructure"><a class="viewcode-back" href="../../../../gustaf.spline.microstructure.html#gustaf.spline.microstructure.microstructure.Microstructure">[docs]</a><span class="k">class</span> <span class="nc">Microstructure</span><span class="p">(</span><span class="n">GustafBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Helper class to facilitatae the construction of microstructures.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Microstructure.__init__"><a class="viewcode-back" href="../../../../gustaf.spline.microstructure.html#gustaf.spline.microstructure.microstructure.Microstructure.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">deformation_function</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">tiling</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">microtile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">parametrization_function</span><span class="o">=</span><span class="kc">None</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Helper class to facilitatae the construction of microstructures.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        deformation_function : spline</span>
+<span class="sd">          Outer function that describes the contour of the microstructured</span>
+<span class="sd">          geometry</span>
+<span class="sd">        tiling : list of integers</span>
+<span class="sd">          microtiles per parametric dimension</span>
+<span class="sd">        microtile : spline or list of splines</span>
+<span class="sd">          Representation of the building block defined in the unit cube</span>
+<span class="sd">        parametrization_function : Callable (optional)</span>
+<span class="sd">          Function to describe spline parameters</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">deformation_function</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">deformation_function</span> <span class="o">=</span> <span class="n">deformation_function</span>
+
+        <span class="k">if</span> <span class="n">tiling</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tiling</span> <span class="o">=</span> <span class="n">tiling</span>
+
+        <span class="k">if</span> <span class="n">microtile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">microtile</span> <span class="o">=</span> <span class="n">microtile</span>
+
+        <span class="k">if</span> <span class="n">parametrization_function</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parametrization_function</span> <span class="o">=</span> <span class="n">parametrization_function</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">deformation_function</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Deformation function defining the outer geometry (contour) of the</span>
+<span class="sd">        microstructure.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        deformation_function : spline</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_deformation_function&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deformation_function</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@deformation_function</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">deformation_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deformation_function</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Deformation function setter defining the outer geometry of the</span>
+<span class="sd">        microstructure. Must be spline type and as such inherit from</span>
+<span class="sd">        gustaf.GustafSpline.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        deformation_function : spline</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">issubclass</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">deformation_function</span><span class="p">),</span> <span class="n">base</span><span class="o">.</span><span class="n">GustafSpline</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Deformation function must be Gustaf-Spline.&quot;</span>
+                    <span class="s2">&quot; e.g. gustaf.NURBS&quot;</span>
+            <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_deformation_function</span> <span class="o">=</span> <span class="n">deformation_function</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sanity_check</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">tiling</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Number of microtiles per parametric dimension.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        tiling : list&lt;int&gt;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_tiling&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tiling</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@tiling</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">tiling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tiling</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Setter for the tiling attribute, defining the number of microtiles</span>
+<span class="sd">        per parametric dimension.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        tiling : int / list&lt;int&gt;</span>
+<span class="sd">          Number of tiles for each dimension respectively</span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tiling</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tiling</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="s2">&quot;Tiling mus be either list of integers of integer &quot;</span>
+                        <span class="s2">&quot;value&quot;</span>
+                <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_tiling</span> <span class="o">=</span> <span class="n">tiling</span>
+        <span class="c1"># Is defaulted to False using function arguments</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sanity_check</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_logd</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Successfully set tiling to : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">tiling</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">microtile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Microtile that is either a spline, a list of splines, or a class</span>
+<span class="sd">        that provides a `create_tile` function.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_microtile&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_microtile</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@microtile</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">microtile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">microtile</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Setter for microtile.</span>
+
+<span class="sd">        Microtile must be either a spline, a list of splines, or a class that</span>
+<span class="sd">        provides (at least) a `create_tile` function and a `dim` member.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        microtile : spline / list&lt;splines&gt; / user-object</span>
+<span class="sd">          arbitrary long list of splines that define the microtile</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># place single tiles into a list to provide common interface</span>
+        <span class="k">if</span> <span class="p">(</span>
+                <span class="nb">isinstance</span><span class="p">(</span><span class="n">microtile</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+                <span class="ow">or</span> <span class="nb">issubclass</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">microtile</span><span class="p">),</span> <span class="n">base</span><span class="o">.</span><span class="n">GustafSpline</span><span class="p">)</span>
+        <span class="p">):</span>
+            <span class="n">microtile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_microtilable</span><span class="p">(</span><span class="n">microtile</span><span class="p">)</span>
+        <span class="c1"># Assign Microtile object to member variable</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_microtile</span> <span class="o">=</span> <span class="n">microtile</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sanity_check</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">parametrization_function</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Function, that - if required - parametrizes the microtiles.</span>
+
+<span class="sd">        In order to use said function, the Microtile needs to provide a couple</span>
+<span class="sd">        of attributes:</span>
+
+<span class="sd">         - evaluation_points - a list of points defined in the unit cube</span>
+<span class="sd">           that will be evaluated in the parametrization function to provide</span>
+<span class="sd">           the required set of data points</span>
+<span class="sd">         - parameter_space_dimension - dimensionality of the parametrization</span>
+<span class="sd">           function and number of design variables for said microtile</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        parametrization_function : Callable</span>
+<span class="sd">          Function that descibes the local tile parameters</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_parametrization_function&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parametrization_function</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@parametrization_function</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">parametrization_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parametrization_function</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="n">parametrization_function</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;parametrization_function must be callable&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_parametrization_function</span> <span class="o">=</span> <span class="n">parametrization_function</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sanity_check</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Microstructure.create"><a class="viewcode-back" href="../../../../gustaf.spline.microstructure.html#gustaf.spline.microstructure.microstructure.Microstructure.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">closing_face</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">knot_span_wise</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a Microstructure.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        closing_face : string</span>
+<span class="sd">          If not None, Microtile must provide a function `closing_tile`</span>
+<span class="sd">          Represents coordinate to be a closed surface {&quot;x&quot;, &quot;y&quot;, &quot;z&quot;}</span>
+<span class="sd">        knot_span_wise : bool</span>
+<span class="sd">          Insertion per knotspan vs. total number per paradim</span>
+<span class="sd">        **kwargs</span>
+<span class="sd">          will be passed to `create_tile` function</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Microstructure : list&lt;spline&gt;</span>
+<span class="sd">          finished microstructure based on object requirements</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="kn">import</span> <span class="nn">itertools</span>
+
+        <span class="c1"># Check if all information is gathered</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sanity_check</span><span class="p">():</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Not enough information provided, abort&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Set default values</span>
+        <span class="k">if</span> <span class="n">knot_span_wise</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">knot_span_wise</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="c1"># check if user wants closed structure</span>
+        <span class="n">closing_face_dim</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">closing_face</span><span class="p">)</span>
+        <span class="n">is_closed</span> <span class="o">=</span> <span class="n">closing_face_dim</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_closed</span> <span class="ow">and</span> <span class="p">(</span><span class="n">closing_face</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Invalid format for closing_face argument, (handed: &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">closing_face</span><span class="si">}</span><span class="s2">), must be one of&quot;</span>
+                    <span class="s2">&quot;{&#39;x&#39;, &#39;y&#39;, &#39;z&#39;}&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">is_closed</span><span class="p">:</span>
+            <span class="n">is_closed</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">if</span> <span class="n">closing_face_dim</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deformation_function</span><span class="o">.</span><span class="n">para_dim</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="s2">&quot;closing face must be smaller than the deformation &quot;</span>
+                        <span class="s2">&quot;function&#39;s parametric dimension&quot;</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parametrization_function</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="s2">&quot;Faceclosure is currently only implemented for &quot;</span>
+                        <span class="s2">&quot;parametrized microstructures&quot;</span>
+                <span class="p">)</span>
+
+        <span class="c1"># Prepare the deformation function</span>
+        <span class="c1"># Transform into a non-uniform splinetype and make sure to work on copy</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deformation_function</span><span class="p">,</span> <span class="s2">&quot;bspline&quot;</span><span class="p">):</span>
+            <span class="n">deformation_function_copy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deformation_function</span><span class="o">.</span><span class="n">bspline</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">deformation_function_copy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deformation_function</span><span class="o">.</span><span class="n">nurbs</span>
+        <span class="c1"># Create Spline that will be used to iterate over parametric space</span>
+        <span class="n">ukvs</span> <span class="o">=</span> <span class="n">deformation_function_copy</span><span class="o">.</span><span class="n">unique_knots</span>
+        <span class="k">if</span> <span class="n">knot_span_wise</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i_pd</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">deformation_function_copy</span><span class="o">.</span><span class="n">para_dim</span><span class="p">):</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tiling</span><span class="p">[</span><span class="n">i_pd</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">inv_t</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">tiling</span><span class="p">[</span><span class="n">i_pd</span><span class="p">]</span>
+                <span class="n">new_knots</span> <span class="o">=</span> <span class="p">[</span>
+                        <span class="n">j</span> <span class="o">*</span> <span class="n">inv_t</span> <span class="o">*</span> <span class="p">(</span><span class="n">ukvs</span><span class="p">[</span><span class="n">i_pd</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">ukvs</span><span class="p">[</span><span class="n">i_pd</span><span class="p">][</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
+                        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ukvs</span><span class="p">[</span><span class="n">i_pd</span><span class="p">]))</span>
+                        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tiling</span><span class="p">[</span><span class="n">i_pd</span><span class="p">])</span>
+                <span class="p">]</span>
+                <span class="c1"># insert knots in both the deformation function</span>
+                <span class="n">deformation_function_copy</span><span class="o">.</span><span class="n">insert_knots</span><span class="p">(</span><span class="n">i_pd</span><span class="p">,</span> <span class="n">new_knots</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_logd</span><span class="p">(</span>
+                    <span class="s2">&quot;New knots will be inserted one by one with the objective&quot;</span>
+                    <span class="s2">&quot; to evenly distribute tiles within the parametric domain&quot;</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">i_pd</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">deformation_function_copy</span><span class="o">.</span><span class="n">para_dim</span><span class="p">):</span>
+                <span class="n">n_current_spans</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ukvs</span><span class="p">[</span><span class="n">i_pd</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tiling</span><span class="p">[</span><span class="n">i_pd</span><span class="p">]</span> <span class="o">==</span> <span class="n">n_current_spans</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">tiling</span><span class="p">[</span><span class="n">i_pd</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">n_current_spans</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_logw</span><span class="p">(</span>
+                            <span class="sa">f</span><span class="s2">&quot;The requested tiling can not be provided, as &quot;</span>
+                            <span class="sa">f</span><span class="s2">&quot;there are too many knotspans in the deformation&quot;</span>
+                            <span class="sa">f</span><span class="s2">&quot; function. The tiling in parametric dimension &quot;</span>
+                            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i_pd</span><span class="si">}</span><span class="s2"> will be set to </span><span class="si">{</span><span class="n">n_current_spans</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">tiling</span><span class="p">[</span><span class="n">i_pd</span><span class="p">]</span> <span class="o">=</span> <span class="n">n_current_spans</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># Determine new knots</span>
+                    <span class="n">n_k_span</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_current_spans</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+                    <span class="n">span_measure</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">ukvs</span><span class="p">[</span><span class="n">i_pd</span><span class="p">])</span>
+                    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tiling</span><span class="p">[</span><span class="n">i_pd</span><span class="p">]</span> <span class="o">-</span> <span class="n">n_current_spans</span><span class="p">):</span>
+                        <span class="n">add_knot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">span_measure</span><span class="p">)</span>
+                        <span class="n">n_k_span</span><span class="p">[</span><span class="n">add_knot</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                        <span class="n">span_measure</span><span class="p">[</span><span class="n">add_knot</span><span class="p">]</span> <span class="o">*=</span> <span class="n">n_k_span</span><span class="p">[</span><span class="n">add_knot</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span>
+                                <span class="n">n_k_span</span><span class="p">[</span><span class="n">add_knot</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+                        <span class="p">)</span>
+
+                    <span class="n">new_knots</span> <span class="o">=</span> <span class="p">[]</span>
+                    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">nks</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">n_k_span</span><span class="p">):</span>
+                        <span class="n">new_knots</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span>
+                                <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span>
+                                        <span class="n">ukvs</span><span class="p">[</span><span class="n">i_pd</span><span class="p">][</span><span class="n">i</span><span class="p">],</span> <span class="n">ukvs</span><span class="p">[</span><span class="n">i_pd</span><span class="p">][</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span>
+                                        <span class="n">nks</span> <span class="o">+</span> <span class="mi">2</span>
+                                <span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                        <span class="p">)</span>
+                    <span class="n">deformation_function_copy</span><span class="o">.</span><span class="n">insert_knots</span><span class="p">(</span><span class="n">i_pd</span><span class="p">,</span> <span class="n">new_knots</span><span class="p">)</span>
+
+        <span class="c1"># Bezier Extraction for composition</span>
+        <span class="n">def_fun_patches</span> <span class="o">=</span> <span class="n">deformation_function_copy</span><span class="o">.</span><span class="n">extract</span><span class="o">.</span><span class="n">beziers</span><span class="p">()</span>
+
+        <span class="c1"># Calculate parametric space representation for parametrized</span>
+        <span class="c1"># microstructures</span>
+        <span class="n">is_parametrized</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parametrization_function</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">is_parametrized</span><span class="p">:</span>
+            <span class="n">para_space_dimensions</span> <span class="o">=</span> <span class="p">[[</span><span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">u</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">ukvs</span><span class="p">]</span>
+            <span class="n">def_fun_para_space</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">Bezier</span><span class="p">(</span>
+                    <span class="n">degrees</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">deformation_function_copy</span><span class="o">.</span><span class="n">para_dim</span><span class="p">,</span>
+                    <span class="n">control_points</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+                            <span class="nb">list</span><span class="p">(</span>
+                                    <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span>
+                                            <span class="o">*</span><span class="n">para_space_dimensions</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                                    <span class="p">)</span>
+                            <span class="p">)</span>
+                    <span class="p">)[:,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">bspline</span>
+            <span class="k">for</span> <span class="n">i_pd</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">deformation_function_copy</span><span class="o">.</span><span class="n">para_dim</span><span class="p">):</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tiling</span><span class="p">[</span><span class="n">i_pd</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">def_fun_para_space</span><span class="o">.</span><span class="n">insert_knots</span><span class="p">(</span>
+                            <span class="n">i_pd</span><span class="p">,</span>
+                            <span class="n">deformation_function_copy</span><span class="o">.</span><span class="n">unique_knots</span><span class="p">[</span><span class="n">i_pd</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="p">)</span>
+            <span class="n">def_fun_para_space</span> <span class="o">=</span> <span class="n">def_fun_para_space</span><span class="o">.</span><span class="n">extract</span><span class="o">.</span><span class="n">beziers</span><span class="p">()</span>
+
+        <span class="c1"># Determine element resolution</span>
+        <span class="n">element_resolutions</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">deformation_function_copy</span><span class="o">.</span><span class="n">unique_knots</span>
+        <span class="p">]</span>
+
+        <span class="c1"># Start actual composition</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_microstructure</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">is_parametrized</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">def_fun</span><span class="p">,</span> <span class="n">def_fun_para</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span>
+                    <span class="nb">zip</span><span class="p">(</span><span class="n">def_fun_patches</span><span class="p">,</span> <span class="n">def_fun_para_space</span><span class="p">)</span>
+            <span class="p">):</span>
+                <span class="c1"># Evaluate tile parameters</span>
+                <span class="n">positions</span> <span class="o">=</span> <span class="n">def_fun_para</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_microtile</span><span class="o">.</span><span class="n">evaluation_points</span>
+                <span class="p">)</span>
+                <span class="n">tile_parameters</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parametrization_function</span><span class="p">(</span><span class="n">positions</span><span class="p">)</span>
+
+                <span class="c1"># Check if center or closing tile</span>
+                <span class="k">if</span> <span class="n">is_closed</span><span class="p">:</span>
+                    <span class="c1"># check index</span>
+                    <span class="n">index</span> <span class="o">=</span> <span class="n">i</span>
+                    <span class="k">for</span> <span class="n">ipd</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">closing_face_dim</span><span class="p">):</span>
+                        <span class="n">index</span> <span class="o">-=</span> <span class="n">index</span> <span class="o">%</span> <span class="n">element_resolutions</span><span class="p">[</span><span class="n">ipd</span><span class="p">]</span>
+                        <span class="n">index</span> <span class="o">/=</span> <span class="n">element_resolutions</span><span class="p">[</span><span class="n">ipd</span><span class="p">]</span>
+                    <span class="n">index</span> <span class="o">=</span> <span class="n">index</span> <span class="o">%</span> <span class="n">element_resolutions</span><span class="p">[</span><span class="n">closing_face_dim</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="c1"># Closure at minimum id</span>
+                        <span class="n">tile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_microtile</span><span class="o">.</span><span class="n">closing_tile</span><span class="p">(</span>
+                                <span class="n">parameters</span><span class="o">=</span><span class="n">tile_parameters</span><span class="p">,</span>
+                                <span class="n">closure</span><span class="o">=</span><span class="n">closing_face</span> <span class="o">+</span> <span class="s2">&quot;_min&quot;</span><span class="p">,</span>
+                                <span class="o">**</span><span class="n">kwargs</span>
+                        <span class="p">)</span>
+                    <span class="k">elif</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="n">element_resolutions</span><span class="p">[</span><span class="n">closing_face_dim</span><span class="p">]:</span>
+                        <span class="c1"># Closure at minimum id</span>
+                        <span class="n">tile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_microtile</span><span class="o">.</span><span class="n">closing_tile</span><span class="p">(</span>
+                                <span class="n">parameters</span><span class="o">=</span><span class="n">tile_parameters</span><span class="p">,</span>
+                                <span class="n">closure</span><span class="o">=</span><span class="n">closing_face</span> <span class="o">+</span> <span class="s2">&quot;_max&quot;</span><span class="p">,</span>
+                                <span class="o">**</span><span class="n">kwargs</span>
+                        <span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">tile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_microtile</span><span class="o">.</span><span class="n">create_tile</span><span class="p">(</span>
+                                <span class="n">parameters</span><span class="o">=</span><span class="n">tile_parameters</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+                        <span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">tile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_microtile</span><span class="o">.</span><span class="n">create_tile</span><span class="p">(</span>
+                            <span class="n">parameters</span><span class="o">=</span><span class="n">tile_parameters</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+                    <span class="p">)</span>
+
+                <span class="c1"># Perform composition</span>
+                <span class="k">for</span> <span class="n">tile_patch</span> <span class="ow">in</span> <span class="n">tile</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_microstructure</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">def_fun</span><span class="o">.</span><span class="n">compose</span><span class="p">(</span><span class="n">tile_patch</span><span class="p">))</span>
+        <span class="c1"># Not parametrized</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Tile can be computed once (prevent to many evaluations)</span>
+            <span class="n">tile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_microtile</span><span class="o">.</span><span class="n">create_tile</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">def_fun</span> <span class="ow">in</span> <span class="n">def_fun_patches</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tile</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_microstructure</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">def_fun</span><span class="o">.</span><span class="n">compose</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+
+        <span class="c1"># return copy of precomputed member</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_microstructure</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Microstructure.show"><a class="viewcode-back" href="../../../../gustaf.spline.microstructure.html#gustaf.spline.microstructure.microstructure.Microstructure.show">[docs]</a>    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">use_saved</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_gustaf</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">use_saved</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_microstructure&quot;</span><span class="p">):</span>
+                <span class="n">microstructure</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_microstructure</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No previous microstructure saved&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Create on the fly</span>
+            <span class="n">microstructure</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="c1"># Precompute splines</span>
+        <span class="n">microtile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">microtile</span><span class="o">.</span><span class="n">create_tile</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">deformation_function</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deformation_function</span>
+
+        <span class="k">if</span> <span class="n">return_gustaf</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span>
+                    <span class="n">deformation_function</span><span class="o">=</span><span class="n">deformation_function</span><span class="p">,</span>
+                    <span class="n">microtile</span><span class="o">=</span><span class="n">microtile</span><span class="p">,</span>
+                    <span class="n">microstructure</span><span class="o">=</span><span class="n">microstructure</span>
+            <span class="p">)</span>
+        <span class="c1"># Show in vedo</span>
+        <span class="kn">from</span> <span class="nn">gustaf.show</span> <span class="kn">import</span> <span class="n">show_vedo</span>
+        <span class="k">return</span> <span class="n">show_vedo</span><span class="p">(</span>
+                <span class="p">[</span><span class="s1">&#39;Deformation Function&#39;</span><span class="p">,</span> <span class="n">deformation_function</span><span class="p">],</span>
+                <span class="p">[</span><span class="s1">&#39;Microtile&#39;</span><span class="p">,</span> <span class="n">microtile</span><span class="p">],</span>
+                <span class="p">[</span><span class="s1">&#39;Composed Microstructure&#39;</span><span class="p">,</span> <span class="n">microstructure</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_sanity_check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check all members and consistency of user data.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        updated_properties : bool</span>
+<span class="sd">          Sets the updated_properties variable to value, which indicates,</span>
+<span class="sd">          wheither the microstructure needs to be rebuilt</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        passes: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="p">(</span>
+                <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deformation_function</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">microtile</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tiling</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_logd</span><span class="p">(</span>
+                    <span class="s2">&quot;Current information not sufficient,&quot;</span>
+                    <span class="s2">&quot; awaiting further assignments&quot;</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="c1"># Check if microtile object fulfils requirements</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_microtile</span><span class="p">,</span> <span class="s2">&quot;create_tile&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Microtile class does not provide the necessary &quot;</span>
+                    <span class="s2">&quot;attribute `create_tile`, that is required for &quot;</span>
+                    <span class="s2">&quot;microstructure construction&quot;</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_microtile</span><span class="p">,</span> <span class="s2">&quot;dim&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Microtile class does not provide the necessary &quot;</span>
+                    <span class="s2">&quot;attribute `dim`, defining the dimensionality of &quot;</span>
+                    <span class="s2">&quot;the created tile&quot;</span>
+            <span class="p">)</span>
+
+        <span class="c1"># Check if parametric dimensions are consistent</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">deformation_function</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_microtile</span><span class="o">.</span><span class="n">dim</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Microtile dimension must match parametric dimension of &quot;</span>
+                    <span class="s2">&quot;deformation function to enable composition&quot;</span>
+            <span class="p">)</span>
+
+        <span class="c1"># Check if tiling is consistent</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tiling</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tiling</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">tiling</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">deformation_function</span><span class="o">.</span><span class="n">para_dim</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tiling</span><span class="p">)</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deformation_function</span><span class="o">.</span><span class="n">para_dim</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Tiling list must have one entry per parametric dimension&quot;</span>
+                    <span class="s2">&quot; of the deformation function&quot;</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parametrization_function</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_logd</span><span class="p">(</span><span class="s2">&quot;Checking compatibility of parametrization function&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_microtile</span><span class="p">,</span> <span class="s2">&quot;evaluation_points&quot;</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="s2">&quot;Microtile class does not provide the necessary &quot;</span>
+                        <span class="s2">&quot;attribute `evaluation_points`, that is required for&quot;</span>
+                        <span class="s2">&quot; a parametrized microstructure construction&quot;</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_microtile</span><span class="p">,</span> <span class="s2">&quot;parameter_space_dimension&quot;</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="s2">&quot;Microtile class does not provide the necessary &quot;</span>
+                        <span class="s2">&quot;attribute `parameter_space_dimension`, that is &quot;</span>
+                        <span class="s2">&quot;required for a parametrized microstructure &quot;</span>
+                        <span class="s2">&quot;construction&quot;</span>
+                <span class="p">)</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parametrization_function</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_microtile</span><span class="o">.</span><span class="n">evaluation_points</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="s2">&quot;Function outline of parametrization function must be &quot;</span>
+                        <span class="s2">&quot;`f(np.ndarray)-&gt;tuple`&quot;</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_microtile</span><span class="o">.</span><span class="n">parameter_space_dimension</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="s2">&quot;Return type of Parametrization function is &quot;</span>
+                        <span class="s2">&quot;insufficient, check documentation of Microtile for &quot;</span>
+                        <span class="s2">&quot;dimensionality&quot;</span>
+                <span class="p">)</span>
+        <span class="c1"># Complete check</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">_make_microtilable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">microtile</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Creates a Microtile object on the fly if user only provides (a list</span>
+<span class="sd">        of) splines. Internal use only.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        microtile : spline / list&lt;splines&gt;</span>
+<span class="sd">          Microtile definition of a spline</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">_UserTile</span><span class="p">(</span><span class="n">microtile</span><span class="p">)</span></div>
+
+
+<span class="k">class</span> <span class="nc">_UserTile</span><span class="p">():</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">microtile</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        On the fly created class of a user tile</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        microtile : spline , list&lt;splines&gt;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Assign microtiles</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_user_tile</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">microtile</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">microtile</span> <span class="o">=</span> <span class="p">[</span><span class="n">microtile</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">microtile</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">issubclass</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">m</span><span class="p">),</span> <span class="n">base</span><span class="o">.</span><span class="n">GustafSpline</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="s2">&quot;Microtiles must be (list of) &quot;</span>
+                        <span class="s2">&quot;gustaf.GustafSplines. e.g. gustaf.NURBS&quot;</span>
+                <span class="p">)</span>
+            <span class="c1"># Extract beziers for every non Bezier patch else this just</span>
+            <span class="c1"># returns itself</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_user_tile</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">extract</span><span class="o">.</span><span class="n">beziers</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dim</span> <span class="o">=</span> <span class="n">microtile</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">dim</span>
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">microtile</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">dim</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dim</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Dimensions of spline lists inconsistent&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dim</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dim</span>
+
+    <span class="k">def</span> <span class="nf">create_tile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a tile on the fly.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_user_tile</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="clearer"></div>
+    </div>
+    <div class="button_nav_wrapper">
+        <div class="button_nav">
+            <div class="left">
+                
+            </div>
+
+            <div class="right">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Jaewook Lee.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+
+<p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>
+  </body>
+</html>

@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gustaf.spline.ffd &#8212; gustaf 0.0.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/basic_mod.css?v=0.7.0-1" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <script src="../../../_static/js/petite-vue.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+  </head><body data-dark_mode_code_blocks="true">
+
+<div id="top_nav">
+    
+
+    <nav>
+        
+            
+        
+
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="../../../index.html" title="Go to homepage">gustaf 0.0.3 documentation</a></h1>
+
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="../../../search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
+            
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><ul>
+<li class="toctree-l1"><a class="reference external" href="http://github.com/tataratat/gustaf">Github</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../CONTRIBUTING.html">Contiributing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">API references</a></li>
+</ul>
+
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for gustaf.spline.ffd</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;gustaf/gustaf/ffd.py.</span>
+
+<span class="sd">Freeform Deformation!</span>
+
+
+<span class="sd">Adaptation of previous implementation in internal python package gustav by</span>
+<span class="sd">Jaewook Lee.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">gustaf._base</span> <span class="kn">import</span> <span class="n">GustafBase</span>
+<span class="kn">from</span> <span class="nn">gustaf.show</span> <span class="kn">import</span> <span class="n">show_vedo</span>
+<span class="kn">from</span> <span class="nn">gustaf._typing</span> <span class="kn">import</span> <span class="n">SPLINE_TYPES</span><span class="p">,</span> <span class="n">MESH_TYPES</span>
+<span class="kn">from</span> <span class="nn">gustaf.create.spline</span> <span class="kn">import</span> <span class="n">with_bounds</span>
+<span class="kn">from</span> <span class="nn">gustaf</span> <span class="kn">import</span> <span class="n">settings</span>
+
+
+<div class="viewcode-block" id="FFD"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.ffd.FFD">[docs]</a><span class="k">class</span> <span class="nc">FFD</span><span class="p">(</span><span class="n">GustafBase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FFD.__init__"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.ffd.FFD.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">mesh</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">MESH_TYPES</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">spline</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SPLINE_TYPES</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Free-form deformation is a method used to deform an object by a</span>
+<span class="sd">        deformation function. In our case the object is given via a mesh, the</span>
+<span class="sd">        currently supported mesh-types are given by the variable</span>
+<span class="sd">        :py:const:`gustaf._typing.MESH_TYPES`, and the deformations function</span>
+<span class="sd">        by a spline, supported splines are given by the variable</span>
+<span class="sd">        :py:const.:`gustaf._typing.SPLINE_TYPES`. The splines parametric</span>
+<span class="sd">        dimension will be scaled in to a unit-hypercube as well as the</span>
+<span class="sd">        original meshes vertices. The outline of the resulting mesh is given</span>
+<span class="sd">        by the physical space of the spline.</span>
+
+<span class="sd">        The FFD class provides functions to modify the spline by completely</span>
+<span class="sd">        overwriting the spline whole spline or parts of it. To obtain the</span>
+<span class="sd">        deformed mesh mapped into the latest spline, retrieve the mesh</span>
+<span class="sd">        attribute.</span>
+
+<span class="sd">        Please not that even though an object of the class can be initiated</span>
+<span class="sd">        without a mesh, it is not possible to compute the deformation without</span>
+<span class="sd">        one. Please ensure that at least a mesh is defined before retrieving</span>
+<span class="sd">        the (deformed) mesh. If only a mesh is provided a default spline where</span>
+<span class="sd">        the geometric dimensions have the bounds of the mesh is defined.</span>
+
+<span class="sd">        A previously available partial FFD is currently not implemented, and</span>
+<span class="sd">        is planned to be implemented in a separate class (LocalFFD).</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        mesh: Optional[MESH_TYPES]</span>
+<span class="sd">            Mesh used in the FFD. Defaults to None.</span>
+<span class="sd">        spline: Optional[SPLINE_TYPES]</span>
+<span class="sd">            Spline used in the FFD. Defaults to None.</span>
+
+<span class="sd">        Class Attributes</span>
+<span class="sd">        ----------------</span>
+<span class="sd">        _spline: SPLINE_TYPES</span>
+<span class="sd">            Internal current spline</span>
+<span class="sd">        _mesh: MESH_TYPES</span>
+<span class="sd">            unscaled base mesh</span>
+<span class="sd">        _q_vertices: np.ndarray (n, dim)</span>
+<span class="sd">            Scaled vertices of the base mesh</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Use property definitions to store the values</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="p">:</span> <span class="n">SPLINE_TYPES</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mesh</span><span class="p">:</span> <span class="n">MESH_TYPES</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_o_mesh</span><span class="p">:</span> <span class="n">MESH_TYPES</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_q_vertices</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">spline</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">spline</span> <span class="o">=</span> <span class="n">spline</span>
+        <span class="k">if</span> <span class="n">mesh</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mesh</span> <span class="o">=</span> <span class="n">mesh</span></div>
+
+        <span class="c1"># self._is_calculated = False</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">mesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MESH_TYPES</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Returns copy of current mesh. Before copying, it applies</span>
+<span class="sd">        deformation.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MESH_TYPES</span>
+<span class="sd">            Current Mesh with the deformation according to the current spline.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_deform</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mesh</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="nd">@mesh</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">mesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh</span><span class="p">:</span> <span class="n">MESH_TYPES</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Sets mesh. If it is first time, the copy of it will be saved as</span>
+<span class="sd">        original mesh. If spline is already defined and in transformed status,</span>
+<span class="sd">        it applies transformation directly.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        mesh: MESH_TYPES</span>
+<span class="sd">            Mesh used for the FFD</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Define a default spline if mesh is given but no spline</span>
+            <span class="n">par_dim</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">spline</span> <span class="o">=</span> <span class="n">with_bounds</span><span class="p">(</span>
+                    <span class="p">[[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">par_dim</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">par_dim</span><span class="p">],</span> <span class="n">mesh</span><span class="o">.</span><span class="n">bounds</span><span class="p">()</span>
+            <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_logi</span><span class="p">(</span><span class="s2">&quot;Setting mesh.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_logi</span><span class="p">(</span><span class="s2">&quot;Mesh Info:&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_logi</span><span class="p">(</span><span class="s2">&quot;  Vertices: </span><span class="si">{v}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">v</span><span class="o">=</span><span class="n">mesh</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_logi</span><span class="p">(</span><span class="s2">&quot;  Bounds: </span><span class="si">{b}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="n">mesh</span><span class="o">.</span><span class="n">bounds</span><span class="p">()))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_o_mesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>  <span class="c1"># we keep original copy for visualization</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>  <span class="c1"># another copy for current status.</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_dimensions</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_scale_mesh_vertices</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="s2">&quot;gustaf_ffd_computed&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">spline</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a copy of the spline. Please use the setter to explicitly</span>
+<span class="sd">        make changes to the spline.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        self._spline: Spline</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span>
+
+    <span class="nd">@spline</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">spline</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spline</span><span class="p">:</span> <span class="n">SPLINE_TYPES</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Sets spline. The spline parametric range bounds will be converted</span>
+<span class="sd">        into the bounds [0,1]^para_dim.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        spline: SPLINE_TYPES</span>
+<span class="sd">            New Spline for the next deformation</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span> <span class="o">=</span> <span class="n">spline</span>
+
+    <span class="k">def</span> <span class="nf">_check_dimensions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Checks if the dimension of the spline and the mesh match and</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: _description_</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">messages</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># Checks dimensions and ranges critical for a correct FFD calculation</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">dim</span><span class="p">:</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="s2">&quot;The parametric and geometric dimensions of the &quot;</span>
+                    <span class="s2">&quot;spline are not the same.&quot;</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mesh</span>
+                <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">dim</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mesh</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="p">):</span>
+            <span class="n">messages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="s2">&quot;The geometric dimensions of the spline and the &quot;</span>
+                    <span class="s2">&quot;dimension of the mesh are not the same.&quot;</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+                    <span class="s2">&quot;Can not perform FFD due to spline and mesh &quot;</span>
+                    <span class="s2">&quot;dimension mismatch. The following dimension mismatches:&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">messages</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_scale_mesh_vertices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Scales the mesh vertices into the dimension of a hypercube and save</span>
+<span class="sd">        them in self._q_vertices.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_logd</span><span class="p">(</span><span class="s2">&quot;Fitting mesh into spline&#39;s parametric space.&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_q_vertices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mesh</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="n">original_mesh_bounds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mesh</span><span class="o">.</span><span class="n">bounds</span><span class="p">()</span>
+
+        <span class="c1"># save mesh offset and scale for reasons</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mesh_offset</span> <span class="o">=</span> <span class="n">original_mesh_bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mesh_scale</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span>
+                <span class="n">original_mesh_bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">original_mesh_bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="p">)</span>
+
+        <span class="c1"># scale and offset vertices coordinates</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_q_vertices</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mesh_offset</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_q_vertices</span> <span class="o">*=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mesh_scale</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_logd</span><span class="p">(</span><span class="s2">&quot;Successfully scaled and transformed mesh vertices!&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_deform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Deforms mesh if spline or mesh changes were detected since last</span>
+<span class="sd">        calculation. Meant for internal use.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mesh</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+                    <span class="s2">&quot;Can&#39;t perform deformation for the FFD, since either the &quot;</span>
+                    <span class="s2">&quot;spline or(and) the mesh are not yet defined. &quot;</span>
+                    <span class="s2">&quot;Please set either spline or mesh.&quot;</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;gustaf_ffd_computed&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="n">spline</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">spline</span><span class="o">.</span><span class="n">has_knot_vectors</span><span class="p">:</span>
+            <span class="n">spline</span><span class="o">.</span><span class="n">normalize_knot_vectors</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_dimensions</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_logd</span><span class="p">(</span><span class="s2">&quot;Applying FFD: Transforming vertices&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Here, we take _q_vertices, due to possible scale/offset.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mesh</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_q_vertices</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_logd</span><span class="p">(</span><span class="s2">&quot;FFD successful.&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="s2">&quot;gustaf_ffd_computed&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">control_points</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns current spline&#39;s control points. The control points can be</span>
+<span class="sd">        directly updated with this.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        self._spline.control_points: np.ndarray</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">control_points</span>
+
+    <span class="nd">@control_points</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">control_points</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">control_points</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Sets control points and deforms mesh.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        control_points: np.ndarray</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">control_points</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">control_points</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span>\
+            <span class="s2">&quot;Given control points&#39; shape does not match current ones!&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">control_points</span> <span class="o">=</span> <span class="n">control_points</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_logd</span><span class="p">(</span><span class="s2">&quot;Set new control points.&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FFD.elevate_degree"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.ffd.FFD.elevate_degree">[docs]</a>    <span class="k">def</span> <span class="nf">elevate_degree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Wrapper for Spline.elevate_degree.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        *args:</span>
+<span class="sd">        **kwargs:</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">elevate_degree</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FFD.insert_knots"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.ffd.FFD.insert_knots">[docs]</a>    <span class="k">def</span> <span class="nf">insert_knots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parametric_dimension</span><span class="p">,</span> <span class="n">knots</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Wrapper for Spline.insert_knots.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        *args:</span>
+<span class="sd">        **kwargs:</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="s2">&quot;knot_vectors&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">required_properties</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                    <span class="s2">&quot;Can not perform knot insertion on Bezier spline.&quot;</span>
+            <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">insert_knots</span><span class="p">(</span><span class="n">parametric_dimension</span><span class="p">,</span> <span class="n">knots</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FFD.remove_knots"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.ffd.FFD.remove_knots">[docs]</a>    <span class="k">def</span> <span class="nf">remove_knots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parametric_dimension</span><span class="p">,</span> <span class="n">knots</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="mf">1e-8</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Wrapper for Spline.remove_knots.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        *args:</span>
+<span class="sd">        **kwargs:</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="s2">&quot;knot_vectors&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">required_properties</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                    <span class="s2">&quot;Can not perform knot insertion on Bezier spline.&quot;</span>
+            <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">remove_knots</span><span class="p">(</span>
+                <span class="n">parametric_dimension</span><span class="p">,</span> <span class="n">knots</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="n">tolerance</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="FFD.reduce_degree"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.ffd.FFD.reduce_degree">[docs]</a>    <span class="k">def</span> <span class="nf">reduce_degree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Wrapper for Spline.reduce_degree.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        *args:</span>
+<span class="sd">        **kwargs:</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        --------</span>
+<span class="sd">        None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">reduce_degree</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FFD.show"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.ffd.FFD.show">[docs]</a>    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Visualize. Shows the deformed mesh and the current spline. Currently</span>
+<span class="sd">        visualization is limited to vedo.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        title: str</span>
+<span class="sd">            Title of the vedo window. Defaults to &quot;gustaf - FFD&quot;.</span>
+<span class="sd">        return_showable: bool</span>
+<span class="sd">            If true returns a dict of the showable items. Defaults to False.</span>
+<span class="sd">        return_discrete: bool</span>
+<span class="sd">            Return dict of gustaf discrete objects, for example,</span>
+<span class="sd">            {Vertices, Edges, Faces}, instead of opening a window.</span>
+<span class="sd">            Defaults to False.</span>
+<span class="sd">        kwargs: Any</span>
+<span class="sd">            Arbitrary keyword arguments. These are passed onto the vedo</span>
+<span class="sd">            functions. Please be aware, that no checking of these are performed</span>
+<span class="sd">            in this function.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Any:</span>
+<span class="sd">            Returns, if applicable, the vedo plotter. &#39;close=False&#39; as argument</span>
+<span class="sd">            to get the plotter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">backend</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;backend&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">return_showable</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;return_showable&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">return_discrete</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;return_discrete&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;gustaf - FFD&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">return_discrete</span> <span class="ow">and</span> <span class="n">return_showable</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Either one of following params can be True: &quot;</span>
+                    <span class="s2">&quot;{return_discrete, return_showable} &quot;</span>
+                    <span class="s2">&quot;You&#39;ve set both True.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">backend</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">backend</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">VISUALIZATION_BACKEND</span>
+
+        <span class="c1"># prepare originals</span>
+        <span class="n">o_mesh</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_o_mesh</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="c1"># prepare deformed</span>
+        <span class="n">d_mesh</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mesh</span>  <span class="c1"># copies</span>
+
+        <span class="n">things_to_show</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="c1"># let&#39;s show faces at most, since volumes can take awhile</span>
+        <span class="k">if</span> <span class="n">o_mesh</span><span class="o">.</span><span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;volume&quot;</span><span class="p">:</span>
+            <span class="c1"># only outer faces. overwrite</span>
+            <span class="n">o_mesh</span> <span class="o">=</span> <span class="n">o_mesh</span><span class="o">.</span><span class="n">tofaces</span><span class="p">(</span><span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">o_mesh</span><span class="o">.</span><span class="n">update_faces</span><span class="p">(</span><span class="n">o_mesh</span><span class="o">.</span><span class="n">single_faces</span><span class="p">())</span>
+            <span class="n">d_mesh</span> <span class="o">=</span> <span class="n">d_mesh</span><span class="o">.</span><span class="n">tofaces</span><span class="p">(</span><span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">d_mesh</span><span class="o">.</span><span class="n">update_faces</span><span class="p">(</span><span class="n">d_mesh</span><span class="o">.</span><span class="n">single_faces</span><span class="p">())</span>
+
+        <span class="c1"># update meshes</span>
+        <span class="n">things_to_show</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">original_mesh</span><span class="o">=</span><span class="n">o_mesh</span><span class="p">)</span>
+        <span class="n">things_to_show</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">original_description</span><span class="o">=</span><span class="s2">&quot;Original Mesh&quot;</span><span class="p">)</span>
+        <span class="n">things_to_show</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">deformed_mesh</span><span class="o">=</span><span class="n">d_mesh</span><span class="p">)</span>
+        <span class="n">things_to_show</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">deformed_description</span><span class="o">=</span><span class="s2">&quot;Deformed Mesh with Spline&quot;</span><span class="p">)</span>
+
+        <span class="c1"># update spline</span>
+        <span class="n">things_to_show</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">deformed_spline</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">spline</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">return_discrete</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">backend</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;vedo&quot;</span><span class="p">):</span>
+            <span class="c1"># spline is strictly not discrete.</span>
+            <span class="k">return</span> <span class="n">things_to_show</span>
+
+        <span class="k">if</span> <span class="n">return_showable</span><span class="p">:</span>
+            <span class="c1"># let&#39;s turn everthing into showable and return</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">things_to_show</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">GustafBase</span><span class="p">):</span>
+                    <span class="n">things_to_show</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">showable</span><span class="p">()</span>
+
+            <span class="k">return</span> <span class="n">things_to_show</span>
+
+        <span class="c1"># current workaround to set spline&#39;s surface alpha correctly</span>
+        <span class="c1"># TODO: support this situation better</span>
+        <span class="n">spl</span> <span class="o">=</span> <span class="n">things_to_show</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;deformed_spline&quot;</span><span class="p">)</span>
+        <span class="n">spl_showable</span> <span class="o">=</span> <span class="n">spl</span><span class="o">.</span><span class="n">showable</span><span class="p">(</span><span class="n">surface_alpha</span><span class="o">=</span><span class="mf">.3</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">show_vedo</span><span class="p">(</span>
+                <span class="p">[</span>
+                        <span class="n">things_to_show</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+                        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">things_to_show</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+                        <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;original&quot;</span><span class="p">)</span>
+                <span class="p">],</span>
+                <span class="p">[</span>
+                        <span class="o">*</span><span class="p">[</span>
+                                <span class="n">things_to_show</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+                                <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">things_to_show</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+                                <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;deformed&quot;</span><span class="p">)</span>
+                        <span class="p">],</span>
+                        <span class="o">*</span><span class="n">spl_showable</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span>
+                <span class="p">],</span>
+                <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="FFD.showable"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.ffd.FFD.showable">[docs]</a>    <span class="k">def</span> <span class="nf">showable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a dictionary of showable items to describe the FFD at the</span>
+<span class="sd">        current state.</span>
+
+<span class="sd">        See show() for more information. This function redirects to it</span>
+<span class="sd">        directly with the return_showable keyword set to True.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">return_showable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div></div>
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="clearer"></div>
+    </div>
+    <div class="button_nav_wrapper">
+        <div class="button_nav">
+            <div class="left">
+                
+            </div>
+
+            <div class="right">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Jaewook Lee.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+
+<p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>
+  </body>
+</html>

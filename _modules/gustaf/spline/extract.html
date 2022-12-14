@@ -1,0 +1,750 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gustaf.spline.extract &#8212; gustaf 0.0.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/basic_mod.css?v=0.7.0-1" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <script src="../../../_static/js/petite-vue.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link href="../../../_static/style.css" rel="stylesheet" type="text/css">
+
+  </head><body data-dark_mode_code_blocks="true">
+
+<div id="top_nav">
+    
+
+    <nav>
+        
+            
+        
+
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="../../../index.html" title="Go to homepage">gustaf 0.0.3 documentation</a></h1>
+
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="../../../search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
+            
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><ul>
+<li class="toctree-l1"><a class="reference external" href="http://github.com/tataratat/gustaf">Github</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../CONTRIBUTING.html">Contiributing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">API references</a></li>
+</ul>
+
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for gustaf.spline.extract</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;gustaf/spline/extract.py.</span>
+
+<span class="sd">Extract operations. Both discrete and spline extraction.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">itertools</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">gustaf</span> <span class="kn">import</span> <span class="n">utils</span>
+<span class="kn">from</span> <span class="nn">gustaf.vertices</span> <span class="kn">import</span> <span class="n">Vertices</span>
+<span class="kn">from</span> <span class="nn">gustaf.edges</span> <span class="kn">import</span> <span class="n">Edges</span>
+<span class="kn">from</span> <span class="nn">gustaf.faces</span> <span class="kn">import</span> <span class="n">Faces</span>
+<span class="kn">from</span> <span class="nn">gustaf.volumes</span> <span class="kn">import</span> <span class="n">Volumes</span>
+
+<span class="kn">from</span> <span class="nn">gustaf.spline._utils</span> <span class="kn">import</span> <span class="n">to_res_list</span>
+
+
+<div class="viewcode-block" id="edges"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.edges">[docs]</a><span class="k">def</span> <span class="nf">edges</span><span class="p">(</span>
+        <span class="n">spline</span><span class="p">,</span>
+        <span class="n">resolution</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+        <span class="n">extract_dim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">extract_knot</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">all_knots</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Extract edges (lines) from a given spline. Only entity you can extract</span>
+<span class="sd">    without dimension limit.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    spline: Spline</span>
+<span class="sd">    resolution: int</span>
+<span class="sd">    extract_dim: int</span>
+<span class="sd">      Parametric dimension to extract.</span>
+<span class="sd">    extract_knot: list</span>
+<span class="sd">      (spline.para_dim - 1,) shaped knot location along extract_dim</span>
+<span class="sd">    all_knots: bool</span>
+<span class="sd">      Switch to allow all knot-line extraction.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    edges: Edges</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">all_knots</span><span class="p">:</span>
+        <span class="n">resolution</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">resolution</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Edges</span><span class="p">(</span>
+                <span class="n">vertices</span><span class="o">=</span><span class="n">spline</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">resolution</span><span class="p">),</span>
+                <span class="n">edges</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">connec</span><span class="o">.</span><span class="n">range_to_edges</span><span class="p">(</span>
+                        <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">resolution</span><span class="p">),</span>
+                        <span class="n">closed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># This should be possible for spline of any dimension.</span>
+        <span class="c1"># As long as it satisfies the following condition</span>
+        <span class="k">if</span> <span class="n">extract_knot</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">extract_knot</span><span class="p">)</span> <span class="o">!=</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="s2">&quot;Must satisfy len(extract_knot) == spline.para_dim -1.&quot;</span>
+                <span class="p">)</span>
+
+        <span class="c1"># This may take awhile.</span>
+        <span class="k">if</span> <span class="n">all_knots</span><span class="p">:</span>
+            <span class="n">edgess</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># edges&#39; is not a valid syntax</span>
+            <span class="n">unique_knots</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">spline</span><span class="o">.</span><span class="n">unique_knots</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span><span class="p">):</span>
+                <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+                <span class="n">mask</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="c1"># gather knots along current knot</span>
+                <span class="n">extract_knot_queries</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span>
+                        <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="o">*</span><span class="n">unique_knots</span><span class="p">[</span><span class="n">mask</span><span class="p">])</span>
+                <span class="p">)</span>
+
+                <span class="k">for</span> <span class="n">ekq</span> <span class="ow">in</span> <span class="n">extract_knot_queries</span><span class="p">:</span>
+                    <span class="n">edgess</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">edges</span><span class="p">(</span><span class="n">spline</span><span class="p">,</span> <span class="n">resolution</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">i</span><span class="p">,</span> <span class="n">ekq</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
+
+            <span class="k">return</span> <span class="n">Edges</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">edgess</span><span class="p">)</span>
+
+        <span class="c1"># Get parametric points to extract</span>
+        <span class="n">queries</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">resolution</span><span class="p">,</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span><span class="p">),</span>
+                <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float64&quot;</span><span class="p">,</span>  <span class="c1"># hardcoded for splinelibpy</span>
+                <span class="n">order</span><span class="o">=</span><span class="s2">&quot;C&quot;</span><span class="p">,</span>  <span class="c1"># hardcoded for splinelibpy</span>
+        <span class="p">)</span>
+        <span class="c1"># get ~extract_dim</span>
+        <span class="n">not_ed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="n">not_ed</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">extract_dim</span><span class="p">)</span>
+        <span class="n">queries</span><span class="p">[:,</span> <span class="n">not_ed</span><span class="p">]</span> <span class="o">=</span> <span class="n">extract_knot</span>
+
+        <span class="c1"># get knot extrema</span>
+        <span class="n">uniq_knots</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">unique_knots</span><span class="p">[</span><span class="n">extract_dim</span><span class="p">]</span>
+        <span class="n">min_knot_position</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">uniq_knots</span><span class="p">)</span>
+        <span class="n">max_knot_position</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">uniq_knots</span><span class="p">)</span>
+
+        <span class="n">queries</span><span class="p">[:,</span> <span class="n">extract_dim</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span>
+                <span class="n">min_knot_position</span><span class="p">,</span>
+                <span class="n">max_knot_position</span><span class="p">,</span>
+                <span class="n">resolution</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">Edges</span><span class="p">(</span>
+                <span class="n">vertices</span><span class="o">=</span><span class="n">spline</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">queries</span><span class="p">),</span>
+                <span class="n">edges</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">connec</span><span class="o">.</span><span class="n">range_to_edges</span><span class="p">(</span>
+                        <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">resolution</span><span class="p">),</span>
+                        <span class="n">closed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="p">)</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="faces"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.faces">[docs]</a><span class="k">def</span> <span class="nf">faces</span><span class="p">(</span>
+        <span class="n">spline</span><span class="p">,</span>
+        <span class="n">resolutions</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Extract faces from spline. Valid iff para_dim is one of the followings:</span>
+<span class="sd">    {2, 3}. In case of {3}, it will return only surfaces. If internal faces are</span>
+<span class="sd">    desired, used `spline.extract.volumes().faces()`. Note that dimension</span>
+<span class="sd">    higher than 3 is not showable.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    spline: BSpline or NURBS</span>
+<span class="sd">    resolutions: int or list</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    faces: faces</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">resolutions</span> <span class="o">=</span> <span class="n">to_res_list</span><span class="p">(</span><span class="n">resolutions</span><span class="p">,</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Faces</span><span class="p">(</span>
+                <span class="n">vertices</span><span class="o">=</span><span class="n">spline</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">resolutions</span><span class="p">),</span>
+                <span class="n">faces</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">connec</span><span class="o">.</span><span class="n">make_quad_faces</span><span class="p">(</span><span class="n">resolutions</span><span class="p">),</span>
+        <span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="c1"># TODO: use spline extraction routine to first extract</span>
+        <span class="c1"># spline, extract faces, merge vertices.</span>
+
+        <span class="c1"># Spline to surfaces</span>
+        <span class="n">vertices</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">faces</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c1"># accomodate bezier Splines</span>
+        <span class="n">ukvs</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">unique_knots</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span><span class="p">):</span>
+            <span class="n">extract</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="c1"># Get extracting dimension</span>
+            <span class="n">extract_along</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+            <span class="n">extract_along</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">extract</span><span class="p">)</span>
+
+            <span class="c1"># Extract range</span>
+            <span class="n">extract_range</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="p">[</span>
+                            <span class="nb">min</span><span class="p">(</span><span class="n">ukvs</span><span class="p">[</span><span class="n">extract_along</span><span class="p">[</span><span class="mi">0</span><span class="p">]]),</span>
+                            <span class="nb">max</span><span class="p">(</span><span class="n">ukvs</span><span class="p">[</span><span class="n">extract_along</span><span class="p">[</span><span class="mi">0</span><span class="p">]]),</span>
+                    <span class="p">],</span>
+                    <span class="p">[</span>
+                            <span class="nb">min</span><span class="p">(</span><span class="n">ukvs</span><span class="p">[</span><span class="n">extract_along</span><span class="p">[</span><span class="mi">1</span><span class="p">]]),</span>
+                            <span class="nb">max</span><span class="p">(</span><span class="n">ukvs</span><span class="p">[</span><span class="n">extract_along</span><span class="p">[</span><span class="mi">1</span><span class="p">]]),</span>
+                    <span class="p">],</span>
+            <span class="p">]</span>
+
+            <span class="n">extract_list</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="nb">min</span><span class="p">(</span><span class="n">ukvs</span><span class="p">[</span><span class="n">extract</span><span class="p">]),</span>
+                    <span class="nb">max</span><span class="p">(</span><span class="n">ukvs</span><span class="p">[</span><span class="n">extract</span><span class="p">]),</span>
+            <span class="p">]</span>
+
+            <span class="c1"># surface point queries (spq)</span>
+            <span class="n">spq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span>
+                    <span class="n">extract_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                    <span class="n">extract_range</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span>
+                    <span class="n">resolutions</span><span class="p">[</span><span class="n">extract_along</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+            <span class="c1"># expand horizontally and init with 1</span>
+            <span class="n">spq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">spq</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">spq</span><span class="p">),</span> <span class="mi">1</span><span class="p">))))</span>
+            <span class="n">spq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span>
+                            <span class="n">spq</span> <span class="o">*</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">extract_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]],</span>
+                            <span class="n">spq</span> <span class="o">*</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">extract_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]],</span>
+                            <span class="n">resolutions</span><span class="p">[</span><span class="n">extract_along</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span>
+                    <span class="p">)</span>
+            <span class="p">)</span>
+
+            <span class="c1"># expand horizontally and init with 1</span>
+            <span class="n">spq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">spq</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">spq</span><span class="p">),</span> <span class="mi">1</span><span class="p">))))</span>
+            <span class="n">spq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span>
+                            <span class="n">spq</span> <span class="o">*</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">extract_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span>
+                            <span class="n">spq</span> <span class="o">*</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">extract_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="mi">2</span>
+                    <span class="p">)</span>
+            <span class="p">)</span>
+
+            <span class="n">surface_point_queries</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">arr</span><span class="o">.</span><span class="n">make_c_contiguous</span><span class="p">(</span>
+                    <span class="n">spq</span><span class="p">,</span>
+                    <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float64&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">sorted_ids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span>
+                    <span class="p">[</span><span class="n">extract_along</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">extract_along</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">extract</span><span class="p">]</span>
+            <span class="p">)</span>
+            <span class="n">surface_point_queries</span> <span class="o">=</span> <span class="n">surface_point_queries</span><span class="p">[:,</span> <span class="n">sorted_ids</span><span class="p">]</span>
+
+            <span class="n">vertices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="n">spline</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span>
+                            <span class="n">surface_point_queries</span><span class="p">[:</span><span class="nb">int</span><span class="p">(</span>
+                                    <span class="n">surface_point_queries</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="mi">2</span>
+                            <span class="p">)]</span>
+                    <span class="p">)</span>
+            <span class="p">)</span>
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">faces</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">offset</span> <span class="o">=</span> <span class="n">faces</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span>
+
+            <span class="n">tmp_faces</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">connec</span><span class="o">.</span><span class="n">make_quad_faces</span><span class="p">(</span>
+                    <span class="p">[</span>
+                            <span class="n">resolutions</span><span class="p">[</span><span class="n">extract_along</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span>
+                            <span class="n">resolutions</span><span class="p">[</span><span class="n">extract_along</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span>
+                    <span class="p">]</span>
+            <span class="p">)</span>
+
+            <span class="n">faces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp_faces</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">offset</span><span class="p">))</span>
+
+            <span class="n">vertices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="n">spline</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span>
+                            <span class="n">surface_point_queries</span><span class="p">[</span>
+                                    <span class="nb">int</span><span class="p">(</span><span class="n">surface_point_queries</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="mi">2</span><span class="p">):]</span>
+                    <span class="p">)</span>
+            <span class="p">)</span>
+
+            <span class="n">offset</span> <span class="o">=</span> <span class="n">faces</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span>
+
+            <span class="n">faces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp_faces</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">offset</span><span class="p">))</span>
+
+        <span class="c1"># make faces and merge vertices before returning</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="n">Faces</span><span class="p">(</span><span class="n">vertices</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">vertices</span><span class="p">),</span> <span class="n">faces</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">faces</span><span class="p">))</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">merge_vertices</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">f</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid spline to make faces.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="volumes"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.volumes">[docs]</a><span class="k">def</span> <span class="nf">volumes</span><span class="p">(</span><span class="n">spline</span><span class="p">,</span> <span class="n">resolutions</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Extract volumes from spline. Valid iff spline.para_dim == 3.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    spline: BSpline or NURBS</span>
+<span class="sd">    resolutions:</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    volumes: Volumes</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Volume extraction from a spline is only valid for &quot;</span>
+                <span class="s2">&quot;para_dim: 3 dim: 3 splines.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">Volumes</span><span class="p">(</span>
+            <span class="n">vertices</span><span class="o">=</span><span class="n">spline</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">resolutions</span><span class="p">),</span>
+            <span class="n">volumes</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">connec</span><span class="o">.</span><span class="n">make_hexa_volumes</span><span class="p">(</span><span class="n">resolutions</span><span class="p">),</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="control_points"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.control_points">[docs]</a><span class="k">def</span> <span class="nf">control_points</span><span class="p">(</span><span class="n">spline</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Extracts control points and return as vertices. Same can be achieved by</span>
+<span class="sd">    doing `gustaf.Vertices(spline.control_points)`</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    spline: BSpline or NURBS</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    cps_as_Vertices: Vertices</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">Vertices</span><span class="p">(</span><span class="n">spline</span><span class="o">.</span><span class="n">control_points</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="control_edges"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.control_edges">[docs]</a><span class="k">def</span> <span class="nf">control_edges</span><span class="p">(</span><span class="n">spline</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Extract control edges (mesh). Valid iff para_dim is 1.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    edges: BSpline or NURBS</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    edges: Edges</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid spline type!&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">Edges</span><span class="p">(</span>
+            <span class="n">vertices</span><span class="o">=</span><span class="n">spline</span><span class="o">.</span><span class="n">control_points</span><span class="p">,</span>
+            <span class="n">edges</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">connec</span><span class="o">.</span><span class="n">range_to_edges</span><span class="p">(</span>
+                    <span class="nb">len</span><span class="p">(</span><span class="n">spline</span><span class="o">.</span><span class="n">control_points</span><span class="p">),</span> <span class="n">closed</span><span class="o">=</span><span class="kc">False</span>
+            <span class="p">)</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="control_faces"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.control_faces">[docs]</a><span class="k">def</span> <span class="nf">control_faces</span><span class="p">(</span><span class="n">spline</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Extract control face (mesh). Valid iff para_dim is 2.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    spline: BSpline or NURBS</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    faces: Faces</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid spline type!&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">Faces</span><span class="p">(</span>
+            <span class="n">vertices</span><span class="o">=</span><span class="n">spline</span><span class="o">.</span><span class="n">control_points</span><span class="p">,</span>
+            <span class="n">faces</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">connec</span><span class="o">.</span><span class="n">make_quad_faces</span><span class="p">(</span>
+                    <span class="n">spline</span><span class="o">.</span><span class="n">control_mesh_resolutions</span>
+            <span class="p">),</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="control_volumes"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.control_volumes">[docs]</a><span class="k">def</span> <span class="nf">control_volumes</span><span class="p">(</span><span class="n">spline</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Extract control volumes (mesh). Valid iff para_dim is 3.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    spline: BSpline or NURBS</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    volumes: Volumes</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid spline type!&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">Volumes</span><span class="p">(</span>
+            <span class="n">vertices</span><span class="o">=</span><span class="n">spline</span><span class="o">.</span><span class="n">control_points</span><span class="p">,</span>
+            <span class="n">volumes</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">connec</span><span class="o">.</span><span class="n">make_hexa_volumes</span><span class="p">(</span>
+                    <span class="n">spline</span><span class="o">.</span><span class="n">control_mesh_resolutions</span>
+            <span class="p">),</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="control_mesh"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.control_mesh">[docs]</a><span class="k">def</span> <span class="nf">control_mesh</span><span class="p">(</span><span class="n">spline</span><span class="p">,</span> <span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calls control_edges, control_faces, control_volumes based on current</span>
+<span class="sd">    spline.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    None</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------</span>
+<span class="sd">    control_mesh: Edges or Faces or Volumes</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">control_edges</span><span class="p">(</span><span class="n">spline</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">control_faces</span><span class="p">(</span><span class="n">spline</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">control_volumes</span><span class="p">(</span><span class="n">spline</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Invalid para_dim to extract control_mesh. &quot;</span>
+                <span class="s2">&quot;Supports 1 to 3.&quot;</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="beziers"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.beziers">[docs]</a><span class="k">def</span> <span class="nf">beziers</span><span class="p">(</span><span class="n">spline</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Extracts Bezier-type objects of any spline-type object.</span>
+
+<span class="sd">  Parameters</span>
+<span class="sd">  ----------</span>
+<span class="sd">  spline : Gustaf-Spline</span>
+
+<span class="sd">  Returns</span>
+<span class="sd">  -------</span>
+<span class="sd">  bezier_list : list&lt;bezier-types&gt;</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">gustaf.spline.base</span> <span class="kn">import</span> <span class="n">Bezier</span><span class="p">,</span> <span class="n">RationalBezier</span>
+
+    <span class="k">if</span> <span class="s2">&quot;Bezier&quot;</span> <span class="ow">in</span> <span class="n">spline</span><span class="o">.</span><span class="n">whatami</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">spline</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="s2">&quot;BSpline&quot;</span> <span class="ow">in</span> <span class="n">spline</span><span class="o">.</span><span class="n">whatami</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span>
+                <span class="n">Bezier</span><span class="p">(</span><span class="o">**</span><span class="n">s</span><span class="o">.</span><span class="n">todict</span><span class="p">())</span>
+                <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">super</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">spline</span><span class="p">),</span> <span class="n">spline</span><span class="p">)</span><span class="o">.</span><span class="n">extract_bezier_patches</span><span class="p">()</span>
+        <span class="p">]</span>
+    <span class="k">elif</span> <span class="s2">&quot;NURBS&quot;</span> <span class="ow">in</span> <span class="n">spline</span><span class="o">.</span><span class="n">whatami</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span>
+                <span class="n">RationalBezier</span><span class="p">(</span><span class="o">**</span><span class="n">s</span><span class="o">.</span><span class="n">todict</span><span class="p">())</span>
+                <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">super</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">spline</span><span class="p">),</span> <span class="n">spline</span><span class="p">)</span><span class="o">.</span><span class="n">extract_bezier_patches</span><span class="p">()</span>
+        <span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Unknown Spline-Type.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="spline"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.spline">[docs]</a><span class="k">def</span> <span class="nf">spline</span><span class="p">(</span><span class="n">spline</span><span class="p">,</span> <span class="n">para_dim</span><span class="p">,</span> <span class="n">split_plane</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Extract a subspline from a given representation.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    para_dim : int</span>
+<span class="sd">      parametric dimension to be extrac ted</span>
+<span class="sd">    split_plane : float / tuple&lt;float, float&gt;</span>
+<span class="sd">      intervall or value in parametric space to be extracted from the spline</span>
+<span class="sd">      representation</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    spline</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">gustaf.spline.base</span> <span class="kn">import</span> <span class="n">GustafSpline</span>
+
+    <span class="c1"># Check type</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">issubclass</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">spline</span><span class="p">),</span> <span class="n">GustafSpline</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Unknown spline representation passed to subspline&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Check arguments for sanity</span>
+    <span class="k">if</span> <span class="n">para_dim</span> <span class="o">&gt;</span> <span class="n">spline</span><span class="o">.</span><span class="n">para_dim</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Requested parametric dimension exceeds spline&#39;s parametric&quot;</span>
+                <span class="s2">&quot; dimensionality.&quot;</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">split_plane</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span>
+                <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">split_plane</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+                <span class="ow">and</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">split_plane</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">float</span><span class="p">))</span>
+                <span class="ow">and</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">split_plane</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">float</span><span class="p">))</span>
+        <span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Range must be float or tuple of floats with length 2&quot;</span>
+            <span class="p">)</span>
+    <span class="k">elif</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">split_plane</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Range must be float or tuple of floats with length 2&quot;</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Convert float to tuple to facilitate</span>
+        <span class="n">split_plane</span> <span class="o">=</span> <span class="nb">list</span><span class="p">([</span><span class="n">split_plane</span><span class="p">])</span>
+
+    <span class="c1"># Check if is bezier-type</span>
+    <span class="n">is_bezier</span> <span class="o">=</span> <span class="s2">&quot;Bezier&quot;</span> <span class="ow">in</span> <span class="n">spline</span><span class="o">.</span><span class="n">whatami</span>
+    <span class="n">is_rational</span> <span class="o">=</span> <span class="s2">&quot;weights&quot;</span> <span class="ow">in</span> <span class="n">spline</span><span class="o">.</span><span class="n">required_properties</span>
+    <span class="k">if</span> <span class="n">is_bezier</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">is_rational</span><span class="p">:</span>
+            <span class="n">spline_copy</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">nurbs</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">spline_copy</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">bspline</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">spline_copy</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">spline_copy</span><span class="o">.</span><span class="n">degrees</span><span class="p">[</span><span class="n">para_dim</span><span class="p">]):</span>
+        <span class="c1"># Will do nothing if spline already has sufficient number of knots</span>
+        <span class="c1"># at given position</span>
+        <span class="n">spline_copy</span><span class="o">.</span><span class="n">insert_knots</span><span class="p">(</span><span class="n">para_dim</span><span class="p">,</span> <span class="n">split_plane</span><span class="p">)</span>
+
+    <span class="c1"># Start extraction</span>
+    <span class="n">cps_res</span> <span class="o">=</span> <span class="n">spline_copy</span><span class="o">.</span><span class="n">control_mesh_resolutions</span>
+    <span class="n">start_id</span> <span class="o">=</span> <span class="n">spline_copy</span><span class="o">.</span><span class="n">knot_vectors</span><span class="p">[</span><span class="n">para_dim</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">split_plane</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">end_id</span> <span class="o">=</span> <span class="n">spline_copy</span><span class="o">.</span><span class="n">knot_vectors</span><span class="p">[</span><span class="n">para_dim</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">split_plane</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">para_dim_ids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">cps_res</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i_pd</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">para_dim</span><span class="p">):</span>
+        <span class="n">para_dim_ids</span> <span class="o">-=</span> <span class="n">para_dim_ids</span> <span class="o">%</span> <span class="n">cps_res</span><span class="p">[</span><span class="n">i_pd</span><span class="p">]</span>
+        <span class="n">para_dim_ids</span> <span class="o">=</span> <span class="n">para_dim_ids</span> <span class="o">//</span> <span class="n">cps_res</span><span class="p">[</span><span class="n">i_pd</span><span class="p">]</span>
+    <span class="c1"># indices are shifted by one</span>
+    <span class="n">para_dim_ids</span> <span class="o">=</span> <span class="n">para_dim_ids</span> <span class="o">%</span> <span class="n">cps_res</span><span class="p">[</span><span class="n">para_dim</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="c1"># Return new_spline</span>
+    <span class="n">spline_info</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">spline_info</span><span class="p">[</span><span class="s2">&quot;control_points&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">spline_copy</span><span class="o">.</span><span class="n">cps</span><span class="p">[(</span><span class="n">para_dim_ids</span> <span class="o">&gt;=</span> <span class="n">start_id</span><span class="p">)</span>
+                                                    <span class="o">&amp;</span> <span class="p">(</span><span class="n">para_dim_ids</span> <span class="o">&lt;=</span> <span class="n">end_id</span><span class="p">)]</span>
+    <span class="n">spline_info</span><span class="p">[</span><span class="s2">&quot;degrees&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">spline_copy</span><span class="o">.</span><span class="n">degrees</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">start_id</span> <span class="o">==</span> <span class="n">end_id</span><span class="p">:</span>
+        <span class="n">spline_info</span><span class="p">[</span><span class="s2">&quot;degrees&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">para_dim</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_bezier</span><span class="p">:</span>
+        <span class="n">spline_info</span><span class="p">[</span><span class="s2">&quot;knot_vectors&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">spline_copy</span><span class="o">.</span><span class="n">knot_vectors</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">start_id</span> <span class="o">==</span> <span class="n">end_id</span><span class="p">:</span>
+            <span class="n">spline_info</span><span class="p">[</span><span class="s2">&quot;knot_vectors&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">para_dim</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">spline_info</span><span class="p">[</span><span class="s2">&quot;knot_vectors&quot;</span><span class="p">][</span><span class="n">para_dim</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="p">[</span><span class="n">spline_copy</span><span class="o">.</span><span class="n">knot_vectors</span><span class="p">[</span><span class="n">para_dim</span><span class="p">][</span><span class="n">start_id</span><span class="p">]]</span>
+                    <span class="o">+</span> <span class="n">spline_copy</span><span class="o">.</span><span class="n">knot_vectors</span><span class="p">[</span><span class="n">para_dim</span><span class="p">]</span>
+                    <span class="p">[</span><span class="n">start_id</span><span class="p">:(</span><span class="n">end_id</span> <span class="o">+</span> <span class="n">spline_copy</span><span class="o">.</span><span class="n">degrees</span><span class="p">[</span><span class="n">para_dim</span><span class="p">])]</span> <span class="o">+</span> <span class="p">[</span>
+                            <span class="n">spline_copy</span><span class="o">.</span><span class="n">knot_vectors</span><span class="p">[</span><span class="n">para_dim</span><span class="p">]</span>
+                            <span class="p">[(</span><span class="n">end_id</span> <span class="o">+</span> <span class="n">spline_copy</span><span class="o">.</span><span class="n">degrees</span><span class="p">[</span><span class="n">para_dim</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span>
+                    <span class="p">]</span>
+            <span class="p">)</span>
+    <span class="k">if</span> <span class="n">is_rational</span><span class="p">:</span>
+        <span class="n">spline_info</span><span class="p">[</span><span class="s2">&quot;weights&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">spline_copy</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span>
+                <span class="p">(</span><span class="n">para_dim_ids</span> <span class="o">&gt;=</span> <span class="n">start_id</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">para_dim_ids</span> <span class="o">&lt;=</span> <span class="n">end_id</span><span class="p">)]</span>
+
+    <span class="k">return</span> <span class="nb">type</span><span class="p">(</span><span class="n">spline</span><span class="p">)(</span><span class="o">**</span><span class="n">spline_info</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Extractor"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.Extractor">[docs]</a><span class="k">class</span> <span class="nc">Extractor</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Helper class to allow direct extraction from spline obj (BSpline or</span>
+<span class="sd">    NURBS). Internal use only.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    ---------</span>
+<span class="sd">    &gt;&gt;&gt; myspline = &lt;your-spline&gt;</span>
+<span class="sd">    &gt;&gt;&gt; spline_faces = myspline.extract.faces()</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Extractor.__init__"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.Extractor.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spl</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span> <span class="o">=</span> <span class="n">spl</span></div>
+
+<div class="viewcode-block" id="Extractor.edges"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.Extractor.edges">[docs]</a>    <span class="k">def</span> <span class="nf">edges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">edges</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Extractor.faces"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.Extractor.faces">[docs]</a>    <span class="k">def</span> <span class="nf">faces</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">faces</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Extractor.volumes"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.Extractor.volumes">[docs]</a>    <span class="k">def</span> <span class="nf">volumes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">volumes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Extractor.control_points"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.Extractor.control_points">[docs]</a>    <span class="k">def</span> <span class="nf">control_points</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">control_points</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Extractor.control_edges"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.Extractor.control_edges">[docs]</a>    <span class="k">def</span> <span class="nf">control_edges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">control_edges</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Extractor.control_faces"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.Extractor.control_faces">[docs]</a>    <span class="k">def</span> <span class="nf">control_faces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">control_faces</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Extractor.control_volumes"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.Extractor.control_volumes">[docs]</a>    <span class="k">def</span> <span class="nf">control_volumes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">control_volumes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Extractor.control_mesh"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.Extractor.control_mesh">[docs]</a>    <span class="k">def</span> <span class="nf">control_mesh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">control_mesh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Extractor.beziers"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.Extractor.beziers">[docs]</a>    <span class="k">def</span> <span class="nf">beziers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">beziers</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Extractor.spline"><a class="viewcode-back" href="../../../gustaf.spline.html#gustaf.spline.extract.Extractor.spline">[docs]</a>    <span class="k">def</span> <span class="nf">spline</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">splittin_plane</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Extract a spline from a spline.</span>
+
+<span class="sd">        Use a (number of) splitting planes to extract a subsection from the</span>
+<span class="sd">        parametric domain of it.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        splitting_plane : int / dictionary (int : (float))</span>
+<span class="sd">          if integer : parametric dimension to be extracted</span>
+<span class="sd">          if dictionary : list of splitting planes and ranges to be passed</span>
+<span class="sd">        interval : float / tuple&lt;float,float&gt;</span>
+<span class="sd">          intervall or value in parametric space to be extracted from the</span>
+<span class="sd">          spline representation</span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        spline</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">splittin_plane</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">interval</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Arguments incompatible expect dictionary&quot;</span><span class="p">)</span>
+            <span class="n">splittin_plane</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+                    <span class="nb">sorted</span><span class="p">(</span><span class="n">splittin_plane</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="p">)</span>
+            <span class="n">spline_copy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">splittin_plane</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">spline_copy</span> <span class="o">=</span> <span class="n">spline</span><span class="p">(</span><span class="n">spline_copy</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">spline_copy</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">spline</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_spline</span><span class="p">,</span> <span class="n">splittin_plane</span><span class="p">,</span> <span class="n">interval</span><span class="p">)</span></div></div>
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="clearer"></div>
+    </div>
+    <div class="button_nav_wrapper">
+        <div class="button_nav">
+            <div class="left">
+                
+            </div>
+
+            <div class="right">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Jaewook Lee.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+
+<p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>
+  </body>
+</html>

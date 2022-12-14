@@ -1,0 +1,1705 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>gustaf &#8212; gustaf 0.0.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/basic_mod.css?v=0.7.0-1" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <script src="_static/js/petite-vue.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gustaf.create" href="gustaf.create.html" />
+    <link rel="prev" title="gustaf" href="modules.html" />
+    <link href="_static/style.css" rel="stylesheet" type="text/css">
+
+  </head><body data-dark_mode_code_blocks="true">
+
+<div id="top_nav">
+    
+
+    <nav>
+        
+            
+        
+
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="index.html" title="Go to homepage">gustaf 0.0.3 documentation</a></h1>
+
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
+            
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><ul>
+<li class="toctree-l1"><a class="reference external" href="http://github.com/tataratat/gustaf">Github</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contiributing</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API references</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">gustaf</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.create.html">gustaf.create</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.helpers.html">gustaf.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.io.html">gustaf.io</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html">gustaf.spline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html">gustaf.utils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="gustaf">
+<h1>gustaf<a class="headerlink" href="#gustaf" title="Permalink to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="gustaf.create.html">gustaf.create</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.create.html#module-gustaf.create.faces">gustaf.create.faces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.create.html#gustaf.create.faces.box"><code class="docutils literal notranslate"><span class="pre">box()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.create.html#module-gustaf.create.spline">gustaf.create.spline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.create.html#gustaf.create.spline.parametric_view"><code class="docutils literal notranslate"><span class="pre">parametric_view()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.create.html#gustaf.create.spline.with_bounds"><code class="docutils literal notranslate"><span class="pre">with_bounds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.create.html#gustaf.create.spline.with_parametric_bounds"><code class="docutils literal notranslate"><span class="pre">with_parametric_bounds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.create.html#gustaf.create.spline.with_physical_bounds"><code class="docutils literal notranslate"><span class="pre">with_physical_bounds()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.create.html#module-gustaf.create.vertices">gustaf.create.vertices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.create.html#gustaf.create.vertices.raster"><code class="docutils literal notranslate"><span class="pre">raster()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.create.html#module-gustaf.create.volumes">gustaf.create.volumes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.create.html#gustaf.create.volumes.box"><code class="docutils literal notranslate"><span class="pre">box()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gustaf.helpers.html">gustaf.helpers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.helpers.html#module-gustaf.helpers.data">gustaf.helpers.data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.ComputedData"><code class="docutils literal notranslate"><span class="pre">ComputedData</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.ComputedData.__init__"><code class="docutils literal notranslate"><span class="pre">ComputedData.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.ComputedData.None"><code class="docutils literal notranslate"><span class="pre">ComputedData.None</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.ComputedData.depends_on"><code class="docutils literal notranslate"><span class="pre">ComputedData.depends_on()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.ComputedMeshData"><code class="docutils literal notranslate"><span class="pre">ComputedMeshData</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.DataHolder"><code class="docutils literal notranslate"><span class="pre">DataHolder</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.DataHolder.__init__"><code class="docutils literal notranslate"><span class="pre">DataHolder.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.DataHolder.None"><code class="docutils literal notranslate"><span class="pre">DataHolder.None</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.DataHolder.get"><code class="docutils literal notranslate"><span class="pre">DataHolder.get()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.DataHolder.items"><code class="docutils literal notranslate"><span class="pre">DataHolder.items()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.DataHolder.keys"><code class="docutils literal notranslate"><span class="pre">DataHolder.keys()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.DataHolder.values"><code class="docutils literal notranslate"><span class="pre">DataHolder.values()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.TrackedArray"><code class="docutils literal notranslate"><span class="pre">TrackedArray</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.TrackedArray.copy"><code class="docutils literal notranslate"><span class="pre">TrackedArray.copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.TrackedArray.mutable"><code class="docutils literal notranslate"><span class="pre">TrackedArray.mutable</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.TrackedArray.view"><code class="docutils literal notranslate"><span class="pre">TrackedArray.view()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.Unique2DFloats"><code class="docutils literal notranslate"><span class="pre">Unique2DFloats</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.Unique2DFloats.ids"><code class="docutils literal notranslate"><span class="pre">Unique2DFloats.ids</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.Unique2DFloats.intersection"><code class="docutils literal notranslate"><span class="pre">Unique2DFloats.intersection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.Unique2DFloats.inverse"><code class="docutils literal notranslate"><span class="pre">Unique2DFloats.inverse</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.Unique2DFloats.values"><code class="docutils literal notranslate"><span class="pre">Unique2DFloats.values</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.Unique2DIntegers"><code class="docutils literal notranslate"><span class="pre">Unique2DIntegers</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.Unique2DIntegers.counts"><code class="docutils literal notranslate"><span class="pre">Unique2DIntegers.counts</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.Unique2DIntegers.ids"><code class="docutils literal notranslate"><span class="pre">Unique2DIntegers.ids</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.Unique2DIntegers.inverse"><code class="docutils literal notranslate"><span class="pre">Unique2DIntegers.inverse</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.Unique2DIntegers.values"><code class="docutils literal notranslate"><span class="pre">Unique2DIntegers.values</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.make_tracked_array"><code class="docutils literal notranslate"><span class="pre">make_tracked_array()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.helpers.html#module-gustaf.helpers.raise_if">gustaf.helpers.raise_if</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.raise_if.ModuleImportRaiser"><code class="docutils literal notranslate"><span class="pre">ModuleImportRaiser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.raise_if.ModuleImportRaiser.__init__"><code class="docutils literal notranslate"><span class="pre">ModuleImportRaiser.__init__()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.raise_if.invalid_inherited_attr"><code class="docutils literal notranslate"><span class="pre">invalid_inherited_attr()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gustaf.io.html">gustaf.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.io.html#module-gustaf.io.ioutils">gustaf.io.ioutils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.io.html#gustaf.io.ioutils.abs_fname"><code class="docutils literal notranslate"><span class="pre">abs_fname()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.io.html#gustaf.io.ioutils.check_and_makedirs"><code class="docutils literal notranslate"><span class="pre">check_and_makedirs()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.io.html#module-gustaf.io.meshio">gustaf.io.meshio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.io.html#module-gustaf.io.mfem">gustaf.io.mfem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.io.html#gustaf.io.mfem.export"><code class="docutils literal notranslate"><span class="pre">export()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.io.html#gustaf.io.mfem.load"><code class="docutils literal notranslate"><span class="pre">load()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.io.html#module-gustaf.io.mixd">gustaf.io.mixd</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.io.html#gustaf.io.mixd.export"><code class="docutils literal notranslate"><span class="pre">export()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.io.html#gustaf.io.mixd.load"><code class="docutils literal notranslate"><span class="pre">load()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gustaf.spline.html">gustaf.spline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.spline.microstructure.html">gustaf.spline.microstructure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.microstructure.tiles.html">gustaf.spline.microstructure.tiles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.microstructure.tiles.html#module-gustaf.spline.microstructure.tiles.crosstile2d">gustaf.spline.microstructure.tiles.crosstile2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.microstructure.tiles.html#module-gustaf.spline.microstructure.tiles.crosstile3d">gustaf.spline.microstructure.tiles.crosstile3d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.microstructure.tiles.html#module-gustaf.spline.microstructure.tiles.inversecrosstile3d">gustaf.spline.microstructure.tiles.inversecrosstile3d</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.microstructure.html#module-gustaf.spline.microstructure.microstructure">gustaf.spline.microstructure.microstructure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.microstructure.html#gustaf.spline.microstructure.microstructure.Microstructure"><code class="docutils literal notranslate"><span class="pre">Microstructure</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.spline.html#module-gustaf.spline.base">gustaf.spline.base</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.BSpline"><code class="docutils literal notranslate"><span class="pre">BSpline</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.BSpline.__init__"><code class="docutils literal notranslate"><span class="pre">BSpline.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.BSpline.extract"><code class="docutils literal notranslate"><span class="pre">BSpline.extract</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.BSpline.create"><code class="docutils literal notranslate"><span class="pre">BSpline.create</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.BSpline.proximity"><code class="docutils literal notranslate"><span class="pre">BSpline.proximity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.BSpline.bspline"><code class="docutils literal notranslate"><span class="pre">BSpline.bspline</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.BSpline.extract_bezier_patches"><code class="docutils literal notranslate"><span class="pre">BSpline.extract_bezier_patches()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.BSpline.nurbs"><code class="docutils literal notranslate"><span class="pre">BSpline.nurbs</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.Bezier"><code class="docutils literal notranslate"><span class="pre">Bezier</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.Bezier.__init__"><code class="docutils literal notranslate"><span class="pre">Bezier.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.Bezier.extract"><code class="docutils literal notranslate"><span class="pre">Bezier.extract</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.Bezier.create"><code class="docutils literal notranslate"><span class="pre">Bezier.create</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.Bezier.proximity"><code class="docutils literal notranslate"><span class="pre">Bezier.proximity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.Bezier.bezier"><code class="docutils literal notranslate"><span class="pre">Bezier.bezier</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.Bezier.bspline"><code class="docutils literal notranslate"><span class="pre">Bezier.bspline</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.Bezier.nurbs"><code class="docutils literal notranslate"><span class="pre">Bezier.nurbs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.Bezier.rationalbezier"><code class="docutils literal notranslate"><span class="pre">Bezier.rationalbezier</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.GustafSpline"><code class="docutils literal notranslate"><span class="pre">GustafSpline</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.GustafSpline.__init__"><code class="docutils literal notranslate"><span class="pre">GustafSpline.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.GustafSpline.copy"><code class="docutils literal notranslate"><span class="pre">GustafSpline.copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.GustafSpline.create"><code class="docutils literal notranslate"><span class="pre">GustafSpline.create</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.GustafSpline.extract"><code class="docutils literal notranslate"><span class="pre">GustafSpline.extract</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.GustafSpline.proximity"><code class="docutils literal notranslate"><span class="pre">GustafSpline.proximity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.GustafSpline.show"><code class="docutils literal notranslate"><span class="pre">GustafSpline.show()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.GustafSpline.showable"><code class="docutils literal notranslate"><span class="pre">GustafSpline.showable()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.NURBS"><code class="docutils literal notranslate"><span class="pre">NURBS</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.NURBS.__init__"><code class="docutils literal notranslate"><span class="pre">NURBS.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.NURBS.extract"><code class="docutils literal notranslate"><span class="pre">NURBS.extract</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.NURBS.create"><code class="docutils literal notranslate"><span class="pre">NURBS.create</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.NURBS.proximity"><code class="docutils literal notranslate"><span class="pre">NURBS.proximity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.NURBS.extract_bezier_patches"><code class="docutils literal notranslate"><span class="pre">NURBS.extract_bezier_patches()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.NURBS.nurbs"><code class="docutils literal notranslate"><span class="pre">NURBS.nurbs</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.RationalBezier"><code class="docutils literal notranslate"><span class="pre">RationalBezier</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.RationalBezier.__init__"><code class="docutils literal notranslate"><span class="pre">RationalBezier.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.RationalBezier.extract"><code class="docutils literal notranslate"><span class="pre">RationalBezier.extract</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.RationalBezier.create"><code class="docutils literal notranslate"><span class="pre">RationalBezier.create</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.RationalBezier.proximity"><code class="docutils literal notranslate"><span class="pre">RationalBezier.proximity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.RationalBezier.nurbs"><code class="docutils literal notranslate"><span class="pre">RationalBezier.nurbs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.RationalBezier.rationalbezier"><code class="docutils literal notranslate"><span class="pre">RationalBezier.rationalbezier</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.from_mfem"><code class="docutils literal notranslate"><span class="pre">from_mfem()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.load_splines"><code class="docutils literal notranslate"><span class="pre">load_splines()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.base.show"><code class="docutils literal notranslate"><span class="pre">show()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.spline.html#module-gustaf.spline.create">gustaf.spline.create</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.Creator"><code class="docutils literal notranslate"><span class="pre">Creator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.Creator.__init__"><code class="docutils literal notranslate"><span class="pre">Creator.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.Creator.extruded"><code class="docutils literal notranslate"><span class="pre">Creator.extruded()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.Creator.revolved"><code class="docutils literal notranslate"><span class="pre">Creator.revolved()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.arc"><code class="docutils literal notranslate"><span class="pre">arc()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.box"><code class="docutils literal notranslate"><span class="pre">box()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.circle"><code class="docutils literal notranslate"><span class="pre">circle()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.cone"><code class="docutils literal notranslate"><span class="pre">cone()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.disk"><code class="docutils literal notranslate"><span class="pre">disk()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.extruded"><code class="docutils literal notranslate"><span class="pre">extruded()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.line"><code class="docutils literal notranslate"><span class="pre">line()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.plate"><code class="docutils literal notranslate"><span class="pre">plate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.pyramid"><code class="docutils literal notranslate"><span class="pre">pyramid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.revolved"><code class="docutils literal notranslate"><span class="pre">revolved()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.sphere"><code class="docutils literal notranslate"><span class="pre">sphere()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.create.torus"><code class="docutils literal notranslate"><span class="pre">torus()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.spline.html#module-gustaf.spline.extract">gustaf.spline.extract</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.Extractor"><code class="docutils literal notranslate"><span class="pre">Extractor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.Extractor.__init__"><code class="docutils literal notranslate"><span class="pre">Extractor.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.Extractor.beziers"><code class="docutils literal notranslate"><span class="pre">Extractor.beziers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.Extractor.control_edges"><code class="docutils literal notranslate"><span class="pre">Extractor.control_edges()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.Extractor.control_faces"><code class="docutils literal notranslate"><span class="pre">Extractor.control_faces()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.Extractor.control_mesh"><code class="docutils literal notranslate"><span class="pre">Extractor.control_mesh()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.Extractor.control_points"><code class="docutils literal notranslate"><span class="pre">Extractor.control_points()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.Extractor.control_volumes"><code class="docutils literal notranslate"><span class="pre">Extractor.control_volumes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.Extractor.edges"><code class="docutils literal notranslate"><span class="pre">Extractor.edges()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.Extractor.faces"><code class="docutils literal notranslate"><span class="pre">Extractor.faces()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.Extractor.spline"><code class="docutils literal notranslate"><span class="pre">Extractor.spline()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.Extractor.volumes"><code class="docutils literal notranslate"><span class="pre">Extractor.volumes()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.beziers"><code class="docutils literal notranslate"><span class="pre">beziers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.control_edges"><code class="docutils literal notranslate"><span class="pre">control_edges()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.control_faces"><code class="docutils literal notranslate"><span class="pre">control_faces()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.control_mesh"><code class="docutils literal notranslate"><span class="pre">control_mesh()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.control_points"><code class="docutils literal notranslate"><span class="pre">control_points()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.control_volumes"><code class="docutils literal notranslate"><span class="pre">control_volumes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.edges"><code class="docutils literal notranslate"><span class="pre">edges()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.faces"><code class="docutils literal notranslate"><span class="pre">faces()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.spline"><code class="docutils literal notranslate"><span class="pre">spline()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.extract.volumes"><code class="docutils literal notranslate"><span class="pre">volumes()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.spline.html#module-gustaf.spline.ffd">gustaf.spline.ffd</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.ffd.FFD"><code class="docutils literal notranslate"><span class="pre">FFD</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.ffd.FFD.__init__"><code class="docutils literal notranslate"><span class="pre">FFD.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.ffd.FFD.control_points"><code class="docutils literal notranslate"><span class="pre">FFD.control_points</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.ffd.FFD.elevate_degree"><code class="docutils literal notranslate"><span class="pre">FFD.elevate_degree()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.ffd.FFD.insert_knots"><code class="docutils literal notranslate"><span class="pre">FFD.insert_knots()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.ffd.FFD.mesh"><code class="docutils literal notranslate"><span class="pre">FFD.mesh</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.ffd.FFD.reduce_degree"><code class="docutils literal notranslate"><span class="pre">FFD.reduce_degree()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.ffd.FFD.remove_knots"><code class="docutils literal notranslate"><span class="pre">FFD.remove_knots()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.ffd.FFD.show"><code class="docutils literal notranslate"><span class="pre">FFD.show()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.ffd.FFD.showable"><code class="docutils literal notranslate"><span class="pre">FFD.showable()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.ffd.FFD.spline"><code class="docutils literal notranslate"><span class="pre">FFD.spline</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.spline.html#module-gustaf.spline.proximity">gustaf.spline.proximity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.proximity.Proximity"><code class="docutils literal notranslate"><span class="pre">Proximity</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.proximity.Proximity.__init__"><code class="docutils literal notranslate"><span class="pre">Proximity.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.proximity.Proximity.closest_control_points"><code class="docutils literal notranslate"><span class="pre">Proximity.closest_control_points()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.proximity.closest_control_points"><code class="docutils literal notranslate"><span class="pre">closest_control_points()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.spline.html#gustaf.spline.proximity.closest_parametric_coordinate"><code class="docutils literal notranslate"><span class="pre">closest_parametric_coordinate()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gustaf.utils.html">gustaf.utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.utils.html#module-gustaf.utils.arr">gustaf.utils.arr</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.arr.bounds"><code class="docutils literal notranslate"><span class="pre">bounds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.arr.bounds_diagonal"><code class="docutils literal notranslate"><span class="pre">bounds_diagonal()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.arr.bounds_mean"><code class="docutils literal notranslate"><span class="pre">bounds_mean()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.arr.bounds_norm"><code class="docutils literal notranslate"><span class="pre">bounds_norm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.arr.close_rows"><code class="docutils literal notranslate"><span class="pre">close_rows()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.arr.is_one_of_shapes"><code class="docutils literal notranslate"><span class="pre">is_one_of_shapes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.arr.is_shape"><code class="docutils literal notranslate"><span class="pre">is_shape()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.arr.make_c_contiguous"><code class="docutils literal notranslate"><span class="pre">make_c_contiguous()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.arr.rotate"><code class="docutils literal notranslate"><span class="pre">rotate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.arr.rotation_matrix"><code class="docutils literal notranslate"><span class="pre">rotation_matrix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.arr.rotation_matrix_around_axis"><code class="docutils literal notranslate"><span class="pre">rotation_matrix_around_axis()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.arr.select_with_ranges"><code class="docutils literal notranslate"><span class="pre">select_with_ranges()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.arr.unique_rows"><code class="docutils literal notranslate"><span class="pre">unique_rows()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.utils.html#module-gustaf.utils.connec">gustaf.utils.connec</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.connec.faces_to_edges"><code class="docutils literal notranslate"><span class="pre">faces_to_edges()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.connec.hexa_to_quad"><code class="docutils literal notranslate"><span class="pre">hexa_to_quad()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.connec.make_hexa_volumes"><code class="docutils literal notranslate"><span class="pre">make_hexa_volumes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.connec.make_quad_faces"><code class="docutils literal notranslate"><span class="pre">make_quad_faces()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.connec.range_to_edges"><code class="docutils literal notranslate"><span class="pre">range_to_edges()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.connec.sequence_to_edges"><code class="docutils literal notranslate"><span class="pre">sequence_to_edges()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.connec.sorted_unique"><code class="docutils literal notranslate"><span class="pre">sorted_unique()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.connec.subdivide_edges"><code class="docutils literal notranslate"><span class="pre">subdivide_edges()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.connec.subdivide_quad"><code class="docutils literal notranslate"><span class="pre">subdivide_quad()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.connec.subdivide_tri"><code class="docutils literal notranslate"><span class="pre">subdivide_tri()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.connec.tet_to_tri"><code class="docutils literal notranslate"><span class="pre">tet_to_tri()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.connec.volumes_to_faces"><code class="docutils literal notranslate"><span class="pre">volumes_to_faces()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.utils.html#module-gustaf.utils.log">gustaf.utils.log</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.log.configure"><code class="docutils literal notranslate"><span class="pre">configure()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.log.debug"><code class="docutils literal notranslate"><span class="pre">debug()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.log.info"><code class="docutils literal notranslate"><span class="pre">info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="gustaf.utils.html#gustaf.utils.log.warning"><code class="docutils literal notranslate"><span class="pre">warning()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gustaf.utils.html#module-gustaf.utils.tictoc">gustaf.utils.tictoc</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="module-gustaf.edges">
+<span id="gustaf-edges"></span><h2>gustaf.edges<a class="headerlink" href="#module-gustaf.edges" title="Permalink to this heading">¶</a></h2>
+<p>gustaf/gustaf/edges.py.</p>
+<p>Edges. Also known as lines.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="gustaf.edges.Edges">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gustaf.edges.</span></span><span class="sig-name descname"><span class="pre">Edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/edges.html#Edges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.edges.Edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#gustaf.vertices.Vertices" title="gustaf.vertices.Vertices"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vertices</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/edges.html#Edges.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.edges.Edges.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edges. It has vertices and edges. Also known as lines.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vertices</strong> (<em>(</em><em>n</em><em>, </em><em>d</em><em>) </em><em>np.ndarray</em>) – </p></li>
+<li><p><strong>edges</strong> (<em>(</em><em>n</em><em>, </em><em>2</em><em>) </em><em>np.ndarray</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.centers">
+<span class="sig-name descname"><span class="pre">centers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/edges.html#Edges.centers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.edges.Edges.centers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Center of elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>centers</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n_elements, d) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.const_edges">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">const_edges</span></span><a class="headerlink" href="#gustaf.edges.Edges.const_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns non-writeable version of edges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>const_edges (n, 2) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.const_elements">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">const_elements</span></span><a class="headerlink" href="#gustaf.edges.Edges.const_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns non-mutable version of elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>non_mutable_elements</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n, d) <a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.TrackedArray" title="gustaf.helpers.data.TrackedArray">TrackedArray</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.dashed">
+<span class="sig-name descname"><span class="pre">dashed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spacing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/edges.html#Edges.dashed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.edges.Edges.dashed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn edges into dashed edges(=lines). Given spacing, it will try to
+chop edges as close to it as possible. Pattern should look:</p>
+<p><code class="docutils literal notranslate"><span class="pre">dashed</span> <span class="pre">edges</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">o</span><span class="o">--------</span><span class="n">o</span>    <span class="n">o</span><span class="o">--------</span><span class="n">o</span>    <span class="n">o</span><span class="o">--------</span><span class="n">o</span>
+<span class="o">|&lt;------&gt;|</span>             <span class="o">|&lt;--&gt;|</span>
+   <span class="p">(</span><span class="n">chop</span> <span class="n">length</span><span class="p">)</span>         <span class="p">(</span><span class="n">chop</span> <span class="n">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>spacing</strong> (<em>float</em>) – Default is None and it will use self.bounds_diagonal_norm() / 50</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>dashing_edges</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#gustaf.edges.Edges" title="gustaf.edges.Edges">Edges</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.edges">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">edges</span></span><a class="headerlink" href="#gustaf.edges.Edges.edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns edges. If edges is not its original property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>edges</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n, 2) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.elements">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">elements</span></span><a class="headerlink" href="#gustaf.edges.Edges.elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns current connectivity. A short cut in FE friendly term.
+Elements mean different things for different classes: Vertices -&gt;
+vertices Edges -&gt; edges Faces -&gt; faces Volumes -&gt; volumes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>elements</strong> – int. iff elements=None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n, d) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.kind">
+<span class="sig-name descname"><span class="pre">kind</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'edge'</span></em><a class="headerlink" href="#gustaf.edges.Edges.kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.referenced_vertices">
+<span class="sig-name descname"><span class="pre">referenced_vertices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/edges.html#Edges.referenced_vertices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.edges.Edges.referenced_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns mask of referenced vertices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>referenced</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n,) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.remove_unreferenced_vertices">
+<span class="sig-name descname"><span class="pre">remove_unreferenced_vertices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/edges.html#Edges.remove_unreferenced_vertices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.edges.Edges.remove_unreferenced_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove unreferenced vertices. Adapted from
+<cite>github.com/mikedh/trimesh</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>new_self</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>type(self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.shrink">
+<span class="sig-name descname"><span class="pre">shrink</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">map_vertexdata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/edges.html#Edges.shrink"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.edges.Edges.shrink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns shrunk elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ratio</strong> (<em>float</em>) – Default is 0.8</p></li>
+<li><p><strong>map_vertexdata</strong> (<em>bool</em>) – Default is True. Maps all vertexdata.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>s_elements</strong> – shrunk elements</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Elements</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.single_edges">
+<span class="sig-name descname"><span class="pre">single_edges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/edges.html#Edges.single_edges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.edges.Edges.single_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns indices of very unique edges: edges that appear only once.
+For well constructed faces, this can be considered as outlines.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>outlines</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(m,) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.sorted_edges">
+<span class="sig-name descname"><span class="pre">sorted_edges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/edges.html#Edges.sorted_edges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.edges.Edges.sorted_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sort edges along axis=1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>edges_sorted</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n_edges, 2) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.tovertices">
+<span class="sig-name descname"><span class="pre">tovertices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/edges.html#Edges.tovertices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.edges.Edges.tovertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Vertices obj.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>vertices</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#gustaf.vertices.Vertices" title="gustaf.vertices.Vertices">Vertices</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.unique_edges">
+<span class="sig-name descname"><span class="pre">unique_edges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/edges.html#Edges.unique_edges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.edges.Edges.unique_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a named tuple of unique edge info. Info includes unique
+values, ids of unique edges, inverse ids, count of each unique values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>unique_info</strong> – valid attributes are {values, ids, inverse, counts}</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.Unique2DIntegers" title="gustaf.helpers.data.Unique2DIntegers">Unique2DIntegers</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.update_edges">
+<span class="sig-name descname"><span class="pre">update_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/edges.html#Edges.update_edges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.edges.Edges.update_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias to update_elements.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.update_elements">
+<span class="sig-name descname"><span class="pre">update_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/edges.html#Edges.update_elements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.edges.Edges.update_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to update_vertices, but for elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mask</strong> (<em>bool</em><em> or </em><em>(</em><em>m</em><em>,</em><em>) </em><em>np.ndarray</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>new_self</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>type(self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gustaf.edges.Edges.whatami">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">whatami</span></span><a class="headerlink" href="#gustaf.edges.Edges.whatami" title="Permalink to this definition">¶</a></dt>
+<dd><p>whatami?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>whatami</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-gustaf.faces">
+<span id="gustaf-faces"></span><h2>gustaf.faces<a class="headerlink" href="#module-gustaf.faces" title="Permalink to this heading">¶</a></h2>
+<p>gustaf/gustaf/faces.py.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="gustaf.faces.Faces">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gustaf.faces.</span></span><span class="sig-name descname"><span class="pre">Faces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">faces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/faces.html#Faces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.faces.Faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#gustaf.edges.Edges" title="gustaf.edges.Edges"><code class="xref py py-class docutils literal notranslate"><span class="pre">Edges</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.BC">
+<span class="sig-name descname"><span class="pre">BC</span></span><a class="headerlink" href="#gustaf.faces.Faces.BC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">faces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/faces.html#Faces.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.faces.Faces.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Faces. It has vertices and faces. Faces could be triangles or
+quadrilaterals.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vertices</strong> (<em>(</em><em>n</em><em>, </em><em>d</em><em>) </em><em>np.ndarray</em>) – </p></li>
+<li><p><strong>faces</strong> (<em>(</em><em>n</em><em>, </em><em>3</em><em>) or </em><em>(</em><em>n</em><em>, </em><em>4</em><em>) </em><em>np.ndarray</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.const_edges">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">const_edges</span></span><a class="headerlink" href="#gustaf.faces.Faces.const_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns non-writeable version of edges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>const_edges (n, 2) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.const_faces">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">const_faces</span></span><a class="headerlink" href="#gustaf.faces.Faces.const_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns non-writeable view of faces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>const_faces</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n, 2</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.dashed">
+<span class="sig-name descname"><span class="pre">dashed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gustaf.faces.Faces.dashed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn edges into dashed edges(=lines). Given spacing, it will try to
+chop edges as close to it as possible. Pattern should look:</p>
+<p><code class="docutils literal notranslate"><span class="pre">dashed</span> <span class="pre">edges</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">o</span><span class="o">--------</span><span class="n">o</span>    <span class="n">o</span><span class="o">--------</span><span class="n">o</span>    <span class="n">o</span><span class="o">--------</span><span class="n">o</span>
+<span class="o">|&lt;------&gt;|</span>             <span class="o">|&lt;--&gt;|</span>
+   <span class="p">(</span><span class="n">chop</span> <span class="n">length</span><span class="p">)</span>         <span class="p">(</span><span class="n">chop</span> <span class="n">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>spacing</strong> (<em>float</em>) – Default is None and it will use self.bounds_diagonal_norm() / 50</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>dashing_edges</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#gustaf.edges.Edges" title="gustaf.edges.Edges">Edges</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.edges">
+<span class="sig-name descname"><span class="pre">edges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/faces.html#Faces.edges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.faces.Faces.edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edges from here aren’t main property. So this needs to be computed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>edges</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n, 2) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.faces">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">faces</span></span><a class="headerlink" href="#gustaf.faces.Faces.faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns faces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>faces</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.kind">
+<span class="sig-name descname"><span class="pre">kind</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'face'</span></em><a class="headerlink" href="#gustaf.faces.Faces.kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.single_faces">
+<span class="sig-name descname"><span class="pre">single_faces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/faces.html#Faces.single_faces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.faces.Faces.single_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns indices of very unique faces: faces that appear only once.
+For well constructed volumes, this can be considered as surfaces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>single_faces</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(m,) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.sorted_faces">
+<span class="sig-name descname"><span class="pre">sorted_faces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/faces.html#Faces.sorted_faces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.faces.Faces.sorted_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to edges_sorted but for faces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>sorted_faces</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(self.faces.shape) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.toedges">
+<span class="sig-name descname"><span class="pre">toedges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unique</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/faces.html#Faces.toedges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.faces.Faces.toedges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Edges obj.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>unique</strong> (<em>bool</em>) – Default is True. If True, only takes unique edges.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>edges</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#gustaf.edges.Edges" title="gustaf.edges.Edges">Edges</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.unique_faces">
+<span class="sig-name descname"><span class="pre">unique_faces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/faces.html#Faces.unique_faces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.faces.Faces.unique_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a namedtuple of unique faces info. Similar to unique_edges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>unique_info</strong> – valid attributes are {values, ids, inverse, counts}</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.Unique2DIntegers" title="gustaf.helpers.data.Unique2DIntegers">Unique2DIntegers</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.update_edges">
+<span class="sig-name descname"><span class="pre">update_edges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gustaf.faces.Faces.update_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias to update_elements.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.update_faces">
+<span class="sig-name descname"><span class="pre">update_faces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/faces.html#Faces.update_faces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.faces.Faces.update_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias to update_elements.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.whatami">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">whatami</span></span><a class="headerlink" href="#gustaf.faces.Faces.whatami" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whatami.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.faces.Faces.whatareyou">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">whatareyou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">face_obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/faces.html#Faces.whatareyou"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.faces.Faces.whatareyou" title="Permalink to this definition">¶</a></dt>
+<dd><p>classmethod that tells you if the Faces is tri or quad or invalid
+kind.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>face_obj</strong> (<a class="reference internal" href="#gustaf.faces.Faces" title="gustaf.faces.Faces"><em>Faces</em></a>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>whatareyou</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-gustaf.meshmaker">
+<span id="gustaf-meshmaker"></span><h2>gustaf.meshmaker<a class="headerlink" href="#module-gustaf.meshmaker" title="Permalink to this heading">¶</a></h2>
+<p>gustaf/gustaf/mesh_maker.py.</p>
+<p>MeshMaker that triangulates and tetrahedralizes with segment input.</p>
+</section>
+<section id="module-gustaf.segment">
+<span id="gustaf-segment"></span><h2>gustaf.segment<a class="headerlink" href="#module-gustaf.segment" title="Permalink to this heading">¶</a></h2>
+<p>gustaf/gustaf/segment.py.</p>
+<p>Segment class to form inputs for <cite>triangle</cite> and <cite>tetgenpy</cite>.</p>
+</section>
+<section id="module-gustaf.settings">
+<span id="gustaf-settings"></span><h2>gustaf.settings<a class="headerlink" href="#module-gustaf.settings" title="Permalink to this heading">¶</a></h2>
+<p>gustaf/gustaf/settings.py.</p>
+<p>Global variables/constants that’s used throughout <cite>gustaf</cite>.</p>
+</section>
+<section id="module-gustaf.show">
+<span id="gustaf-show"></span><h2>gustaf.show<a class="headerlink" href="#module-gustaf.show" title="Permalink to this heading">¶</a></h2>
+<p>gustaf/gustaf/show.py.</p>
+<p>Everything related to show/visualization.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.show.interpolate_vedo_dictcam">
+<span class="sig-prename descclassname"><span class="pre">gustaf.show.</span></span><span class="sig-name descname"><span class="pre">interpolate_vedo_dictcam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cameras</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolutions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spline_degree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/show.html#interpolate_vedo_dictcam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.show.interpolate_vedo_dictcam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpolate between vedo dict cameras.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cameras</strong> (<em>list</em><em> or </em><em>tuple</em>) – </p></li>
+<li><p><strong>resolutions</strong> (<em>int</em>) – </p></li>
+<li><p><strong>spline_degree</strong> (<em>int</em>) – if &gt; 1 and splinepy is available and there are more than two cameras,
+we interpolate all the entries using spline.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>interpolated_cams</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.show.make_showable">
+<span class="sig-prename descclassname"><span class="pre">gustaf.show.</span></span><span class="sig-name descname"><span class="pre">make_showable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'vedo'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/show.html#make_showable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.show.make_showable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Since gustaf does not natively support visualization, one of the
+following library is used to visualize gustaf (visualizable) objects: (1)
+vedo -&gt; Fast, offers a lot of features (2) trimesh -&gt; Fast, compatible with
+old opengl (3) matplotlib -&gt; Slow, offers vector graphics.</p>
+<p>This determines showing types using <cite>whatami</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>gustaf-objects</em>) – </p></li>
+<li><p><strong>backend</strong> (<em>str</em>) – (Optional) Default is <cite>gustaf.settings.VISUALIZATION_BACKEND</cite>.
+Options are: “vedo” | “trimesh” | “matplotlib”</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>showalbe_objs</strong> – List of showable objects.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.show.show">
+<span class="sig-prename descclassname"><span class="pre">gustaf.show.</span></span><span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">gusobj</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/show.html#show"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.show.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shows using appropriate backend.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>*gusobj</strong> (<em>gustaf objects</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gustaf.show.show_vedo">
+<span class="sig-prename descclassname"><span class="pre">gustaf.show.</span></span><span class="sig-name descname"><span class="pre">show_vedo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/show.html#show_vedo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.show.show_vedo" title="Permalink to this definition">¶</a></dt>
+<dd><p><cite>vedo.show</cite> wrapper. Each args represent one section of window. In other
+words len(args) == N, where N corresponds to the parameter for vedo.show().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>*args</strong> (<em>Union</em><em>[</em><em>List</em><em>[</em><em>Union</em><em>[</em><em>gustaf_obj</em><em>, </em><em>vedo_obj</em><em>]</em><em>]</em><em>, </em><em>Dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em><em>]</em><em>]</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-gustaf.vertices">
+<span id="gustaf-vertices"></span><h2>gustaf.vertices<a class="headerlink" href="#module-gustaf.vertices" title="Permalink to this heading">¶</a></h2>
+<p>gustaf/gustaf/vertices.py.</p>
+<p>Vertices. Base of all “Mesh” geometries.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gustaf.vertices.</span></span><span class="sig-name descname"><span class="pre">Vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/vertices.html#Vertices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.vertices.Vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">GustafBase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/vertices.html#Vertices.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.vertices.Vertices.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertices. It has vertices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>vertices</strong> (<em>(</em><em>n</em><em>, </em><em>d</em><em>) </em><em>np.ndarray</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.bounds">
+<span class="sig-name descname"><span class="pre">bounds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/vertices.html#Vertices.bounds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.vertices.Vertices.bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns bounds of the vertices. Bounds means AABB of the geometry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>bounds</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(d,) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.bounds_diagonal">
+<span class="sig-name descname"><span class="pre">bounds_diagonal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/vertices.html#Vertices.bounds_diagonal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.vertices.Vertices.bounds_diagonal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns diagonal vector of the bounding box.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>bounds_digonal</strong> – same as <cite>bounds[1] - bounds[0]</cite></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(d,) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.bounds_diagonal_norm">
+<span class="sig-name descname"><span class="pre">bounds_diagonal_norm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/vertices.html#Vertices.bounds_diagonal_norm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.vertices.Vertices.bounds_diagonal_norm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns norm of bounds diagonal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>bounds_diagonal_norm</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.concat">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">concat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">instances</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/vertices.html#Vertices.concat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.vertices.Vertices.concat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sequentially put them together to make one object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>*instances</strong> (<em>List</em><em>[</em><em>type</em><em>(</em><em>cls</em><em>)</em><em>]</em>) – Allows one iterable object also.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>one_instance</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>type(cls)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.const_vertices">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">const_vertices</span></span><a class="headerlink" href="#gustaf.vertices.Vertices.const_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns non-mutable view of <cite>vertices</cite>. Naming inspired by c/cpp
+sessions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/vertices.html#Vertices.copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.vertices.Vertices.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns deepcopy of self.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>selfcopy</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>type(self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.kind">
+<span class="sig-name descname"><span class="pre">kind</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'vertex'</span></em><a class="headerlink" href="#gustaf.vertices.Vertices.kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.merge_vertices">
+<span class="sig-name descname"><span class="pre">merge_vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/vertices.html#Vertices.merge_vertices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.vertices.Vertices.merge_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Based on unique vertices, merge vertices if it is mergeable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tolerance</strong> (<em>float</em>) – Default is settings.TOLERANCE</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>merged_self</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>type(self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.remove_vertices">
+<span class="sig-name descname"><span class="pre">remove_vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ids</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/vertices.html#Vertices.remove_vertices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.vertices.Vertices.remove_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes vertices with given vertex ids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ids</strong> (<em>(</em><em>n</em><em>,</em><em>) </em><em>np.ndarray</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>new_self</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>type(self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.select_vertices">
+<span class="sig-name descname"><span class="pre">select_vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ranges</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/vertices.html#Vertices.select_vertices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.vertices.Vertices.select_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns vertices inside the given range.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ranges</strong> (<em>(</em><em>d</em><em>, </em><em>2</em><em>) </em><em>array-like</em>) – Takes None.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ids</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n,) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.show">
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/vertices.html#Vertices.show"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.vertices.Vertices.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show current object using visualization backend.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**kwargs</strong> – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.showable">
+<span class="sig-name descname"><span class="pre">showable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/vertices.html#Vertices.showable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.vertices.Vertices.showable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns showable object, meaning object of visualization backend.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**kwargs</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>showable</strong> – Obj of <cite>gustaf.settings.VISUALIZATION_BACKEND</cite></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.unique_vertices">
+<span class="sig-name descname"><span class="pre">unique_vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/vertices.html#Vertices.unique_vertices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.vertices.Vertices.unique_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a namedtuple that holds unique vertices info. Unique here
+means “close-enough-within-tolerance”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tolerance</strong> (<em>float</em>) – (Optional) Default is settings.TOLERANCE</p></li>
+<li><p><strong>recompute</strong> (<em>bool</em>) – Only applicable as keyword argument. Force re-computes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>unique_vertices_info</strong> – namedtuple with <cite>values</cite>, <cite>ids</cite>, <cite>inverse</cite>, <cite>intersection</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.Unique2DFloats" title="gustaf.helpers.data.Unique2DFloats">Unique2DFloats</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.update_vertices">
+<span class="sig-name descname"><span class="pre">update_vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/vertices.html#Vertices.update_vertices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.vertices.Vertices.update_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update vertices with a mask. In other words, keeps only masked
+vertices. Adapted from <cite>github.com/mikedh/trimesh</cite>. Updates
+connectivity accordingly too.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mask</strong> (<em>(</em><em>n</em><em>,</em><em>) </em><em>bool</em><em> or </em><em>int</em>) – </p></li>
+<li><p><strong>inverse</strong> (<em>(</em><em>len</em><em>(</em><em>self.vertices</em><em>)</em><em>,</em><em>) </em><em>int</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>updated_self</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>type(self)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.vertexdata">
+<span class="sig-name descname"><span class="pre">vertexdata</span></span><a class="headerlink" href="#gustaf.vertices.Vertices.vertexdata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.vertices">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">vertices</span></span><a class="headerlink" href="#gustaf.vertices.Vertices.vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns vertices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>vertices</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n, d) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.vis_dict">
+<span class="sig-name descname"><span class="pre">vis_dict</span></span><a class="headerlink" href="#gustaf.vertices.Vertices.vis_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gustaf.vertices.Vertices.whatami">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">whatami</span></span><a class="headerlink" href="#gustaf.vertices.Vertices.whatami" title="Permalink to this definition">¶</a></dt>
+<dd><p>“what am i”?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>whatami</strong> – vertices</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Answers deep philosophical question</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-gustaf.volumes">
+<span id="gustaf-volumes"></span><h2>gustaf.volumes<a class="headerlink" href="#module-gustaf.volumes" title="Permalink to this heading">¶</a></h2>
+<p>gustaf/gustaf/volumes.py.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="gustaf.volumes.Volumes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gustaf.volumes.</span></span><span class="sig-name descname"><span class="pre">Volumes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volumes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/volumes.html#Volumes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.volumes.Volumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#gustaf.faces.Faces" title="gustaf.faces.Faces"><code class="xref py py-class docutils literal notranslate"><span class="pre">Faces</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.volumes.Volumes.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volumes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/volumes.html#Volumes.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.volumes.Volumes.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volumes. It has vertices and volumes. Volumes could be tetrahedrons
+or hexahedrons.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vertices</strong> (<em>(</em><em>n</em><em>, </em><em>d</em><em>) </em><em>np.ndarray</em>) – </p></li>
+<li><p><strong>volumes</strong> (<em>(</em><em>n</em><em>, </em><em>4</em><em>) or </em><em>(</em><em>n</em><em>, </em><em>8</em><em>) </em><em>np.ndarray</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gustaf.volumes.Volumes.const_faces">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">const_faces</span></span><a class="headerlink" href="#gustaf.volumes.Volumes.const_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns non-writeable view of faces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>const_faces</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n, 2</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gustaf.volumes.Volumes.const_volumes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">const_volumes</span></span><a class="headerlink" href="#gustaf.volumes.Volumes.const_volumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns non-writeable view of volumes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>const_volumes</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n, 4) or (n, 8) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.volumes.Volumes.faces">
+<span class="sig-name descname"><span class="pre">faces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/volumes.html#Volumes.faces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.volumes.Volumes.faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Faces here aren’t main property. So this needs to be computed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>faces</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n, 3) or (n, 4) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gustaf.volumes.Volumes.kind">
+<span class="sig-name descname"><span class="pre">kind</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'volume'</span></em><a class="headerlink" href="#gustaf.volumes.Volumes.kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.volumes.Volumes.sorted_volumes">
+<span class="sig-name descname"><span class="pre">sorted_volumes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/volumes.html#Volumes.sorted_volumes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.volumes.Volumes.sorted_volumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sort volumes along axis=1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>volumes_sorted</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(volumes.shape) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.volumes.Volumes.tofaces">
+<span class="sig-name descname"><span class="pre">tofaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unique</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/volumes.html#Volumes.tofaces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.volumes.Volumes.tofaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Faces obj.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>unique</strong> (<em>bool</em>) – Default is True. If True, only takes unique faces.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>faces</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#gustaf.faces.Faces" title="gustaf.faces.Faces">Faces</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.volumes.Volumes.unique_volumes">
+<span class="sig-name descname"><span class="pre">unique_volumes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/volumes.html#Volumes.unique_volumes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.volumes.Volumes.unique_volumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a namedtuple of unique volumes info. Similar to
+unique_edges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>unique_info</strong> – valid attribut4es are {values, ids, inverse, counts}</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="gustaf.helpers.html#gustaf.helpers.data.Unique2DIntegers" title="gustaf.helpers.data.Unique2DIntegers">Unique2DIntegers</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.volumes.Volumes.update_faces">
+<span class="sig-name descname"><span class="pre">update_faces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gustaf.volumes.Volumes.update_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias to update_elements.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.volumes.Volumes.update_volumes">
+<span class="sig-name descname"><span class="pre">update_volumes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/volumes.html#Volumes.update_volumes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.volumes.Volumes.update_volumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias to update_elements.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gustaf.volumes.Volumes.volumes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">volumes</span></span><a class="headerlink" href="#gustaf.volumes.Volumes.volumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns volumes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>volumes</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(n, 4) or (n, 8) np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gustaf.volumes.Volumes.whatareyou">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">whatareyou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume_obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gustaf/volumes.html#Volumes.whatareyou"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gustaf.volumes.Volumes.whatareyou" title="Permalink to this definition">¶</a></dt>
+<dd><p>overwrites Faces.whatareyou to tell you is this volume is tet or
+hexa.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>volume_obj</strong> (<a class="reference internal" href="#gustaf.volumes.Volumes" title="gustaf.volumes.Volumes"><em>Volumes</em></a>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>whatareyou</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+    
+        <div id="show_right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon"><</span><span>Page contents<span></a></p>
+        </div>
+
+        <div id="right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">></span><span>Page contents:<span></a></p>
+            <div class="page_toc">
+                <ul>
+<li><a class="reference internal" href="#">gustaf</a><ul>
+<li><a class="reference internal" href="#module-gustaf.edges">gustaf.edges</a><ul>
+<li><a class="reference internal" href="#gustaf.edges.Edges"><code class="docutils literal notranslate"><span class="pre">Edges</span></code></a><ul>
+<li><a class="reference internal" href="#gustaf.edges.Edges.__init__"><code class="docutils literal notranslate"><span class="pre">Edges.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.centers"><code class="docutils literal notranslate"><span class="pre">Edges.centers()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.const_edges"><code class="docutils literal notranslate"><span class="pre">Edges.const_edges</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.const_elements"><code class="docutils literal notranslate"><span class="pre">Edges.const_elements</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.dashed"><code class="docutils literal notranslate"><span class="pre">Edges.dashed()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.edges"><code class="docutils literal notranslate"><span class="pre">Edges.edges</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.elements"><code class="docutils literal notranslate"><span class="pre">Edges.elements</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.kind"><code class="docutils literal notranslate"><span class="pre">Edges.kind</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.referenced_vertices"><code class="docutils literal notranslate"><span class="pre">Edges.referenced_vertices()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.remove_unreferenced_vertices"><code class="docutils literal notranslate"><span class="pre">Edges.remove_unreferenced_vertices()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.shrink"><code class="docutils literal notranslate"><span class="pre">Edges.shrink()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.single_edges"><code class="docutils literal notranslate"><span class="pre">Edges.single_edges()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.sorted_edges"><code class="docutils literal notranslate"><span class="pre">Edges.sorted_edges()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.tovertices"><code class="docutils literal notranslate"><span class="pre">Edges.tovertices()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.unique_edges"><code class="docutils literal notranslate"><span class="pre">Edges.unique_edges()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.update_edges"><code class="docutils literal notranslate"><span class="pre">Edges.update_edges()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.update_elements"><code class="docutils literal notranslate"><span class="pre">Edges.update_elements()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.edges.Edges.whatami"><code class="docutils literal notranslate"><span class="pre">Edges.whatami</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-gustaf.faces">gustaf.faces</a><ul>
+<li><a class="reference internal" href="#gustaf.faces.Faces"><code class="docutils literal notranslate"><span class="pre">Faces</span></code></a><ul>
+<li><a class="reference internal" href="#gustaf.faces.Faces.BC"><code class="docutils literal notranslate"><span class="pre">Faces.BC</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.faces.Faces.__init__"><code class="docutils literal notranslate"><span class="pre">Faces.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.faces.Faces.const_edges"><code class="docutils literal notranslate"><span class="pre">Faces.const_edges</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.faces.Faces.const_faces"><code class="docutils literal notranslate"><span class="pre">Faces.const_faces</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.faces.Faces.dashed"><code class="docutils literal notranslate"><span class="pre">Faces.dashed()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.faces.Faces.edges"><code class="docutils literal notranslate"><span class="pre">Faces.edges()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.faces.Faces.faces"><code class="docutils literal notranslate"><span class="pre">Faces.faces</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.faces.Faces.kind"><code class="docutils literal notranslate"><span class="pre">Faces.kind</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.faces.Faces.single_faces"><code class="docutils literal notranslate"><span class="pre">Faces.single_faces()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.faces.Faces.sorted_faces"><code class="docutils literal notranslate"><span class="pre">Faces.sorted_faces()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.faces.Faces.toedges"><code class="docutils literal notranslate"><span class="pre">Faces.toedges()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.faces.Faces.unique_faces"><code class="docutils literal notranslate"><span class="pre">Faces.unique_faces()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.faces.Faces.update_edges"><code class="docutils literal notranslate"><span class="pre">Faces.update_edges()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.faces.Faces.update_faces"><code class="docutils literal notranslate"><span class="pre">Faces.update_faces()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.faces.Faces.whatami"><code class="docutils literal notranslate"><span class="pre">Faces.whatami</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.faces.Faces.whatareyou"><code class="docutils literal notranslate"><span class="pre">Faces.whatareyou()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-gustaf.meshmaker">gustaf.meshmaker</a></li>
+<li><a class="reference internal" href="#module-gustaf.segment">gustaf.segment</a></li>
+<li><a class="reference internal" href="#module-gustaf.settings">gustaf.settings</a></li>
+<li><a class="reference internal" href="#module-gustaf.show">gustaf.show</a><ul>
+<li><a class="reference internal" href="#gustaf.show.interpolate_vedo_dictcam"><code class="docutils literal notranslate"><span class="pre">interpolate_vedo_dictcam()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.show.make_showable"><code class="docutils literal notranslate"><span class="pre">make_showable()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.show.show"><code class="docutils literal notranslate"><span class="pre">show()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.show.show_vedo"><code class="docutils literal notranslate"><span class="pre">show_vedo()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-gustaf.vertices">gustaf.vertices</a><ul>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices"><code class="docutils literal notranslate"><span class="pre">Vertices</span></code></a><ul>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.__init__"><code class="docutils literal notranslate"><span class="pre">Vertices.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.bounds"><code class="docutils literal notranslate"><span class="pre">Vertices.bounds()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.bounds_diagonal"><code class="docutils literal notranslate"><span class="pre">Vertices.bounds_diagonal()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.bounds_diagonal_norm"><code class="docutils literal notranslate"><span class="pre">Vertices.bounds_diagonal_norm()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.concat"><code class="docutils literal notranslate"><span class="pre">Vertices.concat()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.const_vertices"><code class="docutils literal notranslate"><span class="pre">Vertices.const_vertices</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.copy"><code class="docutils literal notranslate"><span class="pre">Vertices.copy()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.kind"><code class="docutils literal notranslate"><span class="pre">Vertices.kind</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.merge_vertices"><code class="docutils literal notranslate"><span class="pre">Vertices.merge_vertices()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.remove_vertices"><code class="docutils literal notranslate"><span class="pre">Vertices.remove_vertices()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.select_vertices"><code class="docutils literal notranslate"><span class="pre">Vertices.select_vertices()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.show"><code class="docutils literal notranslate"><span class="pre">Vertices.show()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.showable"><code class="docutils literal notranslate"><span class="pre">Vertices.showable()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.unique_vertices"><code class="docutils literal notranslate"><span class="pre">Vertices.unique_vertices()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.update_vertices"><code class="docutils literal notranslate"><span class="pre">Vertices.update_vertices()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.vertexdata"><code class="docutils literal notranslate"><span class="pre">Vertices.vertexdata</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.vertices"><code class="docutils literal notranslate"><span class="pre">Vertices.vertices</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.vis_dict"><code class="docutils literal notranslate"><span class="pre">Vertices.vis_dict</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.vertices.Vertices.whatami"><code class="docutils literal notranslate"><span class="pre">Vertices.whatami</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-gustaf.volumes">gustaf.volumes</a><ul>
+<li><a class="reference internal" href="#gustaf.volumes.Volumes"><code class="docutils literal notranslate"><span class="pre">Volumes</span></code></a><ul>
+<li><a class="reference internal" href="#gustaf.volumes.Volumes.__init__"><code class="docutils literal notranslate"><span class="pre">Volumes.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.volumes.Volumes.const_faces"><code class="docutils literal notranslate"><span class="pre">Volumes.const_faces</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.volumes.Volumes.const_volumes"><code class="docutils literal notranslate"><span class="pre">Volumes.const_volumes</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.volumes.Volumes.faces"><code class="docutils literal notranslate"><span class="pre">Volumes.faces()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.volumes.Volumes.kind"><code class="docutils literal notranslate"><span class="pre">Volumes.kind</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.volumes.Volumes.sorted_volumes"><code class="docutils literal notranslate"><span class="pre">Volumes.sorted_volumes()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.volumes.Volumes.tofaces"><code class="docutils literal notranslate"><span class="pre">Volumes.tofaces()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.volumes.Volumes.unique_volumes"><code class="docutils literal notranslate"><span class="pre">Volumes.unique_volumes()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.volumes.Volumes.update_faces"><code class="docutils literal notranslate"><span class="pre">Volumes.update_faces()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.volumes.Volumes.update_volumes"><code class="docutils literal notranslate"><span class="pre">Volumes.update_volumes()</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.volumes.Volumes.volumes"><code class="docutils literal notranslate"><span class="pre">Volumes.volumes</span></code></a></li>
+<li><a class="reference internal" href="#gustaf.volumes.Volumes.whatareyou"><code class="docutils literal notranslate"><span class="pre">Volumes.whatareyou()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+    
+
+      <div class="clearer"></div>
+    </div>
+    <div class="button_nav_wrapper">
+        <div class="button_nav">
+            <div class="left">
+                
+                <a href="modules.html">
+                    <span class="icon"><</span><span>gustaf</span></a>
+                
+            </div>
+
+            <div class="right">
+                
+                    <a href="gustaf.create.html"><span>gustaf.create</span><span class="icon">></span></a>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Jaewook Lee.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+
+<p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>
+  </body>
+</html>
